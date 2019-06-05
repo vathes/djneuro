@@ -1,16 +1,16 @@
 exports.ids = [3];
 exports.modules = {
 
-/***/ "./posts/Completion-of-Pilot-Project-with-UCSD.md":
-/*!********************************************************!*\
-  !*** ./posts/Completion-of-Pilot-Project-with-UCSD.md ***!
-  \********************************************************/
+/***/ "./posts/DataJoint-Workshop-in-Princeton.md":
+/*!**************************************************!*\
+  !*** ./posts/DataJoint-Workshop-in-Princeton.md ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Completion of Pilot Project with UCSD\nlayout: postNew.pug\ndate: 2019-03-15\ntags:\n- DataJoint\n- UCSD\ncategories: \n- News\n---\nVathes successfully completed the pilot phase of an ongoing project with UCSD. The project aims to establish an overarching data pipeline and workflow using DataJoint for a multi-lab collaborative large scale microscopy neuroimaging project, aiming to define/expand mouse brain atlases using machine learning approaches. As a core component of the project, Neuroglancer will be used as the web-based, 3D visualization and annotation software. To this end, Vathes is committed to develop and support toolsets for seamless integration between DataJoint and Neuroglancer.");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: DataJoint Workshop in Princeton\nlayout: postNew.pug\ndate: 2019-02-16\ntags:\n- DataJoint\n- PNI\n- workshops\ncategories: \n- Events\n---\n![alt text](./static/posts/DataJoint-Workshop-in-Princeton/PNI%20logo.png \"PNI Logo\")\nVathes conducted a 3 day DataJoint workshop at Princeton as part of our continued involvement with Princeton U19 project {% post_link \"Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint\" \"U19 project\" %}. We were excited to cover topics ranging from DataJoint introduction, infrastructure setup and management as well as hands-on design and implementation of data pipelines. Vathes will continue to be involved in Princeton’s U19 project, providing support on data pipeline development and deployment.");
 
 /***/ })
 

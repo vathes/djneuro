@@ -1,4 +1,204 @@
 {
+  "./A-Showcase-for-Janelia-Datasets.md": [
+    {
+      "id": "./posts/A-Showcase-for-Janelia-Datasets.md",
+      "name": "./posts/A-Showcase-for-Janelia-Datasets.md",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./Completion-of-IBL-Project-M2-and-Starting-M3.md": [
+    {
+      "id": "./posts/Completion-of-IBL-Project-M2-and-Starting-M3.md",
+      "name": "./posts/Completion-of-IBL-Project-M2-and-Starting-M3.md",
+      "file": "static/chunks/2.js",
+      "publicPath": "static/chunks/2.js"
+    }
+  ],
+  "./Completion-of-Pilot-Project-with-UCSD.md": [
+    {
+      "id": "./posts/Completion-of-Pilot-Project-with-UCSD.md",
+      "name": "./posts/Completion-of-Pilot-Project-with-UCSD.md",
+      "file": "static/chunks/3.js",
+      "publicPath": "static/chunks/3.js"
+    }
+  ],
+  "./DataJoint-Workshop-in-Princeton.md": [
+    {
+      "id": "./posts/DataJoint-Workshop-in-Princeton.md",
+      "name": "./posts/DataJoint-Workshop-in-Princeton.md",
+      "file": "static/chunks/4.js",
+      "publicPath": "static/chunks/4.js"
+    }
+  ],
+  "./Dr-Austin-Hilberg-and-Dr-Shan-Shen-Join-Vathes-Team-as-Data-Scientists.md": [
+    {
+      "id": "./posts/Dr-Austin-Hilberg-and-Dr-Shan-Shen-Join-Vathes-Team-as-Data-Scientists.md",
+      "name": "./posts/Dr-Austin-Hilberg-and-Dr-Shan-Shen-Join-Vathes-Team-as-Data-Scientists.md",
+      "file": "static/chunks/5.js",
+      "publicPath": "static/chunks/5.js"
+    }
+  ],
+  "./MAP-contract.md": [
+    {
+      "id": "./posts/MAP-contract.md",
+      "name": "./posts/MAP-contract.md",
+      "file": "static/chunks/6.js",
+      "publicPath": "static/chunks/6.js"
+    }
+  ],
+  "./Multi-photon-Pipeline-with-Moser-Group.md": [
+    {
+      "id": "./posts/Multi-photon-Pipeline-with-Moser-Group.md",
+      "name": "./posts/Multi-photon-Pipeline-with-Moser-Group.md",
+      "file": "static/chunks/7.js",
+      "publicPath": "static/chunks/7.js"
+    }
+  ],
+  "./Neuro-Reproducibility-Hackashop.md": [
+    {
+      "id": "./posts/Neuro-Reproducibility-Hackashop.md",
+      "name": "./posts/Neuro-Reproducibility-Hackashop.md",
+      "file": "static/chunks/8.js",
+      "publicPath": "static/chunks/8.js"
+    }
+  ],
+  "./NeuroNex-Sponsors-a-Two-Day-DataJoint-Workshop-in-Houston.md": [
+    {
+      "id": "./posts/NeuroNex-Sponsors-a-Two-Day-DataJoint-Workshop-in-Houston.md",
+      "name": "./posts/NeuroNex-Sponsors-a-Two-Day-DataJoint-Workshop-in-Houston.md",
+      "file": "static/chunks/9.js",
+      "publicPath": "static/chunks/9.js"
+    }
+  ],
+  "./Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint.md": [
+    {
+      "id": "./posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint.md",
+      "name": "./posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint.md",
+      "file": "static/chunks/10.js",
+      "publicPath": "static/chunks/10.js"
+    }
+  ],
+  "./Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint.md": [
+    {
+      "id": "./posts/Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint.md",
+      "name": "./posts/Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint.md",
+      "file": "static/chunks/11.js",
+      "publicPath": "static/chunks/11.js"
+    }
+  ],
+  "./Vathes-Completes-the-mLIMS-Synchronization-Project-for-the-Moser-Group.md": [
+    {
+      "id": "./posts/Vathes-Completes-the-mLIMS-Synchronization-Project-for-the-Moser-Group.md",
+      "name": "./posts/Vathes-Completes-the-mLIMS-Synchronization-Project-for-the-Moser-Group.md",
+      "file": "static/chunks/12.js",
+      "publicPath": "static/chunks/12.js"
+    }
+  ],
+  "./Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University.md": [
+    {
+      "id": "./posts/Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University.md",
+      "name": "./posts/Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University.md",
+      "file": "static/chunks/13.js",
+      "publicPath": "static/chunks/13.js"
+    }
+  ],
+  "./Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group.md": [
+    {
+      "id": "./posts/Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group.md",
+      "name": "./posts/Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group.md",
+      "file": "static/chunks/14.js",
+      "publicPath": "static/chunks/14.js"
+    }
+  ],
+  "./Vathes-Exhibiting-at-Bernstein-Conference-in-September-2018.md": [
+    {
+      "id": "./posts/Vathes-Exhibiting-at-Bernstein-Conference-in-September-2018.md",
+      "name": "./posts/Vathes-Exhibiting-at-Bernstein-Conference-in-September-2018.md",
+      "file": "static/chunks/15.js",
+      "publicPath": "static/chunks/15.js"
+    }
+  ],
+  "./Vathes-Meets-with-International-Brain-Lab-Data-Science-Team.md": [
+    {
+      "id": "./posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team.md",
+      "name": "./posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team.md",
+      "file": "static/chunks/16.js",
+      "publicPath": "static/chunks/16.js"
+    }
+  ],
+  "./Vathes-Reaches-Agreement-with-the-International-Brain-Lab-to-Develop-Their-Pipeline-for-Data-Processing-and-Analysis.md": [
+    {
+      "id": "./posts/Vathes-Reaches-Agreement-with-the-International-Brain-Lab-to-Develop-Their-Pipeline-for-Data-Processing-and-Analysis.md",
+      "name": "./posts/Vathes-Reaches-Agreement-with-the-International-Brain-Lab-to-Develop-Their-Pipeline-for-Data-Processing-and-Analysis.md",
+      "file": "static/chunks/17.js",
+      "publicPath": "static/chunks/17.js"
+    }
+  ],
+  "./Vathes-Welcomes-Dr-Thinh-Nguyen-as-Data-Scientist.md": [
+    {
+      "id": "./posts/Vathes-Welcomes-Dr-Thinh-Nguyen-as-Data-Scientist.md",
+      "name": "./posts/Vathes-Welcomes-Dr-Thinh-Nguyen-as-Data-Scientist.md",
+      "file": "static/chunks/18.js",
+      "publicPath": "static/chunks/18.js"
+    }
+  ],
+  "./Vathes-attends-the-2017-Society-for-Neuroscience-Conference.md": [
+    {
+      "id": "./posts/Vathes-attends-the-2017-Society-for-Neuroscience-Conference.md",
+      "name": "./posts/Vathes-attends-the-2017-Society-for-Neuroscience-Conference.md",
+      "file": "static/chunks/19.js",
+      "publicPath": "static/chunks/19.js"
+    }
+  ],
+  "./Vathes-contracts-with-Matt-McGinley-lab.md": [
+    {
+      "id": "./posts/Vathes-contracts-with-Matt-McGinley-lab.md",
+      "name": "./posts/Vathes-contracts-with-Matt-McGinley-lab.md",
+      "file": "static/chunks/20.js",
+      "publicPath": "static/chunks/20.js"
+    }
+  ],
+  "./Vathes-team-visits-Harvard.md": [
+    {
+      "id": "./posts/Vathes-team-visits-Harvard.md",
+      "name": "./posts/Vathes-team-visits-Harvard.md",
+      "file": "static/chunks/21.js",
+      "publicPath": "static/chunks/21.js"
+    }
+  ],
+  "./Vathes-team-visits-Janelia-Farm.md": [
+    {
+      "id": "./posts/Vathes-team-visits-Janelia-Farm.md",
+      "name": "./posts/Vathes-team-visits-Janelia-Farm.md",
+      "file": "static/chunks/22.js",
+      "publicPath": "static/chunks/22.js"
+    }
+  ],
+  "./Vathes-team-visits-University-of-Utah.md": [
+    {
+      "id": "./posts/Vathes-team-visits-University-of-Utah.md",
+      "name": "./posts/Vathes-team-visits-University-of-Utah.md",
+      "file": "static/chunks/23.js",
+      "publicPath": "static/chunks/23.js"
+    }
+  ],
+  "./Welcome-Chris.md": [
+    {
+      "id": "./posts/Welcome-Chris.md",
+      "name": "./posts/Welcome-Chris.md",
+      "file": "static/chunks/24.js",
+      "publicPath": "static/chunks/24.js"
+    }
+  ],
+  "./Welcoming-Raphael-Guzman-to-Our-Team.md": [
+    {
+      "id": "./posts/Welcoming-Raphael-Guzman-to-Our-Team.md",
+      "name": "./posts/Welcoming-Raphael-Guzman-to-Our-Team.md",
+      "file": "static/chunks/25.js",
+      "publicPath": "static/chunks/25.js"
+    }
+  ],
   "./noop": [
     {
       "id": "./node_modules/next/dist/client/noop.js",

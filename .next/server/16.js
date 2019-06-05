@@ -1,16 +1,16 @@
 exports.ids = [16];
 exports.modules = {
 
-/***/ "./posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team.md":
-/*!******************************************************************************!*\
-  !*** ./posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team.md ***!
-  \******************************************************************************/
+/***/ "./posts/Vathes-Reaches-Agreement-with-the-International-Brain-Lab-to-Develop-Their-Pipeline-for-Data-Processing-and-Analysis.md":
+/*!***************************************************************************************************************************************!*\
+  !*** ./posts/Vathes-Reaches-Agreement-with-the-International-Brain-Lab-to-Develop-Their-Pipeline-for-Data-Processing-and-Analysis.md ***!
+  \***************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Vathes Meets with International Brain Lab Data Science Team\nlayout: postNew.pug\ndate: 2018-01-30 \ntags:\n- DataJoint\n- IBL\ncategories: \n- Events\n---\n![alt text](./static/posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team/IBL%20logo.png\" \"IBL Logo\")\nDimitri Yatsenko and Edgar Y. Walker travelled to the UK to present DataJoint to Kenneth Harris's group at UCL and discussed the integration of DataJoint with [International Brain Lab](https://www.internationalbrainlab.com/) projects.\n&nbsp;\n![alt text](./static/posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team/UKvisit1.jpg \"Edgar in London\")\n![alt text](./static/posts/Vathes-Meets-with-International-Brain-Lab-Data-Science-Team/UKvisit2.jpg \"Dimitri in London\")\n\n<!-- more -->");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Vathes Reaches Agreement with the International Brain Lab to Develop Their Pipeline for Data Processing and Analysis\nlayout: postNew.pug\ndate: 2018-05-20\ntags:\n- DataJoint\n- IBL\ncategories: \n- News\n---\n![alt text](./static/posts/Vathes-Reaches-Agreement-with-the-International-Brain-Lab-to-Develop-Their-Pipeline-for-Data-Processing-and-Analysis/IBL%20logo.png \"IBL Logo\")\nDataJoint was elected as the official platform for the data collection and analysis for the [International Brain Lab (IBL)](https://www.internationalbrainlab.com/). Over a one-year period, Vathes will work with participating labs to develop a data pipeline and support related developments in the DataJoint framework and web visualization platforms.\n\n<!-- more -->");
 
 /***/ })
 

@@ -1,16 +1,16 @@
 exports.ids = [2];
 exports.modules = {
 
-/***/ "./posts/Completion-of-IBL-Project-M2-and-Starting-M3.md":
-/*!***************************************************************!*\
-  !*** ./posts/Completion-of-IBL-Project-M2-and-Starting-M3.md ***!
-  \***************************************************************/
+/***/ "./posts/Completion-of-Pilot-Project-with-UCSD.md":
+/*!********************************************************!*\
+  !*** ./posts/Completion-of-Pilot-Project-with-UCSD.md ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Completion of IBL Project Milestone 2 and Starting Milestone 3\nlayout: postNew.pug\ndate: 2019-03-12\ntags:\n- DataJoint\n- IBL\ncategories: \n- News\n---\n\n![alt text](./static/posts/Completion-of-IBL-Project-M2-and-Starting-M3/IBL%20logo.png \"IBL Logo\")\nVathes has successfully completed Milestone 2 of our contract with the [International Brain Laboratory (IBL)](https://www.internationalbrainlab.com/), where we developed data pipelines to handle the core mouse and behavioral information collected through IBL projects. In Milestone 3, Vathes will continue to develop and extend the data pipeline, and we are excited to be developing a web interface to support intuitive navigation of the massive behavioral and electrophysiological data collected by IBL.");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Completion of Pilot Project with UCSD\nlayout: postNew.pug\ndate: 2019-03-15\ntags:\n- DataJoint\n- UCSD\ncategories: \n- News\n---\nVathes successfully completed the pilot phase of an ongoing project with UCSD. The project aims to establish an overarching data pipeline and workflow using DataJoint for a multi-lab collaborative large scale microscopy neuroimaging project, aiming to define/expand mouse brain atlases using machine learning approaches. As a core component of the project, Neuroglancer will be used as the web-based, 3D visualization and annotation software. To this end, Vathes is committed to develop and support toolsets for seamless integration between DataJoint and Neuroglancer.");
 
 /***/ })
 

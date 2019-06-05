@@ -1,15 +1,15 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[14],{
 
-/***/ "./posts/Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University.md":
-/*!*****************************************************************************!*\
-  !*** ./posts/Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University.md ***!
-  \*****************************************************************************/
+/***/ "./posts/Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group.md":
+/*!*************************************************************************!*\
+  !*** ./posts/Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group.md ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Vathes Conducts a Two-Day Workshop at Princeton University\nlayout: postNew.pug\ndate: 2018-01-10 \ntags:\n- DataJoint\n- workshops\n- PNI\ncategories: \n- Events\n---\nDimitri Yatsenko and Edgar Y. Walker travelled to Princeton Neuroscience Institute (PNI) to run a two-day introductory workshop on how to build neuroscience data pipelines using DataJoint. Approximately fifty researchers involved with the [Princeton U19 program](https://www.princeton.edu/news/2017/10/24/seven-princeton-researchers-receive-nih-brain-initiative-awards) attended the workshop. On the first day, Dimitri and Edgar covered the basic principles and concepts of DataJoint. On day two, they covered applied examples, and the participants translated an existing project into the DataJoint pipeline with support from the instructors. \n&nbsp;\n![alt text](./static/posts/Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University/Princeton1.jpg \"Edgar visiting Princeton\")\n![alt text](./static/posts/Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University/Princeton2.jpg \"Dimitri visiting Princeton\")\n\n<!-- more -->");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Vathes Conducts a Two-Day Workshop for the Moser Group\nlayout: postNew.pug\ndate: 2018-02-01 \ntags:\n- DataJoint\n- workshops\n- Moser Group\n- Kavli Institute\ncategories: \n- Events\n---\n![alt text](./static/posts/Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group/Kavli.png \"Kavli Institute Logo\")\nDimitri Yatsenko and Edgar Y. Walker visited the Moser group (2014 Nobel Laureates) at NTNU [Kavli Institute](https://www.ntnu.edu/kavli/research/moser) to present on DataJoint. During the visit, Vathes reached an agreement to develop a DataJoint data pipeline that will stay synchronized to mouse and rat colony data organized and managed by [mLIMS](https://bioinforx.com/lims2/product_mlims.php). This development will allow the Moser group to have unified access to information relevant for experimental data collection and analysis through DataJoint, while at the same time leveraging well-established solutions for specialized data entry and management, such as the animal colony information handled by mLIMS.\n&nbsp;\n![alt text](./static/posts/Vathes-Conducts-a-Two-Day-Workshop-for-the-Moser-Group/MoserLabVisit.jpg \"Group photo with the Moser Lab\")\n\n<!-- more -->");
 
 /***/ })
 

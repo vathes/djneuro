@@ -1,15 +1,15 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[11],{
 
-/***/ "./posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint.md":
-/*!**********************************************************************************************************!*\
-  !*** ./posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint.md ***!
-  \**********************************************************************************************************/
+/***/ "./posts/Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint.md":
+/*!*************************************************************************************************************!*\
+  !*** ./posts/Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint.md ***!
+  \*************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Princeton Neuroscience Institute Hires Vathes to Expand the Documentation for DataJoint\nlayout: postNew.pug\ndate: 2018-05-28 \ntags:\n- DataJoint\n- PNI\ncategories: \n- News\n---\n![alt text](./static/posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint/PNI%20logo.png \"PNI Logo\")\n&nbsp;\nVathes entered into a contract with Princeton Neuroscience Institute (PNI) to complete thorough technical reference documentation for DataJoint by December 15, 2018.\n\n<!-- more -->");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Princeton Neuroscience Institute Partners with Vathes to Support the Adoption of DataJoint\nlayout: postNew.pug\ndate: 2018-05-24 \ntags:\n- DataJoint\n- PNI\ncategories: \n- News\n---\n![alt text](./static/posts/Princeton-Neuroscience-Institute-Partners-with-Vathes-to-Support-the-Adoption-of-DataJoint/PNI%20logo.png \"PNI Logo\")\n&nbsp;\nBuilding off a {% post_link \"Vathes-Conducts-a-Two-Day-Workshop-at-Princeton-University\" \"January Workshop\" %} for the Princeton U19 group, Vathes and the Princeton Neuroscience Institute (PNI) officially entered a contract. Vathes will provide support for developing DataJoint pipeline for their U19 projects and support the adoption of DataJoint by PNI labs.\n\n<!-- more -->");
 
 /***/ })
 

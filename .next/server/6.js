@@ -1,16 +1,16 @@
 exports.ids = [6];
 exports.modules = {
 
-/***/ "./posts/MAP-contract.md":
-/*!*******************************!*\
-  !*** ./posts/MAP-contract.md ***!
-  \*******************************/
+/***/ "./posts/Multi-photon-Pipeline-with-Moser-Group.md":
+/*!*********************************************************!*\
+  !*** ./posts/Multi-photon-Pipeline-with-Moser-Group.md ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Vathes joins a multi-lab collaborative project to study neural circuits of decision making\nlayout: postNew.pug\ndate: 2017-08-01 11:40:51\ntags:\n- MAP\n- DataJoint\ncategories: \n- News\n---\n\nVathes LLC began work under a service agreement to build and support the data pipeline for the multi-lab collaborative project nicknamed the “Mesoscale Activity Project” or MAP.  This three-year project aims to analyze brain-wide neural activity during behavior and publish the datasets for the general scientific community.  A more detailed description of the project can found at  \nhttps://www.simonsfoundation.org/funded-project/%20multi-regional-neuronal-dynamics-of-memory-guided-flexible-behavior/\n");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Multi-photon Pipeline with Moser Group\nlayout: postNew.pug\ndate: 2019-03-18\ntags:\n- DataJoint\n- Moser Group\n- Kavli Institute\ncategories: \n- News\n---\n![alt text](./static/posts/Multi-photon-Pipeline-with-Moser-Group/Kavli.png \"Kavli Institute Logo\")\nVathes is thrilled to extend the ongoing project with Moser group from Kavli institute to now support the development and extension of multi-photon imaging data pipelines, in addition to the continued involvement and development of the electrophysiology pipeline in freely behaving animals. The pipeline aims to seamlessly connect data acquisition, pre-processing, and behavioral analysis.\n");
 
 /***/ })
 

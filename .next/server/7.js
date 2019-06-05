@@ -1,16 +1,16 @@
 exports.ids = [7];
 exports.modules = {
 
-/***/ "./posts/Multi-photon-Pipeline-with-Moser-Group.md":
-/*!*********************************************************!*\
-  !*** ./posts/Multi-photon-Pipeline-with-Moser-Group.md ***!
-  \*********************************************************/
+/***/ "./posts/Neuro-Reproducibility-Hackashop.md":
+/*!**************************************************!*\
+  !*** ./posts/Neuro-Reproducibility-Hackashop.md ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Multi-photon Pipeline with Moser Group\nlayout: postNew.pug\ndate: 2019-03-18\ntags:\n- DataJoint\n- Moser Group\n- Kavli Institute\ncategories: \n- News\n---\n![alt text](./static/posts/Multi-photon-Pipeline-with-Moser-Group/Kavli.png \"Kavli Institute Logo\")\nVathes is thrilled to extend the ongoing project with Moser group from Kavli institute to now support the development and extension of multi-photon imaging data pipelines, in addition to the continued involvement and development of the electrophysiology pipeline in freely behaving animals. The pipeline aims to seamlessly connect data acquisition, pre-processing, and behavioral analysis.\n");
+/* harmony default export */ __webpack_exports__["default"] = ("---\ntitle: Neuro Reproducibility Hackashop\nlayout: postNew.pug\ndate: 2019-03-08\ntags:\n- DataJoint\n- NeuroNex\ncategories: \n- News\n---\n![alt text](./static/posts/Neuro-Reproducibility-Hackashop/NeuroReproducibilityHackashop.png \"Neuro Reproducibility Hackashop sign\")\nThe 2019 Neuro Reproducibility Hackashop saw the presentation of many exciting developments for researchers and tool builders within the Neuroscience community. With the goal of promoting reproducibility and interoperability of neuro toolsets, Vathes has worked closely with community leaders and tool builders and is committed to multiple upcoming interoperability efforts. Specifically, Vathes engineers have worked closely with NWB developers to outline a practical and effective pathway for enabling export capabilities  from DataJoint pipelines into NWB 2.0 files. Furthermore, we are very excited to start an interoperability project with the Gigantum team, in which a DataJoint pipeline can be configured to be used as an input to a Gigantum project. \n");
 
 /***/ })
 

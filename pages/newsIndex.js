@@ -1,5 +1,6 @@
 import React from 'react'
 import matter from 'gray-matter';
+import _ from 'lodash';
 import Link from 'next/link';
 import Layout from '../components/Layout.js';
 
@@ -16,13 +17,19 @@ export default class extends React.Component {
                 const value = values[index];
                 // Parse document
                 const document = matter(value.default);
+                // document = { content: '', data: { title:'', date: 2018-12-04T00:00:00.000Z}, isEmpty: false, excerpt: '', orig: <Buffer 2d 2d...>}
+                
                 return {
                     document,
                     slug
                 };
             });
-            return data;
+            // console.log(data[0]);
+            const sortedData = _.orderBy(data, ['document.data.date'], ['asc']);
+            console.log(sortedData);
+            return sortedData;
         })(require.context('../posts', true, /\.md$/));
+        // console.log(posts[0].document.data);
         return {
             posts
         };
@@ -32,9 +39,12 @@ export default class extends React.Component {
             <Layout>
                 <h1>News</h1>
                 {this.props.posts.map(({ document: { data }, slug }) => (
-                    <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}>
-                        <p>{data.title}</p>
-                    </Link>
+                    <div>
+                        <h5>{data.date.toString().split('T')[0]}</h5>
+                        <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}>
+                            <p>{data.title}</p>
+                        </Link>
+                    </div>
                 ))}
             </Layout>
         )
