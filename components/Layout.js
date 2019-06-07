@@ -1,22 +1,19 @@
 import Navigation from './Navigation';
+import Head from './Head';
 
 const layoutStyle = {
-
+    padding: '0',
+    textAlign: 'center',
+    fontFamily: 'sans-serif'
 };
 
-// const Layout = Page => {
-//     return () => (
-//         <div style={layoutStyle}>
-//             <Navigation />
-//             <Page />
-//         </div>
-//     );
-// };
-
 const Layout = props => (
-    <div style={layoutStyle}>
+    <div>
+        <Head />
         <Navigation />
-        { props.children }
+        <div style={layoutStyle}>
+            { props.children }
+        </div>
     </div>
 )
 export default Layout;
