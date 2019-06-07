@@ -8,18 +8,42 @@ const background0 = {
 const background1 = {
     backgroundColor: 'rgba(0, 0, 0, 0.85)',
     padding: '60px 40px',
+    color: '#E1EBF7',
+    position: 'relative',
+    zIndex: '10'
 };
+
+const djWire = {
+    width: '380px',
+    position: 'absolute',
+    zIndex: '5',
+    left: '-55px',
+    bottom: '2px',
+    opacity: '0.3'
+}
 
 const background2 = {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     padding: '60px 40px',
+    color: '#E1EBF7',
+    position: 'relative'
 };
+
+const sphereWire = {
+    width: '540px',
+    position: 'absolute',
+    zIndex: '5',
+    right: '0',
+    bottom: '0',
+    opacity: '0.4'
+}
 
 const background3 = {
     backgroundImage: 'url("/static/images/artwork/pipette.png")',
     backgroundColor: 'rgba(0, 0, 0, 0.75)',
     padding: '60px 40px',
-    backgroundPosition: 'bottom'
+    backgroundPosition: 'bottom',
+    color: '#E1EBF7'
 };
 
 const background4 = {
@@ -30,15 +54,19 @@ const background4 = {
 };
 
 
+
+
 const About = () => (
     <Layout>
         <div style={background0}>
             <div class="section" style={background1}>
+                <img style={djWire} src="/static/images/icons/djIcon-wire-white.png" />
                 <h4>The DataJoint experts</h4>
                 <p>Our team is the principal developer of <a href="https://datajoint.io">DataJoint®</a> — a free, open-source framework 
                 for shared scientific databases and computational data pipelines programmed and accessed directly from MATLAB and Python. </p>
             </div>
             <div class="section" style={background2}>
+                <img style={sphereWire} src="/static/images/icons/sphere_white.png" />
                 <h4>We work with top neuroscience labs worldwide</h4>
                 <p>We help neuroscientists use DataJoint to accelerate their research.  DataJoint Neuro provides solutions for project planning, 
                     training, data infrastructure, as well as tools and resources for maximizing the productivity of individual labs and large 

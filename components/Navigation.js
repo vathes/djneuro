@@ -26,7 +26,7 @@ const Navigation = () => (
         </nav>
         <style jsx>{`
             nav {
-                background-color: #28262D;
+                background: linear-gradient(#0f040f, #0f040f, #001226);
                 padding: 15px 10px 15px 0;
             }
             a {
