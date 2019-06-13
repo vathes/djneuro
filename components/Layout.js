@@ -1,19 +1,25 @@
 import Navigation from './Navigation';
 import Head from './Head';
+import Footer from './Footer';
 
 const layoutStyle = {
     padding: '0',
     textAlign: 'center',
-    fontFamily: 'sans-serif'
+    
 };
 
+const generalStyle = {
+    fontFamily: 'sans-serif'
+}
+
 const Layout = props => (
-    <div>
+    <div style={generalStyle}>
         <Head />
         <Navigation />
         <div style={layoutStyle}>
             { props.children }
         </div>
+        <Footer />
     </div>
 )
 export default Layout;

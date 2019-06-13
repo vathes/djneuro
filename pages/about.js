@@ -6,7 +6,7 @@ const background0 = {
 };
 
 const background1 = {
-    backgroundColor: 'rgba(0, 0, 0, 0.85)',
+    backgroundColor: 'rgba(0, 0, 0, 0.65)',
     padding: '60px 40px',
     color: '#E1EBF7',
     position: 'relative',
@@ -23,7 +23,7 @@ const djWire = {
 }
 
 const background2 = {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.45)',
     padding: '60px 40px',
     color: '#E1EBF7',
     position: 'relative'

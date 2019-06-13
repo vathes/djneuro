@@ -21,14 +21,19 @@ const backdrop = {
     position: 'absolute',
     zIndex: '100',
     height: '100vw',
+    padding: '0',
     margin: '-14% -12%'
 }
 
 const homeTop2 = {
-
 }
 
-const homeTop3 = {
+const partnerSection = {
+    background: 'linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75))',
+    height: '100%',
+    position: 'relative',
+    zIndex: '150',
+    padding: '7% 0 1%'
 
 }
 
@@ -37,7 +42,7 @@ const customerSection = {
     background: 'rgba(255,255,255,0.74)',
     position: 'relative',
     zIndex: '200',
-    padding: '8% 0%'
+    padding: '1% 0% 8%'
 
 }
 
@@ -56,13 +61,17 @@ const logo = {
     padding: '0 1%',
     borderRight: '1px solid #d4d4d4'
 }
+
+const listStyle = {
+    listStyle: 'none',
+}
 export default function Index() {
     return (
         <Layout>
 
             <div style={homeTop1}>
 
-                <div style={backdrop}></div>
+                {/* <div style={backdrop}></div> */}
                 <div style={homeTop1Text}>
                     <p><b>DataJoint Neuro®</b> enables research teams to design scientific databases and computational pipelines by providing support, resources, and services.</p>
                     <br />
@@ -76,15 +85,15 @@ export default function Index() {
             <div style={homeTop2}>
 
             </div>
-            {/* <div style={homeTop3}>
+            <div style={partnerSection}>
                 <h4>Partners</h4>
-                <ul>
+                <ul style={listStyle}>
                     <li>Baylor College of Medicine</li>
                     <li>Neurodata Without Borders</li>
                     <li>Mathworks</li>
                     <li>Amazon Web Services</li>
                 </ul>
-            </div> */}
+            </div>
             <div style={customerSection}>
                 <h4>Our Customers</h4>
                 <div style={customerLogos}>

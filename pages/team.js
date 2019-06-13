@@ -74,9 +74,9 @@ const role = {
 const Team = () => (
     <Layout>
         <div style={background}>
-            <img style={linesCenter} src="./static/images/artwork/networkLines.svg" />
-            <img style={linesSide} src="./static/images/artwork/networkLinesWide.svg" />
-            <img style={linesSide2} src="./static/images/artwork/networkLinesWide.svg" />
+            {/* <img style={linesCenter} src="./static/images/artwork/networkLines.svg" /> */}
+            {/* <img style={linesSide} src="./static/images/artwork/networkLinesWide.svg" /> */}
+            {/* <img style={linesSide2} src="./static/images/artwork/networkLinesWide.svg" /> */}
             <div style={tabcard}>
                 <p>Dimitri Yatsenko, PhD</p>
                 <p style={role}>President</p>
