@@ -4,6 +4,7 @@ import Footer from './Footer';
 
 const layoutStyle = {
     padding: '0',
+    margin: '0',
     textAlign: 'center',
     
 };

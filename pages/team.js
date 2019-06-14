@@ -4,9 +4,14 @@ const background = {
     backgroundImage: 'url("/static/images/artwork/LGN_injection.jpg")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'top right',
-    height: '800px'
+    backgroundPosition: 'center',
+    height: '100vh'
 };
+
+const row = {
+    width: '100%',
+    display: 'inline-block'
+}
 
 const tabcard = {
     position: 'relative',
@@ -77,55 +82,65 @@ const Team = () => (
             {/* <img style={linesCenter} src="./static/images/artwork/networkLines.svg" /> */}
             {/* <img style={linesSide} src="./static/images/artwork/networkLinesWide.svg" /> */}
             {/* <img style={linesSide2} src="./static/images/artwork/networkLinesWide.svg" /> */}
-            <div style={tabcard}>
-                <p>Dimitri Yatsenko, PhD</p>
-                <p style={role}>President</p>
-                <img style={columnAimg} src="./static/images/team/dimitriyatsenko.jpg" />
+            <div style={row}>
+                <div style={tabcard}>
+                    <p>Dimitri Yatsenko, PhD</p>
+                    <p style={role}>President</p>
+                    <img style={columnAimg} src="./static/images/team/dimitriyatsenko.jpg" />
+                </div>
+                <div style={tabcard2}>
+                    <p>Edgar Y. Walker, PhD</p>
+                    <p style={role}>Vice President, Engineering</p>
+                    <img style={columnBimg} src="./static/images/team/edgarwalker.jpg" />
+                </div>
             </div>
-            <div style={tabcard2}>
-                <p>Edgar Y. Walker, PhD</p>
-                <p style={role}>Vice President, Engineering</p>
-                <img style={columnBimg} src="./static/images/team/edgarwalker.jpg" />
+            <div style={row}>
+                <div style={tabcard}>
+                    <p>Andreas Tolias, PhD</p>
+                    <p style={role}>Scientific and Business Consultant</p>
+                    <img style={columnAimg} src="./static/images/team/andreastolias.jpg" />
+                </div>
+                <div style={tabcard2}>
+                    <p>Jake Reimer, PhD</p>
+                    <p style={role}>Application Specialist</p>
+                    <img style={columnBimg} src="./static/images/team/jakereimer.jpg" />
+                </div>
             </div>
-            <div style={tabcard}>
-                <p>Andreas Tolias, PhD</p>
-                <p style={role}>Scientific and Business Consultant</p>
-                <img style={columnAimg} src="./static/images/team/andreastolias.jpg" />
+            <div style={row}>
+                <div style={tabcard}>
+                    <p>Chris Turner</p>
+                    <p style={role}>Product Engineer</p>
+                    <img style={columnAimg} src="./static/images/team/christurner.jpg" />
+                </div>
+                <div style={tabcard2}>
+                    <p>Camila Lopez</p>
+                    <p style={role}>Project Manager</p>
+                    <img style={columnBimg} src="./static/images/team/camilalopez.jpg" />
+                </div>
             </div>
-            <div style={tabcard2}>
-                <p>Jake Reimer, PhD</p>
-                <p style={role}>Application Specialist</p>
-                <img style={columnBimg} src="./static/images/team/jakereimer.jpg" />
+            <div style={row}>
+                <div style={tabcard}>
+                    <p>Shan Shen, PhD</p>
+                    <p style={role}>Data Scientist</p>
+                    <img style={columnAimg} src="./static/images/team/shanshen.jpg" />
+                </div>
+                <div style={tabcard2}>
+                    <p>Thinh Nguyen, PhD</p>
+                    <p style={role}>Data Scientist</p>
+                    <img style={columnBimg} src="./static/images/team/thinhnguyen.jpg" />
+                </div>
             </div>
-            <div style={tabcard}>
-                <p>Chris Turner</p>
-                <p style={role}>Product Engineer</p>
-                <img style={columnAimg} src="./static/images/team/christurner.jpg" />
-            </div>
-            <div style={tabcard2}>
-                <p>Camila Lopez</p>
-                <p style={role}>Project Manager</p>
-                <img style={columnBimg} src="./static/images/team/camilalopez.jpg" />
-            </div>
-            <div style={tabcard}>
-                <p>Shan Shen, PhD</p>
-                <p style={role}>Data Scientist</p>
-                <img style={columnAimg} src="./static/images/team/shanshen.jpg" />
-            </div>
-            <div style={tabcard2}>
-                <p>Thinh Nguyen, PhD</p>
-                <p style={role}>Data Scientist</p>
-                <img style={columnBimg} src="./static/images/team/thinhnguyen.jpg" />
-            </div>
-            <div style={tabcard}>
-                <p>Raphael Guzman</p>
-                <p style={role}>Software Engineer</p>
-                <img style={columnAimg} src="./static/images/team/raphaelguzman.jpg" />
-            </div>
-            <div style={tabcard2}>
-                <p>Maho Sasaki</p>
-                <p style={role}>Front-end Web Developer</p>
-                <img style={columnBimg} src="./static/images/team/mahosasaki.jpg" />
+            <div style={row}>
+                <div style={tabcard}>
+                    <p>Raphael Guzman</p>
+                    <p style={role}>Software Engineer</p>
+                    <img style={columnAimg} src="./static/images/team/raphaelguzman.jpg" />
+                </div>
+                <div style={tabcard2}>
+                    <p>Maho Sasaki</p>
+                    <p style={role}>Front-end Web Developer</p>
+                    <img style={columnBimg} src="./static/images/team/mahosasaki.jpg" />
+                </div>
             </div>
         </div>
         <style jsx>{`

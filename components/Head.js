@@ -9,6 +9,7 @@ export default() => (
         <style jsx global>{`
             body {
                 margin: 0px;
+                padding: 0;
                 // width: 100vw;
                 // overflow: hidden;
             }

@@ -2,6 +2,7 @@ import Layout from '../components/Layout.js';
 
 const background0 = {
     backgroundImage: 'url("/static/images/artwork/above_white_matter.jpg")',
+    backgroundAttachment: 'fixed'
     
 };
 

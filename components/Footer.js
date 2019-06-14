@@ -6,7 +6,7 @@ const footerText = {
 }
 const Footer = () => (
     <div>
-        <p style={footerText}>DataJoint NEURO 2019 Copyrights Reserved</p>
+        <p style={footerText}>DataJoint NEURO 2019 All Rights Reserved</p>
     
     <style jsx>{`
         text-align: center;
