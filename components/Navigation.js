@@ -43,7 +43,7 @@ const Navigation = () => (
                 <Link href="/team">
                     <a style={linkStyle}>Team</a>
                 </Link>
-                <Link href="/newsIndex">
+                <Link href="/news">
                     <a style={linkStyle}>News</a>
                 </Link>
             </div>
@@ -54,7 +54,7 @@ const Navigation = () => (
                 display: inline-block;
                 width: 100%;
                 background: linear-gradient(#0f040f, #0f040f, #001226);
-                padding: 0px 10px 0 0;
+                padding: 0;
             }
             a {
                 color: white;

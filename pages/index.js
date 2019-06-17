@@ -33,7 +33,7 @@ const partnerSection = {
     height: '100%',
     position: 'relative',
     zIndex: '150',
-    padding: '7% 0 1%'
+    padding: '7% 0 5% 0'
 
 }
 
@@ -42,24 +42,29 @@ const customerSection = {
     background: 'rgba(255,255,255,0.74)',
     position: 'relative',
     zIndex: '200',
-    padding: '1% 0% 8%'
+    padding: '1% 0 8% 0',
+    bottom: '50px'
 
 }
 
 const customerLogos = {
-    display: 'flex',
-    flexDirection: 'row',
+    // display: 'inline-flex',
+    // flexDirection: 'row',
+    // float: 'left',
     width: '100%',
-    overflow: 'scroll',
+    // border: '2px red solid'
+    // overflow: 'scroll',
 }
 
 const logo = {
     display: 'block',
     maxHeight: '70px',
-    height: 'auto',
-    width: 'auto',
+    // height: 'auto',
+    // width: 'auto',
     padding: '0 1%',
-    borderRight: '1px solid #d4d4d4'
+    margin: '2% 0',
+    float: 'left',
+    // borderRight: '1px solid #d4d4d4'
 }
 
 const listStyle = {
@@ -97,13 +102,13 @@ export default function Index() {
             <div style={customerSection}>
                 <h4>Our Customers</h4>
                 <div style={customerLogos}>
-                    <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="200px" />
-                    <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="200px" />
-                    <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="200px" />
-                    <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" width="200px" />
-                    <img style={logo} src="./static/images/logo/color/harvard_logo_text.png" alt="Harvard University Logo" width="200px" />
-                    <img style={logo} src="./static/images/logo/color/ucsd_logo.png" alt="UCSD Logo" width="200px" />
-                    <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" width="200px" />
+                    <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
+                    <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
+                    <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
+                    <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
+                    <img style={logo} src="./static/images/logo/color/harvard_logo_text.png" alt="Harvard University Logo" width="140px" />
+                    <img style={logo} src="./static/images/logo/color/ucsd_logo.png" alt="UCSD Logo" width="140px" />
+                    <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" />
                 </div>
             </div>
             <style jsx>{`
