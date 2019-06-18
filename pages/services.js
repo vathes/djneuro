@@ -10,7 +10,6 @@ const background = {
 
 const resourceSection = {
     padding: '40px 0 15px',
-    // border: 'solid 2px red',
     background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.7))'
 }
 
@@ -49,7 +48,8 @@ const servicesSection = {
     display: 'flex',
     flexDirection: 'row',
     marginLeft: '2%',
-    marginTop: '3%'
+    marginTop: '3%',
+    paddingBottom: '8%'
 }
 
 const supportType = {
@@ -77,6 +77,83 @@ const servicePanelTitle = {
     height: '2.0em',
     borderBottom: '2px solid rgba(255,255,255,0.75'
 }
+
+const formContainer = {
+    margin: '2% 10%',
+    paddingBottom: '8%',
+    paddingLeft: '2%',
+    paddingTop: '2%',
+    border: 'solid 2px white',
+    background: 'rgba(0, 0, 0, 0.4)'
+}
+
+const formgroup = {
+    display: 'block',
+    textAlign: 'left',
+    marginBottom: '2%'
+}
+
+const inputField = {
+    borderRadius: '4px',
+    height: '30px',
+    width: '200px'
+}
+
+const radioField = {
+    marginLeft: '15px'
+}
+
+
+class ApplyButton extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            radioChecked: [false, false, false],
+            id: this.props.id
+        };
+        this.check = this.check.bind(this);
+    }
+
+    check(id, e) {
+        if (id === 1) {
+            this.setState(state => ({
+                radioChecked: [true, false, false]
+            }));
+        } else if (id === 2) {
+            this.setState(state => ({
+                radioChecked: [false, true, false]
+            }));
+        } else if (id === 3) {
+            this.setState(state => ({
+                radioChecked: [false, false, true]
+            }));
+        }
+        
+        console.log('custom service checked!');
+        console.log('id is: ', id);
+        console.log('e is: ', e);
+    }
+
+    render(id=this.state.id) {
+        return (
+            <div>
+                <button onClick={(e) => this.check(id, e)}>Apply</button>
+                <style jsx>{`
+                    button {
+                        border: 2px solid white;
+                        background-color: transparent;
+                        color: white;
+                        padding: 12px 28px;
+                        border-radius: 4px;
+                    }
+                `}</style>
+            </div>
+        );
+    }
+}
+
+const radioChecked = [false, true, false];
+
 const Services = () => (
     <Layout>
         <div style={background}>
@@ -124,7 +201,8 @@ const Services = () => (
                             </ul>
                         </ul>
                     </div>
-                    <button>Apply</button>
+                    <ApplyButton id="1" />
+                    {/* <button onClick={(e) => this.check(1, e)}>Apply</button> */}
                 </div>
                 <div style={supportType}>
                     <h3 style={servicePanelTitle}>Managed Database Hosting (Beta)</h3>
@@ -137,7 +215,7 @@ const Services = () => (
                             <li>up to 1 TiB relational storage + 10 TiB object storage</li>
                             <li>unlimited transfers in and up to 2 TiB / month transfers out</li>
                             <li>unlimited transfers to AWS compute</li>
-                                <li>Database access URL  &lt;yourlab&gt;.djhub.io or  &lt;yourlab&gt;.dj.science</li>
+                                <li>Database access URL  &lt;yourlab&gt;.djhub.io</li>
                             <li>Secure connection</li>
                             <li>High performance and uptime </li>
                             <li>Unlimited data pipelines and schemas</li>
@@ -150,7 +228,8 @@ const Services = () => (
                             <li>Availability and performance monitoring</li>
                         </ul>
                     </div>
-                    <button>Apply</button>
+                    <ApplyButton id="2" />
+                    {/* <button onClick={(e) => this.check(2, e)}>Apply</button> */}
                 </div>
                 <div style={supportType}>
                     <h3 style={servicePanelTitle}>Custom Service and Development</h3>
@@ -165,8 +244,43 @@ const Services = () => (
                             <li>Data export, migration, sharing, and publishing</li>
                         </ul>
                     </div>
-                    <button>Contact Us</button>
+                    <ApplyButton id="3" />
+                    {/* <button onClick={(e) => this.check(3, e)}>Contact Us</button> */}
                 </div>
+            </div>
+            <div style={formContainer}>
+                <form action="https://datajoint.io/djNeuroInquiry" method="POST">
+                    <div style={formgroup}>
+                        <label>Contact Person</label>
+                        <input style={inputField} type="text" name="name" placeholder="Contact Person" />
+                    </div>
+                    <div style={formgroup}>
+                        <label>Email</label>
+                        <input style={inputField} type="email" name="email" placeholder="Email" />
+                    </div>
+                    <div style={formgroup}>
+                        <label>Principal Investigator</label>
+                        <input style={inputField} type="text" name="pi" placeholder="Principal Investigator" />
+                    </div>
+                    <div style={formgroup}>
+                        <label>Department</label>
+                        <input style={inputField} type="text" name="department" placeholder="Department" />
+                    </div>
+                    <div style={formgroup}>
+                        <label>Institution</label>
+                        <input style={inputField} type="text" name="institution" placeholder="Institution" />
+                    </div>
+                    <div style={formgroup}>
+                        <label>Project Description</label>
+                        <textarea id="descriptionField" type="text" name="project" placeholder="Project Description"></textarea>
+                    </div>
+                    <div style={formgroup}>
+                        <input style={radioField} type="radio" checked={radioChecked[0]} name="subscription_type" value="basic" /> Basic Support
+                        <input style={radioField} type="radio" checked={radioChecked[1]} name="subscription_type" value="managed db hosting" /> Managed Database Hosting (beta)
+                        <input style={radioField} type="radio" checked={radioChecked[2]} name="subscription_type" value="custom service" /> Custom Service and Development
+                    </div>
+                    <button type="submit" value="Send">Send</button>
+                </form>
             </div>
         </div>
         <style jsx>{`
@@ -191,6 +305,19 @@ const Services = () => (
                 padding: 12px 28px;
                 border-radius: 4px;
             }
+            label {
+                margin-right: 14px;
+                font-size: 90%;
+                vertical-align: top;
+            }
+
+            #descriptionField {
+                width: 400px;
+                height: 150px;
+                border-radius: 4px;
+            }
+
+
         `}</style>
     </Layout>
 );

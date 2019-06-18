@@ -29,7 +29,8 @@ const Footer = () => (
             bottom: 0;
             padding: 10px 0px;
             color: white;
-            background: radial-gradient(#000B59, #00094C);
+            // background: radial-gradient(#000B59, #00094C);
+            background: linear-gradient( #001226,  #001226, #0f040f);
             position: fixed;
             z-index: 999;
         }

@@ -7,7 +7,7 @@ const background0 = {
 };
 
 const background1 = {
-    backgroundColor: 'rgba(0, 0, 0, 0.65)',
+    backgroundColor: 'rgba(0, 0, 0, 0.85)',
     padding: '60px 40px',
     color: '#E1EBF7',
     position: 'relative',
@@ -51,8 +51,19 @@ const background4 = {
     // backgroundImage: 'linear-gradient(white, white, white,  #E6FF42)',
     // backgroundColor: '#E1EBF7',
     padding: '60px 40px',
-    color: 'black'
+    color: 'black',
+    position: 'relative'
 };
+
+const djNeuroLogoColor = {
+    transform: 'rotate(10deg)',
+    width: '220px',
+    position: 'absolute',
+    zIndex: '5',
+    right: '15%',
+    bottom: '24%',
+    opacity: '0.2'
+}
 
 
 
@@ -60,13 +71,13 @@ const background4 = {
 const About = () => (
     <Layout>
         <div style={background0}>
-            <div class="section" style={background1}>
-                <img style={djWire} src="/static/images/icons/djIcon-wire-white.png" />
+            <div style={background1}>
+                <img style={djWire} src="/static/images/icons/djIcon-wire-white.png" className="animated pulse"/>
                 <h4>The DataJoint experts</h4>
                 <p>Our team is the principal developer of <a href="https://datajoint.io">DataJoint®</a> — a free, open-source framework 
                 for shared scientific databases and computational data pipelines programmed and accessed directly from MATLAB and Python. </p>
             </div>
-            <div class="section" style={background2}>
+            <div style={background2}>
                 <img style={sphereWire} src="/static/images/icons/sphere_white.png" />
                 <h4>We work with top neuroscience labs worldwide</h4>
                 <p>We help neuroscientists use DataJoint to accelerate their research.  DataJoint Neuro provides solutions for project planning, 
@@ -74,14 +85,15 @@ const About = () => (
                     consortia. We lead in providing comprehensive solutions for custom scientific data pipelines in neuroscience.</p>
             </div>
         </div>
-        <div class="section" style={background3}>
+        <div style={background3}>
             <h4>Committed to data integrity and reproducibility</h4>
             <p>DataJoint Neuro works closely with the <a href="https://www.imagwiki.nibib.nih.gov/working-groups/other-nih-brain-initiative-u19-data-science-consortium">NIH 
             BRAIN Initiative U19 Data Science Consortium</a> and <a href="https://www.nwb.org/">Neurodata Without Borders</a> to ensure 
             smooth integration with the NIH BRAIN Initiative Informatics infrastructure. DataJoint is endorsed as a neuroinformatics data 
             standard by the <a href="https://www.incf.org/">International Neuroinformatics Coordinating Facility</a> (INCF).</p>
         </div >
-        <div class="section" style={background4}>
+        <div style={background4}>
+            <img style={djNeuroLogoColor} src="/static/images/logo/color_djneuro_white.png" className="animated heartBeat"/>
             <h4>Bringing scientific rigor to AI research</h4>
             <p>DataJoint has also gained popularity in AI research as a data framework for model selection and parameter optimization. DataJoint 
                 Neuro offers expertise and solutions to support AI research.
