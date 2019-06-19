@@ -17,39 +17,39 @@ function formatDate(date) {
     return date.toString().split(' ').slice(1, 4).join(' ') //TODO: toString() by default displaces the date by +1 - fix to reflect actual date
 }
 export default class extends React.Component {
-    static async getInitialProps() {
-        // Get contents from posts folder
-        const posts = (items => {
-            // console.log(items);
-            const keys = items.keys();
-            const values = keys.map(items);
-            const data = keys.map((key, index) => {
-                // Create slug from filename
-                const slug = key.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
-                const value = values[index];
-                // Parse document
-                const document = matter(value.default);
-                // document = { content: '', data: { title:'', date: 2018-12-04T00:00:00.000Z}, isEmpty: false, excerpt: '', orig: <Buffer 2d 2d...>}
+    // static async getInitialProps() {
+    //     // Get contents from posts folder
+    //     const posts = (items => {
+    //         // console.log(items);
+    //         const keys = items.keys();
+    //         const values = keys.map(items);
+    //         const data = keys.map((key, index) => {
+    //             // Create slug from filename
+    //             const slug = key.replace(/^.*[\\\/]/, '').split('.').slice(0, -1).join('.');
+    //             const value = values[index];
+    //             // Parse document
+    //             const document = matter(value.default);
+    //             // document = { content: '', data: { title:'', date: 2018-12-04T00:00:00.000Z}, isEmpty: false, excerpt: '', orig: <Buffer 2d 2d...>}
                 
-                return {
-                    document,
-                    slug
-                };
-            });
-            // console.log(data[0]);
-            const sortedData = _.orderBy(data, ['document.data.date'], ['desc']);
-            for (const post of sortedData) {
-                post['document']['data']['dateOnly'] = formatDate(post['document']['data']['date']);
-                console.log(post.document.data.date, post.document.data.dateOnly);
-            }
-            // sortedData['document']['data']['date'].toString().split('T')[0];
-            // console.log(sortedData[0].document.data);
-            return sortedData;
-        })(require.context('../posts', true, /\.md$/));
-        return {
-            posts
-        };
-    }
+    //             return {
+    //                 document,
+    //                 slug
+    //             };
+    //         });
+    //         // console.log(data[0]);
+    //         const sortedData = _.orderBy(data, ['document.data.date'], ['desc']);
+    //         for (const post of sortedData) {
+    //             post['document']['data']['dateOnly'] = formatDate(post['document']['data']['date']);
+    //             console.log(post.document.data.date, post.document.data.dateOnly);
+    //         }
+    //         // sortedData['document']['data']['date'].toString().split('T')[0];
+    //         // console.log(sortedData[0].document.data);
+    //         return sortedData;
+    //     })(require.context('../posts', true, /\.md$/));
+    //     return {
+    //         posts
+    //     };
+    // }
     render() {
         return (
             <Layout>

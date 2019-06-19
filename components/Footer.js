@@ -15,10 +15,10 @@ const Footer = () => (
             <p style={footerText}>DataJoint NEURO 2019 All Rights Reserved</p>
             <div style={snsLink}>
                 <a target="_blank" href="https://www.linkedin.com/company/vathes-llc">
-                    <img src="./static/images/icons/linkedin_white.png"/>
+                    <img src="/static/images/icons/linkedin_white.png"/>
                 </a>
                 <a target="_blank" href="https://twitter.com/datajointneuro">
-                    <img src="./static/images/icons/twitter_white.png" />
+                    <img src="/static/images/icons/twitter_white.png" />
                 </a>
             </div>
         </footer>

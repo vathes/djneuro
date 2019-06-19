@@ -163,15 +163,15 @@ const Services = () => (
                 <p className="subtitle" style={resourceSubtitle}>DataJoint Neuro is the principal contributor to the free, community-oriented, open-source tools comprising the DataJoint ecosystem:</p>
                 <ul style={resourcesListRow}>
                     <li className="resourcePanel" style={resourcePanel}>DataJoint Reference Documentation  
-                        <a href="https://docs.datajoint.org" target="_blank"><img src="static/images/icons/doc_white.png"/></a></li>
+                        <a href="https://docs.datajoint.org" target="_blank"><img src="/static/images/icons/doc_white.png"/></a></li>
                     <li className="resourcePanel" style={resourcePanel}>DataJoint <br />Tutorials  
-                        <a href="https://tutorials.datajoint.org" target="_blank"><img src="static/images/icons/blackboard_white.png" /></a></li>
+                        <a href="https://tutorials.datajoint.org" target="_blank"><img src="/static/images/icons/blackboard_white.png" /></a></li>
                     <li className="resourcePanel" style={resourcePanel}>DataJoint Server Configuration 
-                        <a href="https://github.com/datajoint/mysql-docker" target="_blank"><img src="static/images/icons/server-config-white.png" /></a></li>
+                        <a href="https://github.com/datajoint/mysql-docker" target="_blank"><img src="/static/images/icons/server-config-white.png" /></a></li>
                     <li className="resourcePanel" style={resourcePanel}>DataJoint <br />Python Client  
-                        <a href="https://github.com/datajoint/datajoint-python" target="_blank"><img src="static/images/icons/python-logo-monoc.png" /></a></li>
+                        <a href="https://github.com/datajoint/datajoint-python" target="_blank"><img src="/static/images/icons/python-logo-monoc.png" /></a></li>
                     <li className="resourcePanel" style={resourcePanel}>DataJoint <br />MATLAB Client  
-                        <a href="https://github.com/datajoint/datajoint-matlab" target="_blank"><img src="static/images/icons/matlab-logo-monoc.png" /></a></li>
+                        <a href="https://github.com/datajoint/datajoint-matlab" target="_blank"><img src="/static/images/icons/matlab-logo-monoc.png" /></a></li>
                 </ul>
                 <p className="subtitle" style={resourceFooter}>In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data 
                     Pipelines for Neurophysiology" to be presented at the <a style={inlineLink} href="https://www.sfn.org/Meetings/Neuroscience-2019">Society for 

@@ -30,7 +30,7 @@ const Navigation = () => (
         <nav>
             <div style={navLeft}>
                 <Link href="/">
-                    <a style={linkHomeStyle}><img style={linkLogoStyle} src="./static/images/logo/djneuroLogo.png" /></a>
+                    <a style={linkHomeStyle}><img style={linkLogoStyle} src="/static/images/logo/djneuroLogo.png" /></a>
                 </Link>
             </div>
             <div style={navRight}>

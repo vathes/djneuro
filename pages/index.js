@@ -72,7 +72,7 @@ export default function Index() {
         <Layout>
             <div style={homeTop1}>
                 <div style={homeTop1Text}>
-                    <h2>Catch copy about this length would be good.</h2>
+                    <h2>Streamlined data organization through pipelines.</h2>
                 </div>
             </div>
 

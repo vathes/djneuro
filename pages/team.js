@@ -100,14 +100,14 @@ const Team = () => (
                         <p>Dimitri Yatsenko, PhD</p>
                         <p style={role}>President</p>
                     </div>
-                    <img style={columnAimg} src="./static/images/team/dimitriyatsenko.jpg" />
+                    <img style={columnAimg} src="/static/images/team/dimitriyatsenko.jpg" />
                 </div>
                 <div style={tabcard2} className="animated fadeInRight">
                     <div style={memberText2}>
                         <p>Edgar Y. Walker, PhD</p>
                         <p style={role}>Vice President, Engineering</p>
                     </div>
-                    <img style={columnBimg} src="./static/images/team/edgarwalker.jpg" />
+                    <img style={columnBimg} src="/static/images/team/edgarwalker.jpg" />
                 </div>
             </div>
             <div className="row">
@@ -116,14 +116,14 @@ const Team = () => (
                         <p>Andreas Tolias, PhD</p>
                         <p style={role}>Scientific and Business Advisor</p>
                     </div>
-                    <img style={columnAimg} src="./static/images/team/andreastolias.jpg" />
+                    <img style={columnAimg} src="/static/images/team/andreastolias.jpg" />
                 </div>
                 <div style={tabcard2} className="animated fadeInLeft">
                     <div style={memberText2}>
                         <p>Jake Reimer, PhD</p>
                         <p style={role}>Application Specialist</p>
                     </div>
-                    <img style={columnBimg} src="./static/images/team/jakereimer.jpg" />
+                    <img style={columnBimg} src="/static/images/team/jakereimer.jpg" />
                 </div>
             </div>
             <div className="row">
@@ -132,14 +132,14 @@ const Team = () => (
                         <p>Chris Turner</p>
                         <p style={role}>Product Engineer</p>
                     </div>
-                    <img style={columnAimg} src="./static/images/team/christurner.jpg" />
+                    <img style={columnAimg} src="/static/images/team/christurner.jpg" />
                 </div>
                 <div style={tabcard2} className="animated fadeInRight">
                     <div style={memberText2}>
                         <p>Camila Lopez</p>
                         <p style={role}>Project Manager</p>
                     </div>
-                    <img style={columnBimg} src="./static/images/team/camilalopez.jpg" />
+                    <img style={columnBimg} src="/static/images/team/camilalopez.jpg" />
                 </div>
             </div>
             <div className="row">
@@ -148,14 +148,14 @@ const Team = () => (
                         <p>Shan Shen, PhD</p>
                         <p style={role}>Data Scientist</p>
                     </div>
-                    <img style={columnAimg} src="./static/images/team/shanshen.jpg" />
+                    <img style={columnAimg} src="/static/images/team/shanshen.jpg" />
                 </div>
                 <div style={tabcard2} className="animated fadeInLeft">
                     <div style={memberText2}>
                         <p>Thinh Nguyen, PhD</p>
                         <p style={role}>Data Scientist</p>
                     </div>
-                    <img style={columnBimg} src="./static/images/team/thinhnguyen.jpg" />
+                    <img style={columnBimg} src="/static/images/team/thinhnguyen.jpg" />
                 </div>
             </div>
             <div className="row">
@@ -164,21 +164,21 @@ const Team = () => (
                         <p>Raphael Guzman</p>
                         <p style={role}>Software Engineer</p>
                     </div>
-                    <img style={columnAimg} src="./static/images/team/raphaelguzman.jpg" />
+                    <img style={columnAimg} src="/static/images/team/raphaelguzman.jpg" />
                 </div>
                 <div style={tabcard2} className="animated fadeInRight">
                     <div style={memberText2}>
                         <p>Maho Sasaki</p>
                         <p style={role}>Front-end Web Developer</p>
                     </div>
-                    <img style={columnBimg} src="./static/images/team/mahosasaki.jpg" />
+                    <img style={columnBimg} src="/static/images/team/mahosasaki.jpg" />
                 </div>
             </div>
         </div>
         <style jsx>{`
             .teamHead {
                 background-color: rgba(0, 0, 0, 0.9);
-                background-image: url("./static/images/artwork/networkLines.svg");
+                background-image: url("/static/images/artwork/networkLines.svg");
                 background-attachment: fixed;
                 background-size: 180px;
                 background-repeat: repeat;
