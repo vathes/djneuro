@@ -7,28 +7,19 @@ const homeTop1 = {
     color: 'rgb(15, 15, 15)',
     padding: '17% 14%',
     lineHeight: '1.4em',
-    textAlign: 'left'
+    textAlign: 'left',
+    position: 'relative'
 }
 
-const homeTop1Text = {
-    position: 'relative',
-    zIndex: '200',
-}
-
-const homeTop2Text = {
-    position: 'relative',
-    zIndex: '200',
-}
 
 const homeTop2 = {
-    backgroundImage: 'url("/static/images/artwork/3P_surface.jpg")',
+    backgroundImage: 'url("/static/images/artwork/3P_surface_bright.jpg")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     color: '#E1EBF7',
     padding: '17% 14%',
     lineHeight: '1.4em',
-    textAlign: 'left',
-    fontSize: '110%'
+    textAlign: 'left'
 }
 
 const customerSection = {
@@ -70,18 +61,28 @@ const listStyle = {
 export default function Index() {
     return (
         <Layout>
-            <div style={homeTop1}>
-                <div style={homeTop1Text}>
-                    <h2>Streamlined data organization through pipelines.</h2>
-                </div>
-            </div>
+            {/* <div style={homeTop1}>
+                <h1 className="homeTopTagline">Data science for research teams</h1>
+                
+                    
+                <p className="homeTopSubtitle">
+                    <br />
+                    <b>DataJoint Neuro®</b> enables research teams to design scientific databases 
+                    and computational pipelines by providing support, resources, and services.
+                    <br /><br />
+                    Our focus is on neuroscience and AI. 
+                </p>
+            </div> */}
 
             <div style={homeTop2}>
-                <div style={homeTop2Text}>
-                    <p><b>DataJoint Neuro®</b> enables research teams to design scientific databases and computational pipelines by providing support, resources, and services.</p>
+                <h1 className="homeTopTagline">Data pipelines built by you.</h1>
+                <p className="homeTopSubtitle">
                     <br />
-                    <p>Our focus is on neuroscience and AI. </p>
-                </div>
+                    <b>DataJoint Neuro®</b> enables research teams to design scientific databases
+                    and computational pipelines by providing support, resources, and services.
+                        <br /><br />
+                    Our focus is on neuroscience and AI.
+                    </p>
             </div>
             <div className="partnerSection">
                 <h4>Partners</h4>
@@ -108,6 +109,16 @@ export default function Index() {
                 p {
                     margin: 0;
                 }
+                .homeTopTagline {
+                    font-weight: 600;
+                    font-size: 275%;
+                    line-height: 1.2;
+                }
+                p.homeTopSubtitle {
+                    font-weight: 300;
+                    font-size: 120%;
+                    position: 'relative'
+                }
                 .partnerSection {
                     background: linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75));
                     height: 100%;
@@ -116,8 +127,27 @@ export default function Index() {
                     z-index: 150;
                     padding: 7% 0 12% 0;
                 }
+
+                @media (max-width: 1440px) {
+                    .homeTopTagline {
+                        font-size: 230%;
+                    }
+                    p.homeTopSubtitle {
+                        font-size: 110%;
+                        position: 'relative'
+                    }
+                }
                
                 @media (max-width: 768px) {
+                    .homeTopTagline {
+                        font-weight: 200;
+                        font-size: 190%;
+                    }
+                    p.homeTopSubtitle {
+                        font-weight: 300;
+                        font-size: 100%;
+                        position: 'relative'
+                    }
                     .partnerSection {
                         padding: 7% 0 20% 0;
                 }

@@ -1,42 +1,12 @@
 import Layout from '../components/Layout.js';
 
 const background = {
-    backgroundImage: 'url("/static/images/artwork/nestin-cherry2.png")',
+    backgroundImage: 'url("/static/images/artwork/blue-cherry-flicker.gif")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'top right',
     color: 'white'
 };
-
-const resourceSection = {
-    padding: '40px 0 15px',
-    background: 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.7))'
-}
-
-const resourceSubtitle = {
-    // fontSize: '0.9em',
-    // lineHeight: '0.75'
-}
-const resourcesListRow = {
-    display: 'flex',
-    flexDirection: 'row',
-    listStyle: 'none'
-}
-
-const resourcePanel = {
-    // width: '17%',
-    // borderRadius: '4px',
-    // backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    // padding: '20px 8px',
-    // margin: '5px'
-}
-
-const resourceFooter = {
-    // fontSize: '0.85em',
-    // lineHeight: '0.75',
-    // textAlign: 'left',
-    // padding: '5px 5%'
-}
 
 const inlineLink = {
     display: 'inline-block',
@@ -158,29 +128,29 @@ const Services = () => (
     <Layout>
         <div style={background}>
         
-            <div style={resourceSection}>
+            <div className="resourceSection">
                 <h3>Free Resources</h3>
-                <p className="subtitle" style={resourceSubtitle}>DataJoint Neuro is the principal contributor to the free, community-oriented, open-source tools comprising the DataJoint ecosystem:</p>
-                <ul style={resourcesListRow}>
-                    <li className="resourcePanel" style={resourcePanel}>DataJoint Reference Documentation  
+                <p className="subtitle1">DataJoint Neuro is the principal contributor to the free, community-oriented, open-source tools comprising the DataJoint ecosystem:</p>
+                <ul className="resourcesListRow">
+                    <li className="resourcePanel">DataJoint Reference Documentation  
                         <a href="https://docs.datajoint.org" target="_blank"><img src="/static/images/icons/doc_white.png"/></a></li>
-                    <li className="resourcePanel" style={resourcePanel}>DataJoint <br />Tutorials  
+                    <li className="resourcePanel">DataJoint <br />Tutorials  
                         <a href="https://tutorials.datajoint.org" target="_blank"><img src="/static/images/icons/blackboard_white.png" /></a></li>
-                    <li className="resourcePanel" style={resourcePanel}>DataJoint Server Configuration 
+                    <li className="resourcePanel">DataJoint Server Configuration 
                         <a href="https://github.com/datajoint/mysql-docker" target="_blank"><img src="/static/images/icons/server-config-white.png" /></a></li>
-                    <li className="resourcePanel" style={resourcePanel}>DataJoint <br />Python Client  
+                    <li className="resourcePanel">DataJoint <br />Python Client  
                         <a href="https://github.com/datajoint/datajoint-python" target="_blank"><img src="/static/images/icons/python-logo-monoc.png" /></a></li>
-                    <li className="resourcePanel" style={resourcePanel}>DataJoint <br />MATLAB Client  
+                    <li className="resourcePanel">DataJoint <br />MATLAB Client  
                         <a href="https://github.com/datajoint/datajoint-matlab" target="_blank"><img src="/static/images/icons/matlab-logo-monoc.png" /></a></li>
                 </ul>
-                <p className="subtitle" style={resourceFooter}>In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data 
+                <p className="subtitle2">In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data 
                     Pipelines for Neurophysiology" to be presented at the <a style={inlineLink} href="https://www.sfn.org/Meetings/Neuroscience-2019">Society for 
                     Neuroscience Conference in November 2019</a>.</p>
             </div>
             <div className="construction">
                 <hr />
                 <h3>Support Type</h3>
-                <h2>Under Construction</h2>
+                <h4>Under Construction</h4>
             </div>
             {/* <div style={servicesSection}>
                 <div style={supportType}>
@@ -305,11 +275,23 @@ const Services = () => (
                 display: block;
                 margin-top: 13px;
             }
-            .subtitle {
+
+            .resourceSection {
+                padding: 40px 0 15px;
+                background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.7));
+            }
+            .subtitle1, .subtitle2 {
                 line-height: 0.8;
                 font-size: 0.85em;
-                text-align: left;
                 padding: 5px 5%;
+            }
+
+            .subtitle1 {
+                text-align: center;
+            }
+
+            .subtitle2 {
+                text-align: left;
             }
 
             .resourcePanel {
@@ -322,6 +304,14 @@ const Services = () => (
             }
             .resourcePanel:hover {
                 border: 1px solid white;
+                // background-color: rgba(100, 0, 126, 0.6);
+                background-color: rgba(0, 0, 0, 0.75);
+            }
+
+            .resourcesListRow {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
             }
 
             button {

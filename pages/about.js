@@ -55,6 +55,15 @@ const background4 = {
     position: 'relative'
 };
 
+const background5 = {
+    // background: 'linear-gradient(#E6FF42, white, white, white)',
+    backgroundImage: 'url("/static/images/artwork/watermelon.png")',
+    padding: '60px 40px',
+    color: 'white',
+    position: 'relative',
+
+};
+
 const djNeuroLogoColor = {
     transform: 'rotate(10deg)',
     width: '220px',
@@ -89,17 +98,21 @@ const About = () => (
             <h4>Committed to data integrity and reproducibility</h4>
             <p>DataJoint Neuro works closely with the <a href="https://www.imagwiki.nibib.nih.gov/working-groups/other-nih-brain-initiative-u19-data-science-consortium">NIH 
             BRAIN Initiative U19 Data Science Consortium</a> and <a href="https://www.nwb.org/">Neurodata Without Borders</a> to ensure 
-            smooth integration with the NIH BRAIN Initiative Informatics infrastructure. DataJoint is endorsed as a neuroinformatics data 
-            standard by the <a href="https://www.incf.org/">International Neuroinformatics Coordinating Facility</a> (INCF).</p>
+            smooth integration with the NIH BRAIN Initiative Informatics infrastructure.</p> 
+            {/* DataJoint is endorsed as a neuroinformatics data 
+            standard by the <a href="https://www.incf.org/">International Neuroinformatics Coordinating Facility</a> (INCF). */}
         </div >
         <div style={background4}>
             <img style={djNeuroLogoColor} src="/static/images/logo/color_djneuro_white.png" className="animated heartBeat"/>
             <h4>Bringing scientific rigor to AI research</h4>
             <p>DataJoint has also gained popularity in AI research as a data framework for model selection and parameter optimization. DataJoint 
-                Neuro offers expertise and solutions to support AI research.
-            <br /><br />
-                DataJoint Neuro is run by Vathes LLC based in Houston, Texas. Vathes LLC spun off from the Lab of Andreas Tolias at Baylor 
-                College of Medicine in 2017 after receiving initial SBIR funding from DARPA and  is a BCM family company.</p>
+                Neuro offers expertise and solutions to support AI research.</p>
+        </div >
+        <div style={background5}>
+            <h4>Lab grown</h4>
+            <p>DataJoint Neuro is run by Vathes LLC based in Houston, Texas. Vathes LLC spun off from the Lab of Andreas Tolias at Baylor
+                College of Medicine in 2017 after receiving initial SBIR funding from DARPA.</p> 
+                {/* and  is a BCM family company */}
         </div >
         <style jsx>{`
             a {

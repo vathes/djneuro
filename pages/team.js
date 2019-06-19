@@ -86,7 +86,7 @@ const Team = () => (
         <div className="teamHead">
             <div className="teamHeadBackdrop">
                 <h4>Our Team</h4>
-                <p className="teamDescription">Our team comprises systems neuroscientists, data scientists, and software engineers with expertise in data acquisition and analysis
+                <p className="teamDescription">Our team comprises systems neuroscientists, data scientists, and software engineers with expertise in
                             systems neuroscience, data acquisition and analysis, databases, machine learning, and cloud computing.</p> 
             </div>
         </div>
