@@ -31,16 +31,6 @@ const homeTop2 = {
     fontSize: '110%'
 }
 
-const partnerSection = {
-    background: 'linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75))',
-    height: '100%',
-    position: 'relative',
-    textAlign: 'center',
-    zIndex: '150',
-    padding: '7% 0 12% 0'
-
-}
-
 const customerSection = {
     backgroundImage: 'url("/static/images/artwork/watermelon.jpg")',
     background: 'rgba(255,255,255,0.74)',
@@ -73,7 +63,8 @@ const logo = {
 
 const listStyle = {
     listStyle: 'none',
-    transform: 'translateX(-1%)'
+    transform: 'translateX(-1%)',
+    lineHeight: '1.8',
 }
 
 export default function Index() {
@@ -92,7 +83,7 @@ export default function Index() {
                     <p>Our focus is on neuroscience and AI. </p>
                 </div>
             </div>
-            <div style={partnerSection}>
+            <div className="partnerSection">
                 <h4>Partners</h4>
                 <ul style={listStyle}>
                     <li>Baylor College of Medicine</li>
@@ -117,6 +108,20 @@ export default function Index() {
                 p {
                     margin: 0;
                 }
+                .partnerSection {
+                    background: linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75));
+                    height: 100%;
+                    position: relative;
+                    text-align: center;
+                    z-index: 150;
+                    padding: 7% 0 12% 0;
+                }
+               
+                @media (max-width: 768px) {
+                    .partnerSection {
+                        padding: 7% 0 20% 0;
+                }
+            }
             `}</style>
         </Layout>
     );

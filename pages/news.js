@@ -53,19 +53,18 @@ export default class extends React.Component {
     render() {
         return (
             <Layout>
-                <div style={newsIndexContainer}>
+                <h3>Under Construction</h3>
+                {/* <div style={newsIndexContainer}>
                     <h1>News</h1>
                     {this.props.posts.map(({ document: { data }, slug }) => (
-                    // {this.props.posts.map(({ document, slug }) => (
                         <div>
                             <h5>{data.dateOnly}</h5>
                             <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}>
-                                {/* <p>{ document.data.dateOnly} / {slug}</p> */}
                                 <p>{data.title}</p>
                             </Link>
                         </div>
                     ))}
-                </div>
+                </div> */}
             </Layout>
         )
     }

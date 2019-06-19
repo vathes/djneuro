@@ -1,51 +1,6 @@
 import Layout from '../components/Layout.js';
 
 
-const teamHead = {
-    backgroundColor: 'rgba(0, 0, 0, 0.9)',
-    backgroundImage: 'url("./static/images/artwork/networkLines.svg")',
-    backgroundAttachment: 'fixed',
-    backgroundSize: '180px',
-    backgroundRepeat: 'repeat',
-    backgroundPosition: 'center',
-    padding: '200px 300px 300px',
-    color: '#E1EBF7',
-    position: 'relative'
-}
-
-const backdrop = {
-    // height: '100%',
-    background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85))',
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    padding: '150px 200px 300px 200px',
-    lineHeight: '1.8',
-    fontSize: '110%',
-}
-const background = {
-    // backgroundImage: 'url("./static/images/artwork/networkLines.svg"), url("/static/images/artwork/LGN_injection.jpg")',
-    backgroundImage: 'url("/static/images/artwork/LGN_injection.jpg")',
-    // backgroundSize: '180px, cover',
-    backgroundSize: 'cover',
-    // backgroundRepeat: 'repeat, no-repeat',
-    backgroundRepeat: 'no-repeat',
-    // backgroundPosition: 'center left',
-    backgroundPosition: 'left',
-    height: '100%',
-    position: 'relative',
-    paddingBottom: '10%'
-};
-
-const teamDescription = {
-    textAlign: 'left'
-}
-
-const row = {
-    width: '100%',
-    display: 'inline-block'
-}
-
 const tabcard = {
     position: 'relative',
     // width: '400px',
@@ -128,18 +83,18 @@ const memberText2 = {
 const Team = () => (
     <Layout>
         
-        <div style={teamHead}>
-            <div style={backdrop}>
+        <div className="teamHead">
+            <div className="teamHeadBackdrop">
                 <h4>Our Team</h4>
-                <p style={teamDescription}>Our team comprises systems neuroscientists, data scientists, and software engineers with expertise in data acquisition and analysis
+                <p className="teamDescription">Our team comprises systems neuroscientists, data scientists, and software engineers with expertise in data acquisition and analysis
                             systems neuroscience, data acquisition and analysis, databases, machine learning, and cloud computing.</p> 
             </div>
         </div>
-        <div style={background}>
+        <div className="memberBackground">
             {/* <img style={linesCenter} src="./static/images/artwork/networkLines.svg" /> */}
             {/* <img style={linesSide} src="./static/images/artwork/networkLinesWide.svg" /> */}
             {/* <img style={linesSide2} src="./static/images/artwork/networkLinesWide.svg" /> */}
-            <div style={row}>
+            <div className="row">
                 <div style={tabcard} className="animated fadeInLeft" >
                     <div style={memberText}>
                         <p>Dimitri Yatsenko, PhD</p>
@@ -155,7 +110,7 @@ const Team = () => (
                     <img style={columnBimg} src="./static/images/team/edgarwalker.jpg" />
                 </div>
             </div>
-            <div style={row}>
+            <div className="row">
                 <div style={tabcard} className="animated fadeInRight">
                     <div style={memberText}>
                         <p>Andreas Tolias, PhD</p>
@@ -171,7 +126,7 @@ const Team = () => (
                     <img style={columnBimg} src="./static/images/team/jakereimer.jpg" />
                 </div>
             </div>
-            <div style={row}>
+            <div className="row">
                 <div style={tabcard} className="animated fadeInLeft">
                     <div style={memberText}>
                         <p>Chris Turner</p>
@@ -187,7 +142,7 @@ const Team = () => (
                     <img style={columnBimg} src="./static/images/team/camilalopez.jpg" />
                 </div>
             </div>
-            <div style={row}>
+            <div className="row">
                 <div style={tabcard} className="animated fadeInRight">
                     <div style={memberText}>
                         <p>Shan Shen, PhD</p>
@@ -203,7 +158,7 @@ const Team = () => (
                     <img style={columnBimg} src="./static/images/team/thinhnguyen.jpg" />
                 </div>
             </div>
-            <div style={row}>
+            <div className="row">
                 <div style={tabcard} className="animated fadeInLeft">
                     <div style={memberText}>
                         <p>Raphael Guzman</p>
@@ -221,6 +176,45 @@ const Team = () => (
             </div>
         </div>
         <style jsx>{`
+            .teamHead {
+                background-color: rgba(0, 0, 0, 0.9);
+                background-image: url("./static/images/artwork/networkLines.svg");
+                background-attachment: fixed;
+                background-size: 180px;
+                background-repeat: repeat;
+                background-position: center;
+                padding: 200px 300px 300px;
+                color: #E1EBF7;
+                position: relative;
+                text-align: center;
+            }
+            .teamHeadBackdrop {
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85));
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 150px 200px 300px 200px;
+                line-height: 1.8;
+                font-size: 110%;
+            }
+            p.teamDescription {
+                text-align: left;
+            }
+            .memberBackground {
+                background-image: url("/static/images/artwork/LGN_injection.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: left;
+                height: 100%;
+                position: relative;
+                padding-bottom: 10%;
+            }
+            .row {
+                width: 100%;
+                max-width: 1000px;
+                display: inline-block;
+            }
             img {
                 width: 96px;
                 border-radius: 50px;
@@ -232,6 +226,15 @@ const Team = () => (
                 color: white;
                 // text-align: center;
                 // transform: translate(-15%, 130%);
+            }
+            @media (max-width: 768px) {
+                .teamHead {
+                    padding: 40% 50% 8%;
+                    height: fit-content;
+                }
+                .teamHeadBackdrop {
+                    padding: 20px 25px;
+                }
             }
         `}</style>
     </Layout>

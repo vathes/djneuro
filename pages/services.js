@@ -14,8 +14,8 @@ const resourceSection = {
 }
 
 const resourceSubtitle = {
-    fontSize: '0.9em',
-    lineHeight: '0.75'
+    // fontSize: '0.9em',
+    // lineHeight: '0.75'
 }
 const resourcesListRow = {
     display: 'flex',
@@ -24,18 +24,18 @@ const resourcesListRow = {
 }
 
 const resourcePanel = {
-    width: '17%',
-    borderRadius: '4px',
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    padding: '20px 8px',
-    margin: '5px'
+    // width: '17%',
+    // borderRadius: '4px',
+    // backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    // padding: '20px 8px',
+    // margin: '5px'
 }
 
 const resourceFooter = {
-    fontSize: '0.85em',
-    lineHeight: '0.75',
-    textAlign: 'left',
-    padding: '5px 5%'
+    // fontSize: '0.85em',
+    // lineHeight: '0.75',
+    // textAlign: 'left',
+    // padding: '5px 5%'
 }
 
 const inlineLink = {
@@ -160,24 +160,29 @@ const Services = () => (
         
             <div style={resourceSection}>
                 <h3>Free Resources</h3>
-                <p style={resourceSubtitle}>DataJoint Neuro is the principal contributor to the free, community-oriented, open-source tools comprising the DataJoint ecosystem:</p>
+                <p className="subtitle" style={resourceSubtitle}>DataJoint Neuro is the principal contributor to the free, community-oriented, open-source tools comprising the DataJoint ecosystem:</p>
                 <ul style={resourcesListRow}>
-                    <li style={resourcePanel}>DataJoint Reference Documentation  
-                        <a href="https://docs.datajoint.org"><img src="static/images/icons/doc_white.png"/></a></li>
-                    <li style={resourcePanel}>DataJoint <br />Tutorials  
-                        <a href="https://tutorials.datajoint.org"><img src="static/images/icons/blackboard_white.png" /></a></li>
-                    <li style={resourcePanel}>DataJoint Server Configuration 
-                        <a href="https://github.com/datajoint/mysql-docker"><img src="static/images/icons/server-config-white.png" /></a></li>
-                    <li style={resourcePanel}>DataJoint <br />Python Client  
-                        <a href="https://github.com/datajoint/datajoint-python"><img src="static/images/icons/python-logo-monoc.png" /></a></li>
-                    <li style={resourcePanel}>DataJoint <br />MATLAB Client  
-                        <a href="https://github.com/datajoint/datajoint-matlab"><img src="static/images/icons/matlab-logo-monoc.png" /></a></li>
+                    <li className="resourcePanel" style={resourcePanel}>DataJoint Reference Documentation  
+                        <a href="https://docs.datajoint.org" target="_blank"><img src="static/images/icons/doc_white.png"/></a></li>
+                    <li className="resourcePanel" style={resourcePanel}>DataJoint <br />Tutorials  
+                        <a href="https://tutorials.datajoint.org" target="_blank"><img src="static/images/icons/blackboard_white.png" /></a></li>
+                    <li className="resourcePanel" style={resourcePanel}>DataJoint Server Configuration 
+                        <a href="https://github.com/datajoint/mysql-docker" target="_blank"><img src="static/images/icons/server-config-white.png" /></a></li>
+                    <li className="resourcePanel" style={resourcePanel}>DataJoint <br />Python Client  
+                        <a href="https://github.com/datajoint/datajoint-python" target="_blank"><img src="static/images/icons/python-logo-monoc.png" /></a></li>
+                    <li className="resourcePanel" style={resourcePanel}>DataJoint <br />MATLAB Client  
+                        <a href="https://github.com/datajoint/datajoint-matlab" target="_blank"><img src="static/images/icons/matlab-logo-monoc.png" /></a></li>
                 </ul>
-                <p style={resourceFooter}>In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data 
+                <p className="subtitle" style={resourceFooter}>In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data 
                     Pipelines for Neurophysiology" to be presented at the <a style={inlineLink} href="https://www.sfn.org/Meetings/Neuroscience-2019">Society for 
                     Neuroscience Conference in November 2019</a>.</p>
             </div>
-            <div style={servicesSection}>
+            <div className="construction">
+                <hr />
+                <h3>Support Type</h3>
+                <h2>Under Construction</h2>
+            </div>
+            {/* <div style={servicesSection}>
                 <div style={supportType}>
                     <h3 style={servicePanelTitle}>Basic Support</h3>
                     <div style={textLeft}>
@@ -202,7 +207,6 @@ const Services = () => (
                         </ul>
                     </div>
                     <ApplyButton id="1" />
-                    {/* <button onClick={(e) => this.check(1, e)}>Apply</button> */}
                 </div>
                 <div style={supportType}>
                     <h3 style={servicePanelTitle}>Managed Database Hosting (Beta)</h3>
@@ -229,7 +233,6 @@ const Services = () => (
                         </ul>
                     </div>
                     <ApplyButton id="2" />
-                    {/* <button onClick={(e) => this.check(2, e)}>Apply</button> */}
                 </div>
                 <div style={supportType}>
                     <h3 style={servicePanelTitle}>Custom Service and Development</h3>
@@ -245,7 +248,6 @@ const Services = () => (
                         </ul>
                     </div>
                     <ApplyButton id="3" />
-                    {/* <button onClick={(e) => this.check(3, e)}>Contact Us</button> */}
                 </div>
             </div>
             <div style={formContainer}>
@@ -281,9 +283,15 @@ const Services = () => (
                     </div>
                     <button type="submit" value="Send">Send</button>
                 </form>
-            </div>
+            </div> */}
         </div>
         <style jsx>{`
+            .construction {
+                height: 500px;
+            }
+            .construction h3 {
+                padding-top: 80px;
+            }
             h3 {
                 margin: 0;
             }
@@ -296,6 +304,24 @@ const Services = () => (
             a {
                 display: block;
                 margin-top: 13px;
+            }
+            .subtitle {
+                line-height: 0.8;
+                font-size: 0.85em;
+                text-align: left;
+                padding: 5px 5%;
+            }
+
+            .resourcePanel {
+                width: 17%;
+                border-radius: 4px;
+                border: 1px solid transparent;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 20px 8px;
+                margin: 5px;
+            }
+            .resourcePanel:hover {
+                border: 1px solid white;
             }
 
             button {
@@ -317,6 +343,19 @@ const Services = () => (
                 border-radius: 4px;
             }
 
+            @media (max-width: 768px) {
+                .subtitle {
+                    line-height: 1;
+                    font-size: 0.82em;
+                }
+
+                img {
+                    height: 50px;
+                }
+
+                .resourcePanel {
+                    font-size: 82%;
+                }
 
         `}</style>
     </Layout>
