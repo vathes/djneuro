@@ -22,20 +22,9 @@ const servicesSection = {
     paddingBottom: '8%'
 }
 
-const formgroup = {
-    display: 'block',
-    textAlign: 'left',
-    marginBottom: '2%'
-}
-
-const inputField = {
-    borderRadius: '4px',
-    height: '30px',
-    width: '200px'
-}
 
 const radioField = {
-    marginLeft: '15px'
+    // marginLeft: '15px'
 }
 
 
@@ -144,7 +133,7 @@ class Services extends React.Component {
                             <div className="servicePanelText">
                                 <p>Basic Support is a subscription service offered to qualified research groups who use DataJoint 
                                     and require occasional or semi-regular support and assistance.</p> 
-                                <p><b>Cost: </b>$1200/year</p>
+                                <p><b>Price: </b>$1200/year</p>
                                 <ul>
                                     <li>Includes a free online <b>"Interactive Course for DataJoint  Practitioners"</b> (10 seats).</li>
                                     <li>Access to on-demand, targeted training workshops for novice, intermediate, or advanced practitioners:</li>
@@ -216,35 +205,35 @@ class Services extends React.Component {
                         </div>
                     </div>
                     <div style={this.formContainerStyle()} className={'formContainer ' + this.pullUpForm()} >
-                        <form action="https://datajoint.io/djNeuroInquiry" method="POST">
-                            <div style={formgroup}>
+                        <form action="http://localhost:3000/djneuro-service-inquiry" method="POST">
+                            <div className="formgroup">
                                 <label>Contact Person</label>
-                                <input style={inputField} type="text" name="name" placeholder="Contact Person" />
+                                <input className="inputField" type="text" name="name" placeholder="Contact Person" />
                             </div>
-                            <div style={formgroup}>
+                            <div className="formgroup">
                                 <label>Email</label>
-                                <input style={inputField} type="email" name="email" placeholder="Email" />
+                                <input className="inputField" type="email" name="email" placeholder="Email" />
                             </div>
-                            <div style={formgroup}>
+                            <div className="formgroup">
                                 <label>Principal Investigator</label>
-                                <input style={inputField} type="text" name="pi" placeholder="Principal Investigator" />
+                                <input className="inputField" type="text" name="pi" placeholder="Principal Investigator" />
                             </div>
-                            <div style={formgroup}>
+                            <div className="formgroup">
                                 <label>Department</label>
-                                <input style={inputField} type="text" name="department" placeholder="Department" />
+                                <input className="inputField" type="text" name="department" placeholder="Department" />
                             </div>
-                            <div style={formgroup}>
+                            <div className="formgroup">
                                 <label>Institution</label>
-                                <input style={inputField} type="text" name="institution" placeholder="Institution" />
+                                <input className="inputField" type="text" name="institution" placeholder="Institution" />
                             </div>
-                            <div style={formgroup}>
+                            <div className="formgroup">
                                 <label>Project Description</label>
-                                <textarea id="descriptionField" type="text" name="project" placeholder="Project Description"></textarea>
+                                <textarea className="descriptionField" type="text" name="project" placeholder="Project Description"></textarea>
                             </div>
-                            <div style={formgroup}>
-                                <input style={radioField} type="radio" checked={this.state.radioChecked[0]} onChange={() => this.check(1)} name="subscription_type" value="basic" /> Basic Support
-                                <input style={radioField} type="radio" checked={this.state.radioChecked[1]} onChange={() => this.check(2)} name="subscription_type" value="managed db hosting" /> Managed Database Hosting (beta)
-                                <input style={radioField} type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> Custom Service and Development
+                            <div className="formgroup">
+                                <input className="radioField" style={radioField} type="radio" checked={this.state.radioChecked[0]} onChange={() => this.check(1)} name="subscription_type" value="basic" /> Basic Support
+                                <input className="radioField" style={radioField} type="radio" checked={this.state.radioChecked[1]} onChange={() => this.check(2)} name="subscription_type" value="managed db hosting" /> Managed Database Hosting (beta)
+                                <input className="radioField" style={radioField} type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> Custom Service and Development
                             </div>
                             <button type="submit" value="Send">Send</button>
                         </form>
@@ -316,17 +305,8 @@ class Services extends React.Component {
                         padding: 12px 28px;
                         border-radius: 4px;
                     }
-                    label {
-                        margin-right: 14px;
-                        font-size: 90%;
-                        vertical-align: top;
-                    }
 
-                    #descriptionField {
-                        width: 400px;
-                        height: 150px;
-                        border-radius: 4px;
-                    }
+                    
                     div.formContainer {
                         margin: -6% 10% 0;
                         padding: 2% 2% 8%;
@@ -337,6 +317,37 @@ class Services extends React.Component {
                         margin-top: 0;
                         padding: 3%;
                         border: solid 2px white;
+                    }
+
+                    div.formgroup {
+                        display: block;
+                        text-align: left;
+                        margin-bottom: 2%;
+                    }
+
+                    .formgroup label {
+                        margin-right: 14px;
+                        font-size: 90%;
+                        vertical-align: top;
+                        min-width: 150px;
+                        text-align: right;
+                        display: inline-block;
+                    }
+
+                    .formgroup input.inputField {
+                        borde-radius: 4px;
+                        height: 30px;
+                        width: 400px;
+                    }
+
+                    .formgroup textarea.descriptionField {
+                        width: 400px;
+                        height: 150px;
+                        border-radius: 4px;
+                    }
+
+                    .formgroup .radioField {
+                        margin-left: 15px;
                     }
 
                     .servicePanel {

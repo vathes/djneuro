@@ -115,7 +115,7 @@ export default function Index() {
                     line-height: 1.2;
                 }
                 p.homeTopSubtitle {
-                    font-weight: 300;
+                    // font-weight: 300;
                     font-size: 120%;
                     position: 'relative'
                 }
