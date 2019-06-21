@@ -26,11 +26,12 @@ export default() => (
             body {
                 margin: 0px;
                 padding: 0;
+                background-color: #DDD;
             }
-            canvas {
-                width: 100%;
-                height: 100%;
-            }
+            // canvas {
+            //     width: 100%;
+            //     height: 100%;
+            // }
         `}</style>
     </div>
 )

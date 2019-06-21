@@ -109,9 +109,9 @@ export default function Index() {
                 p {
                     margin: 0;
                 }
-                .homeTopTagline {
+                h1.homeTopTagline {
                     font-weight: 600;
-                    font-size: 275%;
+                    font-size: 330%;
                     line-height: 1.2;
                 }
                 p.homeTopSubtitle {
@@ -130,7 +130,7 @@ export default function Index() {
 
                 @media (max-width: 1440px) {
                     .homeTopTagline {
-                        font-size: 230%;
+                        font-size: 260%;
                     }
                     p.homeTopSubtitle {
                         font-size: 110%;
@@ -140,11 +140,11 @@ export default function Index() {
                
                 @media (max-width: 768px) {
                     .homeTopTagline {
-                        font-weight: 200;
+                        font-weight: 500;
                         font-size: 190%;
                     }
                     p.homeTopSubtitle {
-                        font-weight: 300;
+                        // font-weight: 300;
                         font-size: 100%;
                         position: 'relative'
                     }

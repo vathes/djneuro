@@ -103,7 +103,7 @@ const About = () => (
             standard by the <a href="https://www.incf.org/">International Neuroinformatics Coordinating Facility</a> (INCF). */}
         </div >
         <div style={background4}>
-            <img style={djNeuroLogoColor} src="/static/images/logo/color_djneuro_white.png" className="animated heartBeat"/>
+            <img style={djNeuroLogoColor} src="/static/images/logo/color_djneuro.png" className="animated heartBeat"/>
             <h4>Bringing scientific rigor to AI research</h4>
             <p>DataJoint has also gained popularity in AI research as a data framework for model selection and parameter optimization. DataJoint 
                 Neuro offers expertise and solutions to support AI research.</p>
