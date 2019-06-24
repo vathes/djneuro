@@ -1,6 +1,7 @@
 const PipelinePage = () => (
     <div>
         <div className="pipelinePageContainer">
+            <h2>Coming Soon...</h2>
             <h3>The DataJoint Pipelines</h3>
             <p className="pipelineNotice">In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data
                 Pipelines for Neurophysiology" to be presented at the <a className="inlineLink" href="https://www.sfn.org/Meetings/Neuroscience-2019">Society for
@@ -8,8 +9,11 @@ const PipelinePage = () => (
             </p>
         </div>
         <style jsx>{`
-            h3 {
+            h2, h3 {
                 text-align: center;
+            }
+            h2 {
+                color: blueviolet;
             }
             .pipelinePageContainer {
                 // backgroundImage: url("");
