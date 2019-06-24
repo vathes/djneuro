@@ -205,7 +205,7 @@ class Services extends React.Component {
                         </div>
                     </div>
                     <div style={this.formContainerStyle()} className={'formContainer ' + this.pullUpForm()} >
-                        <form action="http://localhost:3000/djneuro-service-inquiry" method="POST">
+                        <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
                             <div className="formgroup">
                                 <label>Name</label>
                                 <input className="inputField" type="text" name="name" placeholder="Contact Person" />
