@@ -1,4 +1,5 @@
 import Layout from '../components/Layout.js';
+import React from 'react';
 
 const background = {
     // backgroundImage: 'url("/static/images/artwork/blue-cherry-flicker.gif")',
@@ -23,10 +24,12 @@ const servicesSection = {
 }
 
 
+
 class ApplyButton extends React.Component {
 
     onClickApply(id, e) {
         this.props.check(id);
+        // this.props.scroll();
     }
 
     render(id=this.props.id) {
@@ -59,14 +62,19 @@ class ApplyButton extends React.Component {
 }
 
 class Services extends React.Component {
+    
     constructor(props) {
         super(props);
+        this.formOpenedRef = React.createRef();
         this.state = {
             radioChecked: [false, false, false],
-            formLoaded: false
+            formLoaded: false,
         };
         this.check = this.check.bind(this);
+        // this.scroll = this.scroll.bind(this);
+        
     }
+   
 
     check(id) {
         if (id === 1) {
@@ -85,22 +93,17 @@ class Services extends React.Component {
                 formLoaded: true
             }));
         }
-
-    }
-    formContainerStyle() {
-        const hidden = {
-            display: 'none'
-        }
-        const show = {
-            display: 'block'
-        }
-        return this.state.formLoaded ? show: hidden;
+        // this.formOpenedRef.current.scrollIntoView({ behavior: 'smooth' });
+        this.scroll();
     }
 
-    pullUpForm() {
-        return this.state.formLoaded ? 'animated fadeInDown' : '';
+    scroll() {
+        this.formOpenedRef.current.scrollIntoView({ behavior: "smooth" });
+
     }
+
     render() {
+        
         return (
             <Layout>
                 <div style={background}>
@@ -204,7 +207,8 @@ class Services extends React.Component {
                             
                         </div>
                     </div>
-                    <div style={this.formContainerStyle()} className={'formContainer ' + this.pullUpForm()} >
+                    
+                    <div style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'block', opacity: '0' }} className={this.state.formLoaded ? 'formContainer animated fadeInUp': 'formContainer'}>
                         <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
                             <div className="formgroup">
                                 <label>Name</label>
@@ -235,9 +239,12 @@ class Services extends React.Component {
                                 <input className="radioField" type="radio" checked={this.state.radioChecked[1]} onChange={() => this.check(2)} name="subscription_type" value="managed db hosting" /> Managed Database Hosting (beta)
                                 <input className="radioField" type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> Custom Services and Development
                             </div>
+                            <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
                             <button className="formButton" type="submit" value="Send">Send</button>
                         </form>
                     </div>
+                    {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> */}
+                    
                 </div>
                 <style jsx>{`
                     .construction {
