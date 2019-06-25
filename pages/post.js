@@ -20,7 +20,7 @@ class PostImage extends React.Component {
 
 export default class extends React.Component {
     static async getInitialProps({ query }) {
-        const post = await import(`../posts/${query.id}.md`);
+        const post = await import(`../static/posts/${query.id}.md`);
         const document = matter(post.default);
         return {
             ...document

@@ -6,10 +6,10 @@ import Link from 'next/link';
 import Layout from '../components/Layout.js';
 
 function formatDate(date) {
-    console.log('inside formatDate');
+    // console.log('inside formatDate');
     // 2017-06-12T19:33:20.000Z ...(date) 
     // 'Mon Jun 12 2017 14:33:20 GMT-0500 (CDT) ...(date.toString())
-    console.log(date, '(original)', date.toString(), '(postFormat)')
+    // console.log(date, '(original)', date.toString(), '(postFormat)')
     return date.toString().split(' ').slice(1, 4).join(' ') //TODO: toString() by default displaces the date by +1 - fix to reflect actual date
 }
 
@@ -88,9 +88,9 @@ class BlogIndex extends React.Component {
                 // console.log(post.document.data.date, post.document.data.dateOnly);
             }
             // sortedData['document']['data']['date'].toString().split('T')[0];
-            console.log(sortedData[0].document);
+            // console.log(sortedData[0].document);
             return sortedData;
-        })(require.context('../posts', true, /\.md$/));
+        })(require.context('../static/posts', true, /\.md$/));
         return {
             posts
         };
@@ -102,33 +102,31 @@ class BlogIndex extends React.Component {
                     <br />
                     <h1>News</h1>
                     {this.props.posts.map(({ document: { data, content }, slug }) => (
-                        <div>
-                           
-                                <div className="postCard">
-                                    <div className="postHeader">
-                                        <span className="postDate">{data.dateOnly}</span>
-                                        <span className="postTitle">{data.title}</span>
-                                    </div>
-                                    <div className="mdWrap">
-                                        <ReactMarkdown source={content} 
-                                            escapeHtml={false}
-                                            renderers={{
-                                                image: props => (
-                                                    <PostImage {...props} />
-                                                ),
-                                                paragraph: props => (
-                                                    <StyledP {...props} />
-                                                )
-                                            }}/>
-                                    </div>
-                                    <div className="readMore">
-                                        <div className="readMoreOverlay">
-                                            <div className="readMoreLink">
-                                                <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}>Read More &#x21c0;</Link>
-                                            </div>
-                                        </div>
+                        <div className="postCard">
+                            <div className="postHeader">
+                                <span className="postDate">{data.dateOnly}</span>
+                                <span className="postTitle">{data.title}</span>
+                            </div>
+                            <div className="mdWrap">
+                                <ReactMarkdown source={content} 
+                                    escapeHtml={false}
+                                    renderers={{
+                                        image: props => (
+                                            <PostImage {...props} />
+                                        ),
+                                        paragraph: props => (
+                                            <StyledP {...props} />
+                                        )
+                                    }}/>
+                            </div>
+                            <div className="readMore">
+                                <div className="readMoreOverlay">
+                                    <div className="readMoreLink">
+                                        {/* <Link href={{ pathname: '/post/' + slug }} key={slug}><a>Read More &#x21c0;</a></Link> */}
+                                    <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}><a>Read More &#x21c0;</a></Link>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     ))}
                 </div>
