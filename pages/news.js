@@ -13,19 +13,23 @@ function formatDate(date) {
     return date.toString().split(' ').slice(1, 4).join(' ') //TODO: toString() by default displaces the date by +1 - fix to reflect actual date
 }
 
-class PostImage extends React.Component {
-    render(img=this.props) {
-        // console.log(img)
+class StyledP extends React.Component {
+    render(paragraph=this.props) {
+        // console.log(paragraph)
         return (
             <div>
-                <div className="blogImageContainer">
-                 <img src={img.src}  alt={img.title}/>
-                </div>
+                <p className="paragraphStyle">{paragraph.children}</p>
                 <style jsx>{`
-                    .blogImageContainer img {
-                        width: 200px;
-                        position: relative;
-                        top: 0px;
+                    .paragraphStyle {
+                        // border: 2px dotted green;
+                        display: block;
+                        margin: 0 15px;
+                        padding-top: 10px;
+                        line-height: 1.5rem;
+                    }
+
+                    .paragraphStyle > div {
+                        // border: 1px solid red;
                     }
                 `}</style>
             </div>
@@ -33,16 +37,19 @@ class PostImage extends React.Component {
     }
 }
 
-class StyledP extends React.Component {
-    render(paragraph=this.props) {
-        // console.log(paragraph)
+class PostImage extends React.Component {
+    render(img = this.props) {
+        // console.log(img)
         return (
-            <div>
-                <div className="paragraphStyle">{paragraph.children}</div>
+            <div className="blogImageContainer">
+                <img src={img.src} alt={img.title} />
                 <style jsx>{`
-                    .paragraphStyle {
-                        line-height: 1.5;
-                        color: midnightblue;
+                    .blogImageContainer img {
+                        width: 33%;
+                        margin-right: 15px;
+                        margin-top: -10px;
+                        margin-left: -15px;
+                        float: left;
                     }
                 `}</style>
             </div>
@@ -91,62 +98,103 @@ class BlogIndex extends React.Component {
     render() {
         return (
             <Layout>
-                <h3>Under Construction</h3>
                 <div className="newsIndexContainer">
+                    <br />
                     <h1>News</h1>
                     {this.props.posts.map(({ document: { data, content }, slug }) => (
                         <div>
-                            <h5>{data.dateOnly}</h5>
-                            <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}>
+                           
                                 <div className="postCard">
-                                    <p className="postTitle">{data.title}</p>
+                                    <div className="postHeader">
+                                        <span className="postDate">{data.dateOnly}</span>
+                                        <span className="postTitle">{data.title}</span>
+                                    </div>
                                     <div className="mdWrap">
                                         <ReactMarkdown source={content} 
+                                            escapeHtml={false}
                                             renderers={{
                                                 image: props => (
-                                                    <PostImage className="testStyleImage" {...props} />
+                                                    <PostImage {...props} />
                                                 ),
                                                 paragraph: props => (
                                                     <StyledP {...props} />
                                                 )
                                             }}/>
                                     </div>
+                                    <div className="readMore">
+                                        <div className="readMoreOverlay">
+                                            <div className="readMoreLink">
+                                                <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}>Read More &#x21c0;</Link>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </Link>
                         </div>
                     ))}
                 </div>
                 <style jsx>{`
                     div.newsIndexContainer {
-                        margin-bottom: 8%;
+                        padding-bottom: 8%;
                         background-color: rgba(10, 10, 110, 0.1);
                     }
                     .postCard {
                         border: 2px solid black;
                         border-radius: 3px;
-                        height: 250px;
-                        overflow: scroll;
                         width: 90%;
                         transform: translateX(5%);
+                        margin-bottom: 15px;
                     }
 
-                    .postTitle {
-                        background-color: midnightblue;
-                        color: white;
+                    .postHeader {
+                        background-color: #001226; // same as footer top color
+                        color: rgb(220, 220, 220);
                         font-size: 120%;
                         margin: 0;
-                        height: 40px;
-                        padding-top: 20px;
+                        // padding-top: 20px;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                    .postDate {
+                        padding: 13px;
+                        border-right: 1px solid white;
+                        // background-color: blue;
+                    }
+                    .postTitle {
+                        padding-top: 13px;
+                        padding-left: 18px;
                     }
 
                     .mdWrap {
                         text-align: left;
-                        padding: 10px 40px;
-                        overflow: scroll;
+                        padding: 0px 15px 20px 0px;
                         background-color: white;
+                        height: 160px;
+                        position: relative;
+                        overflow: hidden;
+                        color: #001226; // same as footer top color
                     }
-                    .mdWrap .testStyleImage {
-                        border: 2px solid pink;
+                    .readMore {
+                        width: 100%;
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        text-align:center;
+                    }
+                    .readMoreOverlay {
+                        background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
+                        position: relative;
+                        height: 50px;
+                        width: 100%;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                    .readMoreLink {
+                        font-size: 120%;
+                        margin-top: 14px;
+                        position: relative;
                     }
                 `}</style>
             </Layout>

@@ -7,8 +7,8 @@ tags:
 categories: 
 - News
 ---
+![](./static/posts/Dr-Austin-Hilberg-and-Dr-Shan-Shen-Join-Vathes-Team-as-Data-Scientists/Austin&Shan.jpg "Austin and Shan")
 
-![alt text](./static/posts/Dr-Austin-Hilberg-and-Dr-Shan-Shen-Join-Vathes-Team-as-Data-Scientists/Austin&Shan.jpg "Austin and Shan")
 Vathes is excited to welcome Austin Hilberg and Shan Shen to the team. 
 Austin Hilberg has a Ph.D. in Biomedical Engineering from UCLA, where he studied the human visual system and visual attention control using fMRI and EEG. Since graduating, he has been working in Silicon Valley developing medical ultrasound systems. In his spare time, he enjoys creating virtual reality experiences and tinkering with electronic devices. Austin is very excited to apply his engineering, programming, and neuroscience background to his role as a Data Scientist at Vathes.
 &nbsp;

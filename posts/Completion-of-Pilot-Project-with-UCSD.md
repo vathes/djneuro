@@ -1,6 +1,5 @@
 ---
 title: Completion of Pilot Project with UCSD
-layout: postNew.pug
 date: 2019-03-15
 tags:
 - DataJoint

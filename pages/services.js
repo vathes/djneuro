@@ -149,7 +149,7 @@ class Services extends React.Component {
                                     <li>Access to ticket-based priority support ($95/hour/engineer):</li>
                                     <ul>
                                         <li>Assistance with pipeline design and execution</li>
-                                        <li>Assistance with local IT configuration</li>
+                                        <li>Assistance with local IT and database administration</li>
                                         <li>Administration of cloud storage and servers</li>
                                     </ul>
                                 </ul>

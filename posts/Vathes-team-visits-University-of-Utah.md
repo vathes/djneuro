@@ -10,6 +10,4 @@ categories:
 ---
 Dimitri and Edgar presented at the University of Utah and spent a full day learning about the cutting-edge neuroscience research conducted at the University of Utah, and discussing how DataJoint might be able to help!
 
-![alt text](./static/posts/Vathes-team-visits-University-of-Utah/utahvisit.jpg "Dimitri and Edgar in Utah")
-
-<!-- more -->
+![](./static/posts/Vathes-team-visits-University-of-Utah/utahvisit.jpg "Dimitri and Edgar in Utah")

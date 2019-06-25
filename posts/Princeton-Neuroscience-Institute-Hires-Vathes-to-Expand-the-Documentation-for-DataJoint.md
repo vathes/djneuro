@@ -8,8 +8,6 @@ tags:
 categories: 
 - News
 ---
-![alt text](./static/posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint/PNI%20logo.png "PNI Logo")
-&nbsp;
-Vathes entered into a contract with Princeton Neuroscience Institute (PNI) to complete thorough technical reference documentation for DataJoint by December 15, 2018.
+![](./static/posts/Princeton-Neuroscience-Institute-Hires-Vathes-to-Expand-the-Documentation-for-DataJoint/PNI%20logo.png "PNI Logo")
 
-<!-- more -->
+Vathes entered into a contract with Princeton Neuroscience Institute (PNI) to complete thorough technical reference documentation for DataJoint by December 15, 2018.
