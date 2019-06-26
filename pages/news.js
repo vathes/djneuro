@@ -122,8 +122,8 @@ class BlogIndex extends React.Component {
                             <div className="readMore">
                                 <div className="readMoreOverlay">
                                     <div className="readMoreLink">
-                                        {/* <Link href={{ pathname: '/post/' + slug }} key={slug}><a>Read More &#x21c0;</a></Link> */}
-                                    <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}><a>Read More &#x21c0;</a></Link>
+                                        <Link href={{ pathname: '/post/' + slug }} key={slug}><a>Read More &#x21c0;</a></Link>
+                                    {/* <Link href={{ pathname: '/post', query: { id: slug } }} key={slug}><a>Read More &#x21c0;</a></Link> */}
                                     </div>
                                 </div>
                             </div>
