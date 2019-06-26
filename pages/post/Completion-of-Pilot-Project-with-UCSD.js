@@ -22,16 +22,20 @@ class PostImage extends React.Component {
 }
 
 export default class extends React.Component {
+    // static async getInitialProps({ query }) { // old stuff - if server was running...
+    //     const post = await import(`../static/posts/${query.id}.md`);
+    //     const document = matter(post.default);
+    //     return {
+    //         ...document
+    //     };
+    // }
     static async getInitialProps(props) {
-        console.log('initial prop setup. printing props');
-        console.log(props);
         const fileName = props.asPath.split('/')[2]
-        console.log('filename is: ', fileName)
+        // console.log('filename is: ', fileName)
         const post = await import(`../../markdowns/${fileName}.md`);
 
         const document = matter(post.default);
         if (document) {
-            console.log(document.data.date)
             const formattedDate = formatDate(document.data.date)
             document.data['dateOnly'] = formattedDate;
             // document['data']['dateOnly'] = formatDate(post['document']['data']['date']);

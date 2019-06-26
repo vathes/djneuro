@@ -10,7 +10,7 @@ categories:
 ---
 Dimitri and Edgar presented at Janelia Farm and spent two days meeting with a number of interested labs there.
 
-![](../static/posts/Vathes-team-visits-Janelia-Farm/atJaneliaFarm.jpg "Dimitri and Edgar at Janelia Farm")
+![](/static/posts/Vathes-team-visits-Janelia-Farm/atJaneliaFarm.jpg "Dimitri and Edgar at Janelia Farm")
 
 #### Presentation Video
 Checkout the recording of their full presentation!
