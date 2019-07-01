@@ -108,7 +108,7 @@ class Services extends React.Component {
             }), 
             () => { this.validateField(fieldname, value)}
         );
-        console.log('current form value is: ', this.state.form);
+        // console.log('current form value is: ', this.state.form);
     }
 
     validateField(fieldname, value) {
@@ -137,7 +137,6 @@ class Services extends React.Component {
     }
 
     validateForm() {
-        console.log('inside validateForm');
         this.setState({allFormFieldsValid: this.state.fieldStatus.nameValid &&
                                         this.state.fieldStatus.emailValid &&
                                         this.state.fieldStatus.piValid &&
@@ -145,8 +144,8 @@ class Services extends React.Component {
                                         this.state.fieldStatus.institutionValid &&
                                         this.state.fieldStatus.projectValid
                       });
-        console.log('field status is...', this.state.fieldStatus);
-        console.log('form validation status is...', this.state.allFormFieldsValid);
+        // console.log('field status is...', this.state.fieldStatus);
+        // console.log('form validation status is...', this.state.allFormFieldsValid);
     }
 
     errorClass(error) {
@@ -411,6 +410,12 @@ class Services extends React.Component {
                         background-color: blueviolet;
                         color: #DDD;
                     }
+                    .formButton:disabled {
+                        border: 2px solid gray;
+                        background-color: gray;
+                        color: #DDD;
+                    }
+
 
                     .error-field {
                         background-color: #ffcccc;
