@@ -69,12 +69,89 @@ class Services extends React.Component {
         this.state = {
             radioChecked: [false, false, false],
             formLoaded: false,
+            form: {
+                email: '',
+                name: '',
+                pi: '',
+                department: '',
+                institution: '',
+                project: ''
+            },
+            formErrors: {
+                email: '', name: '', pi: '', department: '', institution: '', project: ''
+            },
+            fieldStatus: {
+                emailValid: false, nameValid: false, piValid: false, departmentValid: false, institutionValid: false, projectValid: false
+            },
+            allFormFieldsValid: false
         };
         this.check = this.check.bind(this);
         // this.scroll = this.scroll.bind(this);
         
     }
-   
+
+    handleReturn(e) {
+        if (e && e.keyCode === 13) {
+            e.preventDefault();
+            return false;
+        }
+    }
+
+    handleUserInput(e) {
+        const fieldname = e.target.name;
+        const value = e.target.value;
+        this.setState(prevState => ({
+            form: {
+                ...prevState.form,
+                [fieldname]: value
+            }
+            }), 
+            () => { this.validateField(fieldname, value)}
+        );
+        console.log('current form value is: ', this.state.form);
+    }
+
+    validateField(fieldname, value) {
+        let validationErrors = this.state.formErrors;
+        let validationStatus = this.state.fieldStatus;
+
+        switch(fieldname) {
+            case 'name':
+                validationStatus.nameValid = value.length > 0 ? true : false;
+                validationErrors.name = validationStatus.nameValid ? '' : 'name is required';
+                break;
+            case 'email':
+                validationStatus.emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+                validationErrors.email = validationStatus.emailValid ? '' : 'email format invalid';
+                break;
+            default:
+                validationStatus.piValid = true;
+                validationStatus.departmentValid = true;
+                validationStatus.institutionValid = true;
+                validationStatus.projectValid = true;
+                break;
+        }
+        this.setState({formErrors: validationErrors,
+                       fieldStatus: validationStatus 
+                    }, this.validateForm);
+    }
+
+    validateForm() {
+        console.log('inside validateForm');
+        this.setState({allFormFieldsValid: this.state.fieldStatus.nameValid &&
+                                        this.state.fieldStatus.emailValid &&
+                                        this.state.fieldStatus.piValid &&
+                                        this.state.fieldStatus.departmentValid &&
+                                        this.state.fieldStatus.institutionValid &&
+                                        this.state.fieldStatus.projectValid
+                      });
+        console.log('field status is...', this.state.fieldStatus);
+        console.log('form validation status is...', this.state.allFormFieldsValid);
+    }
+
+    errorClass(error) {
+        return(error.length === 0 ? '': 'error-field');
+    }
 
     check(id) {
         if (id === 1) {
@@ -211,28 +288,36 @@ class Services extends React.Component {
                     <div style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'block', opacity: '0' }} className={this.state.formLoaded ? 'formContainer animated fadeInUp': 'formContainer'}>
                         <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
                             <div className="formgroup">
-                                <label>Name</label>
-                                <input className="inputField" type="text" name="name" placeholder="Contact Person" />
+                                <label>Name *</label>
+                                <input className={`inputField ${this.errorClass(this.state.formErrors.name)}`} type="text" name="name" placeholder="Contact Person" 
+                                    value={this.state.form.name} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
+                                <p className="error-message">{this.state.formErrors.name}</p>
                             </div>
                             <div className="formgroup">
-                                <label>Email</label>
-                                <input className="inputField" type="email" name="email" placeholder="Email" />
+                                <label>Email *</label>
+                                <input className={`inputField ${this.errorClass(this.state.formErrors.email)}`} type="email" name="email" placeholder="Email" 
+                                    value={this.state.form.email} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
+                                <p className="error-message">{this.state.formErrors.email}</p>
                             </div>
                             <div className="formgroup">
                                 <label>Principal Investigator</label>
-                                <input className="inputField" type="text" name="pi" placeholder="Principal Investigator" />
+                                <input className="inputField" type="text" name="pi" placeholder="Principal Investigator" 
+                                    value={this.state.form.pi} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
                             </div>
                             <div className="formgroup">
                                 <label htmlFor="department">Department</label>
-                                <input className="inputField" type="text" name="department" placeholder="Department" />
+                                <input className="inputField" type="text" name="department" placeholder="Department" 
+                                    value={this.state.form.department} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
                             </div>
                             <div className="formgroup">
                                 <label>Institution</label>
-                                <input className="inputField" type="text" name="institution" placeholder="Institution/Organization" />
+                                <input className="inputField" type="text" name="institution" placeholder="Institution/Organization" 
+                                    value={this.state.form.institution} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
                             </div>
                             <div className="formgroup">
                                 <label>Project Description</label>
-                                <textarea className="descriptionField" type="text" name="project" placeholder="Project Description"></textarea>
+                                <textarea className="descriptionField" type="text" name="project" placeholder="Project Description" 
+                                    value={this.state.form.project} onChange={(e) => this.handleUserInput(e)}></textarea>
                             </div>
                             <div className="formgroup">
                                 <input className="radioField" type="radio" checked={this.state.radioChecked[0]} onChange={() => this.check(1)} name="subscription_type" value="basic" /> Basic Support
@@ -240,7 +325,7 @@ class Services extends React.Component {
                                 <input className="radioField" type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> Custom Services and Development
                             </div>
                             <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
-                            <button className="formButton" type="submit" value="Send">Send</button>
+                            <button className="formButton" type="submit" value="Send" disabled={!this.state.allFormFieldsValid}>Send</button>
                         </form>
                     </div>
                     {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> */}
@@ -261,52 +346,6 @@ class Services extends React.Component {
                         display: block;
                         margin-top: 13px;
                     }
-
-                    // .resourceSection {
-                    //     padding: 40px 0 15px;
-                    //     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.7));
-                    // }
-
-                    // a.inlineLink {
-                    //     display: inline-block;
-                    //     text-decoration: none;
-                    //     color: #41B0F7; // muted blue
-                    // }
-
-                    // .subtitle1, .subtitle2 {
-                    //     line-height: 0.8;
-                    //     font-size: 0.85em;
-                    //     padding: 5px 5%;
-                    // }
-
-                    // .subtitle1 {
-                    //     text-align: center;
-                    // }
-
-                    // .subtitle2 {
-                    //     text-align: left;
-                    // }
-
-                    // .resourcePanel {
-                    //     width: 17%;
-                    //     border-radius: 4px;
-                    //     border: 1px solid transparent;
-                    //     background-color: rgba(0, 0, 0, 0.6);
-                    //     padding: 20px 8px;
-                    //     margin: 5px;
-                    // }
-                    // .resourcePanel:hover {
-                    //     border: 1px solid #DDD;
-                    //     // background-color: rgba(100, 0, 126, 0.6);
-                    //     background-color: rgba(0, 0, 0, 0.75);
-                    // }
-
-                    // .resourcesListRow {
-                    //     display: flex;
-                    //     flex-direction: row;
-                    //     list-style: none;
-                    // }
-
                     
 
                     
@@ -371,6 +410,16 @@ class Services extends React.Component {
                         border: 2px solid blueviolet;
                         background-color: blueviolet;
                         color: #DDD;
+                    }
+
+                    .error-field {
+                        background-color: #ffcccc;
+                    }
+                    .error-message {
+                        font-size: 70%;
+                        color: red;
+                        margin-left: 173px;
+                        margin-top: 3px;
                     }
 
                     .servicePanel {
