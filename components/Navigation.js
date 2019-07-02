@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { withRouter } from 'next/router'
 import router from 'next/dist/client/router';
 import ActiveLink from './ActiveLink';
+import { timingSafeEqual } from 'crypto';
 
 
 // const NaviTest = (props) => (
@@ -103,7 +104,25 @@ import ActiveLink from './ActiveLink';
 // }
 
 class Navigation extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuOpen: false
+        }
+    }
+    collapseClass(e) {
+        console.log('inside collapseClass()');
+        console.log(e);
+        // consolelog('window.innerWidth?: ', window.innerWidth)
+        // return (window && window.innerWidth > 1200 ? '' : 'collapse');
+    }
 
+    toggleMenu() {
+        console.log('toggling menue!');
+        console.log('menuOpen? before: ', this.state.menuOpen)
+        this.state.menuOpen = !this.state.menuOpen;
+        console.log('menuOpen? after: ', this.state.menuOpen)
+    }
     // constructor(props) {
     //     super(props);
     //     console.log('inside constructor');
@@ -134,7 +153,7 @@ class Navigation extends React.Component {
                             </a>
                         </Link>
                     </div>
-                    <div className="navRight">
+                    <div className={`navRight ${this.state.menuOpen ? 'visible': 'test'}`} onClick={() => this.setState({menuOpen: !this.state.menuOpen})}>
                         <div className="linkWrap">
                             <ActiveLink href="/about">About</ActiveLink>
                         </div>
@@ -216,6 +235,41 @@ class Navigation extends React.Component {
 
                     .linkWrap:hover { 
                         border-bottom: solid 4px black;
+                    }
+
+                    @media(max-width: 768px) {
+                        .navRight .linkWrap {
+                            display: none;
+                        }
+                        .navRight:before {
+                            content: "\u2261";
+                            font-size: 50px;
+                            color: white;
+                            position: relative;
+                            margin: 0 15px;
+                            transform: translateY(-60%);
+                        }
+                        .navRight.visible {
+                            display: block;
+                            position: absolute;
+                            z-index: 500;
+                            flex-direction: column;
+                            content: '';
+                            background-color: #0f040f;
+                            right: 0;
+                            width: 66%;
+                            text-align: center;
+                            padding-left: 25px;
+                        }
+                        .navRight.visible .linkWrap {
+                            display: block;
+                            float: bottom;
+                            padding: 20px 0;
+                        }
+                        .navRight.visible .linkWrap:hover {
+                            border-bottom: none;
+                            border-left: 10px solid #0f040f;
+                        }
                     }
                 `}</style>
             </div>
