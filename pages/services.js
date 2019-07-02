@@ -124,10 +124,13 @@ class Services extends React.Component {
                 validationStatus.emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
                 validationErrors.email = validationStatus.emailValid ? '' : 'email format invalid';
                 break;
+            case 'institution':
+                validationStatus.institutionValid = value.length > 0 ? true : false;
+                validationErrors.institution = validationStatus.institutionValid ? '' : 'institution is required';
+                break;
             default:
                 validationStatus.piValid = true;
                 validationStatus.departmentValid = true;
-                validationStatus.institutionValid = true;
                 validationStatus.projectValid = true;
                 break;
         }
@@ -299,19 +302,20 @@ class Services extends React.Component {
                                 <p className="error-message">{this.state.formErrors.email}</p>
                             </div>
                             <div className="formgroup">
-                                <label>Principal Investigator</label>
-                                <input className="inputField" type="text" name="pi" placeholder="Principal Investigator" 
-                                    value={this.state.form.pi} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
+                                <label>Institution *</label>
+                                <input className={`inputField ${this.errorClass(this.state.formErrors.institution)}`} type="text" name="institution" placeholder="Institution/Organization" 
+                                    value={this.state.form.institution} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
+                                <p className="error-message">{this.state.formErrors.institution}</p>
                             </div>
                             <div className="formgroup">
                                 <label htmlFor="department">Department</label>
-                                <input className="inputField" type="text" name="department" placeholder="Department" 
-                                    value={this.state.form.department} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
+                                <input className="inputField" type="text" name="department" placeholder="Department"
+                                    value={this.state.form.department} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)} />
                             </div>
                             <div className="formgroup">
-                                <label>Institution</label>
-                                <input className="inputField" type="text" name="institution" placeholder="Institution/Organization" 
-                                    value={this.state.form.institution} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)}/>
+                                <label>Principal Investigator</label>
+                                <input className="inputField" type="text" name="pi" placeholder="Principal Investigator"
+                                    value={this.state.form.pi} onChange={(e) => this.handleUserInput(e)} onKeyDown={(e) => this.handleReturn(e)} />
                             </div>
                             <div className="formgroup">
                                 <label>Project Description</label>
@@ -325,6 +329,8 @@ class Services extends React.Component {
                             </div>
                             <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
                             <button className="formButton" type="submit" value="Send" disabled={!this.state.allFormFieldsValid}>Send</button>
+
+                            <p className="formHelpText">* required field</p>
                         </form>
                     </div>
                     {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> */}
@@ -424,6 +430,10 @@ class Services extends React.Component {
                         font-size: 70%;
                         color: red;
                         margin-left: 173px;
+                        margin-top: 3px;
+                    }
+                    p.formHelpText {
+                        font-size: 70%;
                         margin-top: 3px;
                     }
 
