@@ -90,7 +90,7 @@ class BlogIndex extends React.Component {
             // sortedData['document']['data']['date'].toString().split('T')[0];
             // console.log(sortedData[0].document);
             return sortedData;
-        })(require.context('../static/posts', true, /\.md$/));
+        })(require.context('../markdowns', true, /\.md$/));
         return {
             posts
         };
