@@ -1,42 +1,6 @@
 import Layout from '../components/Layout.js';
 
 
-const tabcard = {
-    position: 'relative',
-    // width: '400px',
-    width: '350px',
-    height: '100px',
-    // borderRadius: '0 50px 50px 0',
-    borderRadius: '50px',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    // margin: '10px 0',
-    margin: '30px 50px 0',
-    float: 'left',
-    zIndex: '100'
-}
-
-const tabcard2 = {
-    position: 'relative',
-    // width: '400px',
-    width: '350px',
-    height: '100px',
-    // borderRadius: '50px 0 0 50px',
-    borderRadius: '50px',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    // margin: '10px 0',
-    margin: '30px 50px 0 50px',
-    float: 'right',
-    zIndex: '100'
-}
-
-const columnAimg = {
-    float: 'right'
-}
-
-const columnBimg = {
-    float: 'left'
-}
-
 const linesCenter = {
     height: '480px',
     borderRadius: '0',
@@ -64,118 +28,106 @@ const linesSide2 = {
     position: 'absolute'
 }
 
-const role = {
-    fontSize: '75%',
-    fontWeight: '200',
-    paddingTop: '2px',
-}
-
-const memberText = {
-    transform: 'translateX(-10%)'
-}
-
-const memberText2 = {
-    transform: 'translateX(10%)'
-}
-
-
-
 const Team = () => (
     <Layout>
-        
-        <div className="teamHead">
-            <div className="teamHeadBackdrop">
-                <h4>Our Team</h4>
-                <p className="teamDescription">Our team comprises systems neuroscientists, data scientists, and software engineers with expertise in
-                            systems neuroscience, data acquisition and analysis, databases, machine learning, and cloud computing.</p> 
-            </div>
-        </div>
-        <div className="memberBackground">
-            {/* <img style={linesCenter} src="./static/images/artwork/networkLines.svg" /> */}
-            {/* <img style={linesSide} src="./static/images/artwork/networkLinesWide.svg" /> */}
-            {/* <img style={linesSide2} src="./static/images/artwork/networkLinesWide.svg" /> */}
-            <div className="row">
-                <div style={tabcard} className="animated fadeInLeft" >
-                    <div style={memberText}>
-                        <p>Dimitri Yatsenko, PhD</p>
-                        <p style={role}>President</p>
-                    </div>
-                    <img style={columnAimg} src="/static/images/team/dimitriyatsenko.jpg" />
-                </div>
-                <div style={tabcard2} className="animated fadeInRight">
-                    <div style={memberText2}>
-                        <p>Edgar Y. Walker, PhD</p>
-                        <p style={role}>Vice President, Engineering</p>
-                    </div>
-                    <img style={columnBimg} src="/static/images/team/edgarwalker.jpg" />
+        <div className="teamPageContainer">
+            <div className="teamHead">
+                <div className="teamHeadBackdrop">
+                    <h4>Our Team</h4>
+                    <p className="teamDescription">Our team comprises systems neuroscientists, data scientists, and software engineers with expertise in
+                                systems neuroscience, data acquisition and analysis, databases, machine learning, and cloud computing.</p> 
                 </div>
             </div>
-            <div className="row">
-                <div style={tabcard} className="animated fadeInRight">
-                    <div style={memberText}>
-                        <p>Andreas Tolias, PhD</p>
-                        <p style={role}>Scientific and Business Advisor</p>
+            <div className="memberBackground">
+                {/* <img style={linesCenter} src="./static/images/artwork/networkLines.svg" /> */}
+                {/* <img style={linesSide} src="./static/images/artwork/networkLinesWide.svg" /> */}
+                {/* <img style={linesSide2} src="./static/images/artwork/networkLinesWide.svg" /> */}
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInLeft" >
+                        <div className="memberText">
+                            <p className="memberName">Dimitri Yatsenko, PhD</p>
+                            <p className="memberRole">President</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/dimitriyatsenko.jpg" />
                     </div>
-                    <img style={columnAimg} src="/static/images/team/andreastolias.jpg" />
+                    <div className="tabcard to-right animated fadeInRight">
+                        <div className="memberText2">
+                            <p className="memberName">Edgar Y. Walker, PhD</p>
+                            <p className="memberRole">Vice President, Engineering</p>
+                        </div>
+                        <img style={{float: 'left'}} src="/static/images/team/edgarwalker.jpg" />
+                    </div>
                 </div>
-                <div style={tabcard2} className="animated fadeInLeft">
-                    <div style={memberText2}>
-                        <p>Jake Reimer, PhD</p>
-                        <p style={role}>Application Specialist</p>
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInRight">
+                        <div className="memberText">
+                            <p className="memberName">Andreas Tolias, PhD</p>
+                            <p className="memberRole">Scientific and Business Advisor</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/andreastolias.jpg" />
                     </div>
-                    <img style={columnBimg} src="/static/images/team/jakereimer.jpg" />
+                    <div className="tabcard to-right animated fadeInLeft">
+                        <div className="memberText2">
+                            <p className="memberName">Jake Reimer, PhD</p>
+                            <p className="memberRole">Application Specialist</p>
+                        </div>
+                        <img style={{ float: 'left' }} src="/static/images/team/jakereimer.jpg" />
+                    </div>
                 </div>
-            </div>
-            <div className="row">
-                <div style={tabcard} className="animated fadeInLeft">
-                    <div style={memberText}>
-                        <p>Chris Turner</p>
-                        <p style={role}>Product Engineer</p>
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInLeft">
+                        <div className="memberText">
+                            <p className="memberName">Chris Turner</p>
+                            <p className="memberRole">Product Engineer</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/christurner.jpg" />
                     </div>
-                    <img style={columnAimg} src="/static/images/team/christurner.jpg" />
+                    <div className="tabcard to-right animated fadeInRight">
+                        <div className="memberText2">
+                            <p className="memberName">Camila Lopez</p>
+                            <p className="memberRole">Project Manager</p>
+                        </div>
+                        <img style={{ float: 'left' }} src="/static/images/team/camilalopez.jpg" />
+                    </div>
                 </div>
-                <div style={tabcard2} className="animated fadeInRight">
-                    <div style={memberText2}>
-                        <p>Camila Lopez</p>
-                        <p style={role}>Project Manager</p>
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInRight">
+                        <div className="memberText">
+                            <p className="memberName">Shan Shen, PhD</p>
+                            <p className="memberRole">Data Scientist</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/shanshen.jpg" />
                     </div>
-                    <img style={columnBimg} src="/static/images/team/camilalopez.jpg" />
+                    <div className="tabcard to-right animated fadeInLeft">
+                        <div className="memberText2">
+                            <p className="memberName">Thinh Nguyen, PhD</p>
+                            <p className="memberRole">Data Scientist</p>
+                        </div>
+                        <img style={{ float: 'left' }} src="/static/images/team/thinhnguyen.jpg" />
+                    </div>
                 </div>
-            </div>
-            <div className="row">
-                <div style={tabcard} className="animated fadeInRight">
-                    <div style={memberText}>
-                        <p>Shan Shen, PhD</p>
-                        <p style={role}>Data Scientist</p>
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInLeft">
+                        <div className="memberText">
+                            <p className="memberName">Raphael Guzman</p>
+                            <p className="memberRole">Software Engineer</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/raphaelguzman.jpg" />
                     </div>
-                    <img style={columnAimg} src="/static/images/team/shanshen.jpg" />
-                </div>
-                <div style={tabcard2} className="animated fadeInLeft">
-                    <div style={memberText2}>
-                        <p>Thinh Nguyen, PhD</p>
-                        <p style={role}>Data Scientist</p>
+                    <div className="tabcard to-right animated fadeInRight">
+                        <div className="memberText2">
+                            <p className="memberName">Maho Sasaki</p>
+                            <p className="memberRole">Front-end Web Developer</p>
+                        </div>
+                        <img style={{ float: 'left' }} src="/static/images/team/mahosasaki.jpg" />
                     </div>
-                    <img style={columnBimg} src="/static/images/team/thinhnguyen.jpg" />
-                </div>
-            </div>
-            <div className="row">
-                <div style={tabcard} className="animated fadeInLeft">
-                    <div style={memberText}>
-                        <p>Raphael Guzman</p>
-                        <p style={role}>Software Engineer</p>
-                    </div>
-                    <img style={columnAimg} src="/static/images/team/raphaelguzman.jpg" />
-                </div>
-                <div style={tabcard2} className="animated fadeInRight">
-                    <div style={memberText2}>
-                        <p>Maho Sasaki</p>
-                        <p style={role}>Front-end Web Developer</p>
-                    </div>
-                    <img style={columnBimg} src="/static/images/team/mahosasaki.jpg" />
                 </div>
             </div>
         </div>
         <style jsx>{`
+            .teamPageContainer {
+                width: 100%;
+            }
             .teamHead {
                 background-color: rgba(0, 0, 0, 0.9);
                 background-image: url("/static/images/artwork/networkLines.svg");
@@ -210,30 +162,137 @@ const Team = () => (
                 position: relative;
                 padding-bottom: 10%;
             }
+
             .row {
                 width: 100%;
                 max-width: 1000px;
                 display: inline-block;
             }
+
+            .tabcard {
+                position: relative;
+                width: 350px;
+                height: 100px;
+                border-radius: 50px;
+                background-color: rgba(0, 0, 0, 0.5);    
+                z-index: 100;
+            }
+
+            .to-right {
+                float: right;
+                margin: 30px 50px 0 50px;
+            }
+
+            .to-left {
+                margin: 30px 50px 0;
+                float: left;
+            }
+
             img {
                 width: 96px;
                 border-radius: 50px;
                 border: 2px solid cyan;
                 transform: translateY(-85%);
             }
+
+            .memberText {
+                transform: translateX(-10%);
+            }
+
+            .memberText2 {
+                transform: translateX(10%);
+            }
+
             p {
                 padding-top: 8px;
                 color: white;
-                // text-align: center;
-                // transform: translate(-15%, 130%);
+            }
+            .memberRole {
+                font-size: 75%;
+                font-weight: 200;
+                padding-top: 2px;
+            }
+            
+            @media (max-width: 1024px) {
+                .teamHead h4 {
+                    margin-top: 0;
+                }
+                .teamHead {
+                    padding: 150px 100px 250px;
+                }
+                .teamHead .teamHeadBackdrop {
+                    padding: 100px 100px 250px;
+                }
+
+                .memberText2 {
+                    width: 85%;
+                    padding-left: 5%;
+                    margin-right: 0;
+                }
+                .teamPageContainer {
+                    width: 100%;
+                }
+                .to-left {
+                    margin: 30px 15px 0;
+                }
+                .to-right {
+                    margin: 30px 15px 0 15px;
+                }
             }
             @media (max-width: 768px) {
                 .teamHead {
-                    padding: 40% 50% 8%;
-                    height: fit-content;
+                    padding: 150px 70px 250px;
                 }
-                .teamHeadBackdrop {
-                    padding: 20px 25px;
+                .teamHead .teamHeadBackdrop {
+                    padding: 100px 70px 250px;
+                }
+                .teamHead h4 {
+                    font-size: 1.25rem;
+                    margin-bottom: 0;
+                }
+                p.teamDescription {
+                    font-size: 90%;
+                }
+                .memberBackground {
+                    padding-bottom: 14%;
+                }
+            }
+            @media (max-width: 480px) {
+                .teamHead {
+                    padding: 150px 70px 250px;
+                }
+                .teamHead .teamHeadBackdrop {
+                    padding: 50px 70px 250px;
+                }
+                
+                .memberBackground {
+                    padding-bottom: 18%;
+                }
+                .tabcard {
+                    max-width: 350px;
+                    width: 95%;
+                    height: 100px;
+                    border-radius: 50px;
+                    background-color: rgba(0, 0, 0, 0.5);    
+                    z-index: 100;
+                }
+                .memberText2 {
+                    width: 77%;
+                    padding-left: 10%;
+                    margin-right: 0;
+                }
+                .memberName {
+                    // margin-right:
+                }
+                .memberRole {
+                    // font-size: 75%;
+                    // padding-top: 2px;
+                }
+                .to-left {
+                    margin: 30px 0 0 0;
+                }
+                .to-right {
+                    margin: 30px 0 0 0;
                 }
             }
         `}</style>

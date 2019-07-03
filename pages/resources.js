@@ -8,16 +8,18 @@ export default function Resources() {
                 <h3>Free Resources</h3>
                 <p className="subtitle">DataJoint Neuro is the principal contributor to the free, community-oriented, open-source tools comprising the DataJoint ecosystem:</p>
                 <ul className="resourcesListRow">
-                    <li className="resourcePanel">DataJoint Reference Documentation
+                    <li className="resourcePanel">DataJoint Reference <span>Documentation</span>
                         <a href="https://docs.datajoint.org" target="_blank"><img src="/static/images/icons/doc_white.png" /></a></li>
-                    <li className="resourcePanel">DataJoint <br />Tutorials
+                    <li className="resourcePanel">DataJoint <span>Tutorials</span>
                         <a href="https://tutorials.datajoint.org" target="_blank"><img src="/static/images/icons/blackboard_white.png" /></a></li>
-                    <li className="resourcePanel">DataJoint Server Configuration
+                    <li className="resourcePanel">DataJoint Server <span>Configuration</span>
                         <a href="https://github.com/datajoint/mysql-docker" target="_blank"><img src="/static/images/icons/server-config-white.png" /></a></li>
-                    <li className="resourcePanel">DataJoint <br />Python Client
-                        <a href="https://github.com/datajoint/datajoint-python" target="_blank"><img src="/static/images/icons/python-logo-monoc.png" /></a></li>
-                    <li className="resourcePanel">DataJoint <br />MATLAB Client
-                        <a href="https://github.com/datajoint/datajoint-matlab" target="_blank"><img src="/static/images/icons/matlab-logo-monoc.png" /></a></li>
+                    <li className="resourcePanel">DataJoint <span>Python Client</span>
+                        <a href="https://github.com/datajoint/datajoint-python" target="_blank"><img src="/static/images/icons/python-logo-monoc.png" /></a>
+                    </li>
+                    <li className="resourcePanel">DataJoint <span>MATLAB Client</span>
+                    <a href="https://github.com/datajoint/datajoint-matlab" target="_blank"><img src="/static/images/icons/matlab-logo-monoc.png" /></a>
+                    </li>
                 </ul>
             </div>
             <PipelinePage></PipelinePage>
@@ -66,28 +68,70 @@ export default function Resources() {
                     background-color: rgba(0, 0, 0, 0.75);
                 }
 
+                .resourcePanel span {
+                    display: block;
+                }
+
                 .resourcesListRow {
                     display: flex;
                     flex-direction: row;
                     list-style: none;
                 }
-                @media (max-width: 1440px) {
- 
+                @media (max-width: 1024px) {
+                    .subtitle {
+                        line-height: 1.2;
+                        font-size: 0.84em;
+                    }
+                    .resourcesListRow {
+                        padding-left: 0.2%;
+                    }
+                    .resourcePanel {
+                        font-size: 86%;
+                        margin-left: 2px;
+                        margin-right: 2px;
+                    }
+                    img {
+                        height: 60px;
+                    }
                 }
                
                 @media (max-width: 768px) {
-                        .subtitle {
-                            line-height: 1;
-                            font-size: 0.82em;
-                        }
+                    .resourcesListRow {
+                        margin-left: 10%;
+                        display: inline-block;
+                    }
+                    .resourcePanel {
+                        font-size: 82%;
+                        width: 120px;
+                        height: 100px;
+                        float: left;
+                    }
+                    .subtitle {
+                        line-height: 1.1;
+                        font-size: 0.82em;
+                    }
 
-                        img {
-                            height: 50px;
-                        }
+                    img {
+                        height: 50px;
+                    }
 
-                        .resourcePanel {
-                            font-size: 82%;
-                        }
+                        
+                }
+
+                @media (max-width: 480px) {
+                    .resourcesListRow {
+                        margin-left: 10px;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    .resourcePanel {
+                        font-size: 82%;
+                        min-width: 40%;
+                        max-width: 45%;
+                        // height: 100px;
+                        float: left;
+                        margin: 1px;
+                    }
                 }
             }
             `}</style>

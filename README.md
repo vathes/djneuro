@@ -1,4 +1,6 @@
 ## How to build
+If you've written a new news post - 
+
 Don't forget to run `node prebuild.js` to build the appropriate news posts in to the `/post` folder inside `pages`
 
 Put the markdown news post files inside the `markdowns` folder. The filename before `.md` will also be the path to the post on the website

@@ -129,8 +129,8 @@ export default function Index() {
                 }
 
                 @media (max-width: 1440px) {
-                    .homeTopTagline {
-                        font-size: 260%;
+                    h1.homeTopTagline {
+                        font-size: 280%;
                     }
                     p.homeTopSubtitle {
                         font-size: 110%;
@@ -139,12 +139,25 @@ export default function Index() {
                 }
                
                 @media (max-width: 768px) {
-                    .homeTopTagline {
-                        font-weight: 500;
-                        font-size: 190%;
+                    h1.homeTopTagline {
+                        font-weight: 600;
+                        font-size: 240%;
                     }
                     p.homeTopSubtitle {
                         // font-weight: 300;
+                        font-size: 100%;
+                        position: 'relative'
+                    }
+                    .partnerSection {
+                        padding: 7% 0 20% 0;
+                }
+                @media (max-width: 480px) {
+                    h1.homeTopTagline {
+                        font-weight: 600;
+                        font-size: 220%;
+                    }
+                    p.homeTopSubtitle {
+                        font-weight: 300;
                         font-size: 100%;
                         position: 'relative'
                     }

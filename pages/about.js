@@ -142,6 +142,30 @@ const About = () => (
                 line-height: 1.9rem;
             }
 
+            @media (max-width: 1440px) {
+                
+            }
+            @media (max-width: 768px) {
+                h4 {
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    line-height: 1.9rem;
+                }
+            }
+            @media (max-width: 480px) {
+                h4 {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    font-size: 0.95rem;
+                    line-height: 1.5rem;
+                }
+            }
+
         `}</style>
         </Layout>
 );

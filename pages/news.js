@@ -149,7 +149,7 @@ class BlogIndex extends React.Component {
                         font-size: 120%;
                         margin: 0;
                         // padding-top: 20px;
-                        height: 50px;
+                        height: auto;
                         display: flex;
                         flex-direction: row;
                     }
@@ -159,8 +159,7 @@ class BlogIndex extends React.Component {
                         // background-color: blue;
                     }
                     .postTitle {
-                        padding-top: 13px;
-                        padding-left: 18px;
+                        padding: 13px 13px 13px 18px;
                     }
 
                     .mdWrap {
@@ -193,6 +192,32 @@ class BlogIndex extends React.Component {
                         font-size: 120%;
                         margin-top: 14px;
                         position: relative;
+                    }
+                    @media (max-width: 1440px) {
+                
+                    }
+                    @media (max-width: 768px) {
+                        div.newsIndexContainer {
+                            padding-bottom: 10%;
+                        }
+                        .postHeader {
+                            font-size: 110%;
+                        }
+                        .readMoreLink {
+                            font-size: 110%;
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        div.newsIndexContainer {
+                            padding-bottom: 12%;
+                        }
+                        .postHeader {
+                            font-size: 100%;
+                        }
+                        .readMoreLink {
+                            font-size: 100%;
+                        }
+                        
                     }
                 `}</style>
             </Layout>

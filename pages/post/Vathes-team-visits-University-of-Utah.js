@@ -15,6 +15,11 @@ class PostImage extends React.Component {
                     .postImageContainer img {
                         max-width: 500px;
                     }
+                    @media (max-width: 768px) {
+                        .postImageContainer img {
+                            max-width: 90%;
+                        }
+                    }
                 `}</style>
             </div>
         )
@@ -72,8 +77,25 @@ export default class extends React.Component {
                     }
 
                     .postContentWrapper {
-                        // text-align: left;
+                        width: 66%;
 
+                    }
+                    @media (max-width: 1024px) {
+                        
+                    }
+                    @media (max-width: 768px) {
+                        .postContentWrapper {
+                            width: 95%;
+                            text-align: left;
+                            padding-bottom: 4%;
+                        }
+                        
+                    }
+                    @media (max-width: 480px) {
+                        .postContentWrapper {
+                            width: 100%;
+                            padding-bottom: 7%;
+                        }
                     }
 =
                 `}</style>

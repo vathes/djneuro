@@ -15,13 +15,6 @@ const background = {
 };
 
 
-const servicesSection = {
-    display: 'flex',
-    flexDirection: 'row',
-    marginLeft: '2%',
-    marginTop: '3%',
-    paddingBottom: '8%'
-}
 
 
 
@@ -54,6 +47,18 @@ class ApplyButton extends React.Component {
                         // border: 2px solid rgba(100, 0, 121, 0.9);
                         background-color: indigo;
                         border: 2px solid indigo;
+                    }
+
+                    @media (max-width: 480px) {
+                        button {
+                            padding: 12px 28px;
+                            border-radius: 0 0 4px 4px;
+                            border: 2px solid rgb(175,110,235);
+                            background-color: rgb(175,110,235);
+                            margin: 0;
+                            width: 100%;
+                            color: white;
+                        }
                     }
                 `}</style>
             </div>
@@ -209,7 +214,7 @@ class Services extends React.Component {
                         </div> */}
                     <br />
                     {/* <h3>Support Types</h3> */}
-                    <div style={servicesSection}>
+                    <div className="servicesSection">
                         <div className="servicePanel">
                             <h4 className="servicePanelTitle">Basic Support</h4>
                             <div className="servicePanelText">
@@ -322,10 +327,19 @@ class Services extends React.Component {
                                 <textarea className="descriptionField" type="text" name="project" placeholder="Project Description" 
                                     value={this.state.form.project} onChange={(e) => this.handleUserInput(e)}></textarea>
                             </div>
-                            <div className="formgroup">
-                                <input className="radioField" type="radio" checked={this.state.radioChecked[0]} onChange={() => this.check(1)} name="subscription_type" value="basic" /> Basic Support
-                                <input className="radioField" type="radio" checked={this.state.radioChecked[1]} onChange={() => this.check(2)} name="subscription_type" value="managed db hosting" /> Managed Database Hosting (beta)
-                                <input className="radioField" type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> Custom Services and Development
+                            <div className="formgroup radioFieldContainer">
+                                <div>
+                                    <input className="radioField" type="radio" checked={this.state.radioChecked[0]} onChange={() => this.check(1)} name="subscription_type" value="basic" /> 
+                                    <label>Basic Support</label>
+                                </div>
+                                <div>
+                                    <input className="radioField" type="radio" checked={this.state.radioChecked[1]} onChange={() => this.check(2)} name="subscription_type" value="managed db hosting" /> 
+                                    <label>Managed Database Hosting (beta)</label>
+                                </div>
+                                <div>
+                                    <input className="radioField" type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> 
+                                    <label>Custom Services and Development</label>
+                                </div>
                             </div>
                             <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
                             <button className="formButton" type="submit" value="Send" disabled={!this.state.allFormFieldsValid}>Send</button>
@@ -343,6 +357,7 @@ class Services extends React.Component {
                     .construction h3 {
                         padding-top: 80px;
                     }
+
                     h3 {
                         margin: 0;
                     }
@@ -351,90 +366,14 @@ class Services extends React.Component {
                         display: block;
                         margin-top: 13px;
                     }
-                    
-
-                    
-                    div.formContainer {
-                        margin: -6% 10% 0;
-                        padding: 2% 2% 8%;
-                        // background: rgba(0, 0, 0, 0.4);
-                        background: rgba(255, 255, 255, 0.9);
-                    }
-
-                    form {
-                        margin-top: 0;
-                        padding: 3%;
-                        border: solid 0.5px blueviolet;
-                    }
-
-                    div.formgroup {
-                        display: block;
-                        text-align: left;
-                        margin-bottom: 2%;
-                    }
-
-                    .formgroup label {
-                        margin-right: 14px;
-                        font-size: 90%;
-                        vertical-align: top;
-                        min-width: 150px;
-                        text-align: right;
-                        display: inline-block;
-                        padding-top: 10px;
-                    }
-
-                    .formgroup input.inputField {
-                        padding-left: 10px;
-                        border: 0.5px solid darkgrey;
-                        border-radius: 4px;
-                        height: 30px;
-                        width: 400px;
-                    }
-
-                    .formgroup textarea.descriptionField {
-                        width: 400px;
-                        height: 150px;
-                        padding-left: 10px;
-                        padding-top: 10px;
-                        border: 0.5px solid darkgrey;
-                        border-radius: 4px;
-                    }
-
-                    .formgroup .radioField {
-                        margin-left: 15px;
-                    }
-
-                    .formButton {
-                        border: 2px solid blueviolet;
-                        background-color: transparent;
-                        color: bluevioet;
-                        padding: 12px 28px;
-                        border-radius: 4px;
-                    }
-                    .formButton:hover {
-                        border: 2px solid blueviolet;
-                        background-color: blueviolet;
-                        color: #DDD;
-                    }
-                    .formButton:disabled {
-                        border: 2px solid gray;
-                        background-color: gray;
-                        color: #DDD;
-                    }
 
 
-                    .error-field {
-                        background-color: #ffcccc;
-                    }
-                    .error-message {
-                        font-size: 70%;
-                        color: red;
-                        margin-left: 173px;
-                        margin-top: 3px;
-                    }
-                    p.formHelpText {
-                        font-size: 70%;
-                        margin-top: 3px;
+                    .servicesSection {
+                        display: flex;
+                        flex-direction: row;
+                        margin-left: 2%;
+                        margin-top: 3%;
+                        padding-bottom: 8%;
                     }
 
                     .servicePanel {
@@ -491,19 +430,202 @@ class Services extends React.Component {
                         border-radius: 0 0 5px 5px;
                         width: 100%;
                     }
+                    
 
+                    
+                    div.formContainer {
+                        margin: -6% 10% 0;
+                        padding: 2% 2% 8%;
+                        // background: rgba(0, 0, 0, 0.4);
+                        background: rgba(255, 255, 255, 0.9);
+                    }
+
+                    form {
+                        margin-top: 0;
+                        padding: 3%;
+                        border: solid 0.5px blueviolet;
+                    }
+
+                    div.formgroup {
+                        display: block;
+                        text-align: left;
+                        margin-bottom: 2%;
+                    }
+
+                    .formgroup label {
+                        margin-right: 14px;
+                        font-size: 90%;
+                        vertical-align: top;
+                        min-width: 150px;
+                        text-align: right;
+                        display: inline-block;
+                        padding-top: 10px;
+                    }
+
+                    .formgroup input.inputField {
+                        padding-left: 10px;
+                        border: 0.5px solid darkgrey;
+                        border-radius: 4px;
+                        height: 30px;
+                        width: 400px;
+                    }
+
+                    .formgroup textarea.descriptionField {
+                        width: 400px;
+                        height: 150px;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                        border: 0.5px solid darkgrey;
+                        border-radius: 4px;
+                    }
+
+                    .radioFieldContainer,
+                    .radioFieldContainer div {
+                        display: inline-flex;
+                        flex-direction: row;
+                    }
+                    .radioFieldContainer input.radioField {
+                        margin-left: 15px;
+                        margin-top: 0px;
+                    }
+
+                    .radioFieldContainer label {
+                            margin-left: 0px;
+                            font-size: 90%;
+                            vertical-align: none;
+                            text-align: left;
+                            display: inline;
+                            padding-top: 1.5px;
+                        }
+
+                    .formButton {
+                        border: 2px solid blueviolet;
+                        background-color: transparent;
+                        color: bluevioet;
+                        padding: 12px 28px;
+                        border-radius: 4px;
+                    }
+                    .formButton:hover {
+                        border: 2px solid blueviolet;
+                        background-color: blueviolet;
+                        color: #DDD;
+                    }
+                    .formButton:disabled {
+                        border: 2px solid gray;
+                        background-color: gray;
+                        color: #DDD;
+                    }
+
+
+                    .error-field {
+                        background-color: #ffcccc;
+                    }
+                    .error-message {
+                        font-size: 70%;
+                        color: red;
+                        margin-left: 173px;
+                        margin-top: 3px;
+                    }
+                    p.formHelpText {
+                        font-size: 70%;
+                        margin-top: 3px;
+                    }
+
+                    
+
+                    @media (max-width: 1024px) {
+                        .servicePanelTitle {
+                            margin: 0;
+                            padding: 15px 15px 12px 15px;
+                            font-weight: 400;
+                            font-size: 92%;
+                            height: 1.3em;
+                        }
+                        .servicePanelText {
+                            padding: 5px 12px 20%;
+                            line-height: 1.19em;
+                            font-size: 90%;
+                            font-weight: 200;
+                            height: 380px;
+                        }
+                        .servicePanelText li {
+                            margin-top: 9px;
+                        }
+
+                        div.formContainer {
+                            margin: -6% 7% 0;
+                            padding: 2% 2% 8%;
+                        }
+                        
+                        .radioFieldContainer input.radioField {
+                            margin-left: 10px;
+                        }
+                        .radioFieldContainer label {
+                            // margin-left: -5px;
+                            margin-right: 2px;
+                            font-size: 85%;
+                        }
+                        
+                    }
                     @media (max-width: 768px) {
-                        .subtitle {
-                            line-height: 1;
-                            font-size: 0.82em;
+                        .servicesSection {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 2%;
+                            margin-top: 3%;
+                            padding-bottom: 8%;
+                        }
+                        
+                        .servicePanel {
+                            width: 95%;
+                            margin: 0 0.3% 2%;
+                            border-radius: 5px;
+                            position: relative;
                         }
 
-                        img {
-                            height: 50px;
+                        .servicePanelText {
+                            padding: 10px 15px 10%;
+                            height: 100%;
                         }
 
-                        .resourcePanel {
-                            font-size: 82%;
+                        .formgroup label {
+                            text-align: left;
+                            margin-bottom: 2px;
+                        }
+
+                        .formgroup input.inputField {
+                            padding-left: 3%;
+                            border-radius: 3px;
+                            height: 30px;
+                            width: 92%;
+                        }
+
+                        .formgroup textarea.descriptionField {
+                            width: 92%;
+                            height: 120px;
+                            padding-left: 3%;
+                            padding-top: 10px;
+                            border-radius: 3px;
+                        }
+                        }
+                        
+                    }
+                    @media (max-width: 480px) {
+                        .servicePanelText {
+                            padding: 10px 15px 18%;
+                            max-height: 480px;
+                            overflow: scroll;
+                        }
+                        .servicePanelFooter {
+                            bottom: 0;
+                            padding: 0;
+                            border-top: 0.5px solid rgb(175,110,235);
+                            border-radius: 0 0 5px 5px;
+                            width: 100%;
+                        }
+                        div.formContainer {
+                            margin: -6% 2% 0;
+                            padding: 2% 2% 11%;
                         }
                     }
 
