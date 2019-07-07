@@ -15,6 +15,6 @@ Dimitri and Edgar presented at Janelia Farm and spent two days meeting with a nu
 #### Presentation Video
 Checkout the recording of their full presentation!
 <!-- youtube uXQ8pa2AM1s -->
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=uXQ8pa2AM1s" target="_blank">
-<img src="http://img.youtube.com/vi/uXQ8pa2AM1s/0.jpg" 
+<a href="https://www.youtube.com/watch?feature=player_embedded&v=uXQ8pa2AM1s" target="_blank">
+<img src="https://img.youtube.com/vi/uXQ8pa2AM1s/0.jpg" 
 alt="thumbnail for introduction video clip" width="240" height="180" border="3" /></a>

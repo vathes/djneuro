@@ -5,7 +5,7 @@ const background = {
     // backgroundImage: 'url("/static/images/artwork/blue-cherry-flicker.gif")',
     // background: 'linear-gradient(353deg, blueviolet, navy, midnightblue, #000011)',
     // background: 'linear-gradient(303deg, blueviolet, indigo)',
-    background: '#FFF',
+    background: '#001a33', //'#FFF',
     backgroundImage: 'url("/static/images/artwork/djneuro_unit.png")',
     backgroundSize: '12.5%',
     backgroundRepeat: 'repeat',
@@ -384,7 +384,7 @@ class Services extends React.Component {
                         border: 1.5px solid blueviolet;
                         border-radius: 5px;
                         // background-color: rgba(0, 0, 0, 0.7);
-                        background-color: rgba(255, 255, 255, 0.9);
+                        background-color: rgba(255, 255, 255, 0.82);
                         position: relative;
                     }
 
@@ -424,7 +424,8 @@ class Services extends React.Component {
                         bottom: 0;
                         text-align: center;
                         padding: 12px 0;
-                        background-color: rgb(240, 240, 240);
+                        // background-color: rgba(249, 244, 253, 0.8); //rgb(240, 240, 240);
+                        background: linear-gradient(rgba(249, 244, 253, 0.8), rgba(249, 244, 253, 0.96), rgb(240, 240, 240));
                         // background-color: #f3e9fc;
                         border-top: 0.5px solid #c495f0;
                         border-radius: 0 0 5px 5px;
@@ -584,7 +585,7 @@ class Services extends React.Component {
                         }
 
                         .servicePanelText {
-                            padding: 10px 15px 10%;
+                            padding: 10px 15px 14%;
                             height: 100%;
                         }
 
