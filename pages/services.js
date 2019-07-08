@@ -178,12 +178,20 @@ class Services extends React.Component {
             }));
         }
         // this.formOpenedRef.current.scrollIntoView({ behavior: 'smooth' });
-        this.scroll();
+        // this.scroll();
     }
 
     scroll() {
         this.formOpenedRef.current.scrollIntoView({ behavior: "smooth" });
+        console.log('scroll ran! formLoaded Status - ', this.state.formLoaded);
 
+    }
+
+    componentDidUpdate() {
+        if (this.state.formLoaded) {
+            console.log('inside comp did update - form is loaded');
+            this.scroll();
+        }
     }
 
     render() {
@@ -292,7 +300,8 @@ class Services extends React.Component {
                         </div>
                     </div>
                     
-                    <div style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'block', opacity: '0' }} className={this.state.formLoaded ? 'formContainer animated fadeInUp': 'formContainer'}>
+                    {/* <div style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'none', opacity: '0' }} className={this.state.formLoaded ? 'formContainer animated fadeInUp': 'formContainer'} {...this.state.formLoaded ? this.scroll() : ''}> */}
+                    <div className={this.state.formLoaded ? 'animated fadeIn formContainer' : 'formContainer'} style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'none', opacity: '0' }}>
                         <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
                             <div className="formgroup">
                                 <label>Name *</label>
@@ -346,10 +355,10 @@ class Services extends React.Component {
 
                             <p className="formHelpText">* required field</p>
                         </form>
+                        </div>
                     </div>
-                    {/* <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> */}
-                    
-                </div>
+                    {/* <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div> */}
+
                 <style jsx>{`
                     .construction {
                         height: 500px;

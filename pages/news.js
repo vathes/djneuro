@@ -45,7 +45,9 @@ class PostImage extends React.Component {
                 <img src={img.src} alt={img.title} />
                 <style jsx>{`
                     .blogImageContainer img {
-                        width: 33%;
+                        // min-width: 33%;
+                        max-width: 33%;
+                        max-height: 150px;
                         margin-right: 15px;
                         margin-top: -10px;
                         margin-left: -15px;
