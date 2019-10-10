@@ -1,4 +1,5 @@
 import Layout from '../components/Layout.js';
+import Slider from 'react-slick';
 
 const homeTop1 = {
     // backgroundImage: 'url("/static/images/artwork/above_white_matter2.jpg")',
@@ -22,34 +23,13 @@ const homeTop2 = {
     textAlign: 'left'
 }
 
-const customerSection = {
-    backgroundImage: 'url("/static/images/artwork/watermelon.jpg")',
-    background: 'rgba(255,255,255,0.74)',
-    position: 'relative',
-    zIndex: '200',
-    padding: '1% 0 8% 0',
-    bottom: '50px'
-
-}
-
-const customerLogos = {
-    // display: 'inline-flex',
-    // flexDirection: 'row',
-    // float: 'left',
-    width: '100%',
-    // border: '2px red solid'
-    // overflow: 'scroll',
-}
 
 const logo = {
-    display: 'block',
-    maxHeight: '70px',
-    // height: 'auto',
-    // width: 'auto',
-    padding: '0 1%',
-    margin: '2% 0',
-    float: 'left',
-    // borderRight: '1px solid #d4d4d4'
+    // display: 'block',
+    // maxHeight: '70px',
+    // padding: '0 1%',
+    // margin: '2% 0',
+    // float: 'left',
 }
 
 const listStyle = {
@@ -57,6 +37,28 @@ const listStyle = {
     transform: 'translateX(-1%)',
     lineHeight: '1.8',
 }
+
+const sliderSetup = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '60px',
+    // responsive: [
+    //     {
+    //         breakpoint: 768,
+    //         settings: {
+    //             arrows: false,
+    //             centerMode: true,
+    //             centerPadding: '40px',
+    //             slidesToShow: 3
+    //         }
+    //     },
+    // ],
+    speed: 500
+}
+
 
 export default function Index() {
     return (
@@ -93,18 +95,54 @@ export default function Index() {
                     <li>Amazon Web Services</li>
                 </ul>
             </div>
-            {/* <div style={customerSection}>
-                <h4>Our Customers</h4>
-                <div style={customerLogos}>
+            <div className="sliderContainer">
+                <Slider {...sliderSetup}>
+                    <div className="sliderBooth">
+                        <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
+                    </div>
+                    <div className="sliderBooth">
+                        <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
+                    </div>
+                    <div className="sliderBooth">
+                        <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
+                    </div>
+                    <div className="sliderBooth">
+                        <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" height="70px"/>
+                    </div>
+                    <div className="sliderBooth">
+                        <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
+                    </div>
+                </Slider>
+            </div>
+            <div className="customerSection">
+                <h4>Our Projects and Customers</h4>
+                <div className="sliderContainer">
+                    <Slider {...sliderSetup}>
+                        <div className="sliderBooth">
+                            <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
+                        </div>
+                        <div className="sliderBooth">
+                            <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
+                        </div>
+                        <div className="sliderBooth">
+                            <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
+                        </div>
+                        <div className="sliderBooth">
+                            <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" height="70px" />
+                        </div>
+                        <div className="sliderBooth">
+                            <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
+                        </div>
+                    </Slider>
+                </div>
+                {/* <div className="customerLogoList">
                     <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
-                    <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
                     <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
                     <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
-                    <img style={logo} src="./static/images/logo/color/harvard_logo_text.png" alt="Harvard University Logo" width="140px" />
-                    <img style={logo} src="./static/images/logo/color/ucsd_logo.png" alt="UCSD Logo" width="140px" />
                     <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" />
-                </div>
-            </div> */}
+                    <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
+                </div> */}
+            </div>
             <style jsx>{`
                 p {
                     margin: 0;
@@ -119,13 +157,31 @@ export default function Index() {
                     font-size: 120%;
                     position: 'relative'
                 }
-                .partnerSection {
+                .partnerSection,
+                .customerSection {
                     background: linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75));
                     height: 100%;
                     position: relative;
                     text-align: center;
                     z-index: 150;
                     padding: 7% 0 12% 0;
+                }
+                .sliderContainer {
+                    width: 70%;
+                    margin-left: 15%;
+                }
+
+                .sliderBooth {
+                    // margin-left: 120px;
+                    // border-right: 1px solid black;
+                    // border-left: 1px solid red;
+                }
+                .customerSection {
+
+                }
+
+                .customerLogoList {
+                    width: 100%;
                 }
 
                 @media (max-width: 1440px) {
