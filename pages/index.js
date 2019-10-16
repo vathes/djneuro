@@ -1,19 +1,8 @@
 import Layout from '../components/Layout.js';
 import Slider from 'react-slick';
 
-const homeTop1 = {
-    // backgroundImage: 'url("/static/images/artwork/above_white_matter2.jpg")',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    color: 'rgb(15, 15, 15)',
-    padding: '17% 14%',
-    lineHeight: '1.4em',
-    textAlign: 'left',
-    position: 'relative'
-}
 
-
-const homeTop2 = {
+const homeTop = {
     backgroundImage: 'url("/static/images/artwork/3P_surface_bright.jpg")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -23,28 +12,14 @@ const homeTop2 = {
     textAlign: 'left'
 }
 
-
-const logo = {
-    // display: 'block',
-    // maxHeight: '70px',
-    // padding: '0 1%',
-    // margin: '2% 0',
-    // float: 'left',
-}
-
-const listStyle = {
-    listStyle: 'none',
-    transform: 'translateX(-1%)',
-    lineHeight: '1.8',
-}
-
 const sliderSetup = {
+    className: "center",
+    // centerMode: true,
     dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '60px',
+    centerPadding: "0px",
     // responsive: [
     //     {
     //         breakpoint: 768,
@@ -58,6 +33,7 @@ const sliderSetup = {
     // ],
     speed: 500
 }
+
 
 
 export default function Index() {
@@ -76,7 +52,7 @@ export default function Index() {
                 </p>
             </div> */}
 
-            <div style={homeTop2}>
+            <div style={homeTop}>
                 <h1 className="homeTopTagline">Data pipelines built by you.</h1>
                 <p className="homeTopSubtitle">
                     <br />
@@ -88,60 +64,64 @@ export default function Index() {
             </div>
             <div className="partnerSection">
                 <h4>Partners</h4>
-                <ul style={listStyle}>
-                    <li>Baylor College of Medicine</li>
-                    <li>Neurodata Without Borders</li>
-                    <li>Mathworks</li>
-                    <li>Amazon Web Services</li>
+                <ul>
+                    {/* <li>Baylor College of Medicine</li> */}
+                    <li>
+                        <img className="partnerLogo" src="./static/images/logo/color/nwb_logo.png" alt="neurodata without borders logo" />
+                    </li>
+                    <li>
+                        <img src="./static/images/logo/color/mathworks_logo.png" alt="mathworks logo" />
+                    </li>
+                    <li>
+                        <img src="./static/images/logo/color/aws_logo.png" alt="amazon web services logo" />
+                    </li>
                 </ul>
-            </div>
-            <div className="sliderContainer">
-                <Slider {...sliderSetup}>
-                    <div className="sliderBooth">
-                        <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
-                    </div>
-                    <div className="sliderBooth">
-                        <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
-                    </div>
-                    <div className="sliderBooth">
-                        <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
-                    </div>
-                    <div className="sliderBooth">
-                        <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" height="70px"/>
-                    </div>
-                    <div className="sliderBooth">
-                        <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
-                    </div>
-                </Slider>
             </div>
             <div className="customerSection">
                 <h4>Our Projects and Customers</h4>
                 <div className="sliderContainer">
                     <Slider {...sliderSetup}>
                         <div className="sliderBooth">
-                            <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
+                            {/* <img src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" /> */}
+                            <img src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" height="70px" />
+                            <div className="customerDetail">
+                                <p>Svoboda Lab @ HHMI Janelia Research Campus</p>
+                            </div>
                         </div>
                         <div className="sliderBooth">
-                            <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
+                            {/* <img src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" /> */}
+                            <img src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" height="70px" />
+                            <div className="customerDetail">
+                                <p>International Brain Laboratory</p>
+                            </div>
                         </div>
                         <div className="sliderBooth">
-                            <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
+                            <img src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
+                            <div className="customerDetail">
+                                <p>Moser Lab @ Kavli Institute</p>
+                            </div>
                         </div>
                         <div className="sliderBooth">
-                            <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" height="70px" />
+                            <img src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" height="70px" />
+                            <div className="customerDetail">
+                                <p>Nuo lab @ Baylor College of Medicine</p>
+                            </div>
                         </div>
                         <div className="sliderBooth">
-                            <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
+                            {/* <img src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" /> */}
+                            <img src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" height="70px" />
+                            <div className="customerDetail">
+                                <p>Princeton Neuroscience Institute</p>
+                            </div>
+                        </div>
+                        <div className="sliderBooth">
+                            <img src="./static/images/logo/color/ucsf_logo.png" alt="UCSF Logo" height="70px" />
+                            <div className="customerDetail">
+                                <p>Frank lab @ University of California San Francisco</p>
+                            </div>
                         </div>
                     </Slider>
                 </div>
-                {/* <div className="customerLogoList">
-                    <img style={logo} src="./static/images/logo/color/hhmi_janelia_logo.png" alt="HHMI Janelia Research Campus Logo" width="180px" />
-                    <img style={logo} src="./static/images/logo/color/ibl_logo.png" alt="International Brain Laboratory Logo" width="180px" />
-                    <img style={logo} src="./static/images/logo/color/kavli_logo.png" alt="Kavli Institute for Systems Neuroscience Logo" height="70px" />
-                    <img style={logo} src="./static/images/logo/color/bcm_logo.png" alt="Baylor College of Medicine Logo" />
-                    <img style={logo} src="./static/images/logo/color/pni_logo.png" alt="Princeton Neuroscience Institute Logo" width="100px" />
-                </div> */}
             </div>
             <style jsx>{`
                 p {
@@ -159,26 +139,71 @@ export default function Index() {
                 }
                 .partnerSection,
                 .customerSection {
-                    background: linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75));
                     height: 100%;
                     position: relative;
                     text-align: center;
                     z-index: 150;
-                    padding: 7% 0 12% 0;
+                }
+
+                .partnerSection h4,
+                .customerSection h4 {
+                    font-size: 115%;
+                    font-weight: 300;
+                }
+
+                .partnerSection {
+                    background: linear-gradient(rgba(255,255,255,1.0), rgba(251,255,255,0.75));
+                    padding: 4% 0 6% 0;
+                }
+
+                .partnerSection ul {
+                    list-style: none;
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+                .partnerSection li {
+                    margin: 25px;
+                }
+                .partnerSection img {
+                    height: 80px;
+                }
+                .customerSection {
+                    padding: 4% 0 12% 0;
                 }
                 .sliderContainer {
                     width: 70%;
                     margin-left: 15%;
+                    margin-top: 4%;
+                }
+                
+
+                .slick-center * {
+                    transform: scale(1.4) !important;
+                    // margin-left: auto;
+                    // margin-right: auto;
                 }
 
                 .sliderBooth {
-                    // margin-left: 120px;
-                    // border-right: 1px solid black;
-                    // border-left: 1px solid red;
+                    border-right: 1px solid lightgrey;
+                    // border-top: 1px solid red;
+                    // border-bottom: 1px solid red;
                 }
-                .customerSection {
 
+                .sliderBooth img {
+                    display: inline-flex;
                 }
+                .sliderBooth .customerDetail {
+                    color: rgb(120, 120, 120);
+                    margin-top: 18px;
+                    font-size: 0.8rem;
+                }
+                
+
+                // .slick-prev:before,
+                // .slick-next:before {
+                //     color: blue !important;
+                // }
+
 
                 .customerLogoList {
                     width: 100%;

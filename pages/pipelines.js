@@ -3,9 +3,16 @@ const PipelinePage = () => (
         <div className="pipelinePageContainer">
             <h2>Coming Soon...</h2>
             <h3>The DataJoint Pipelines</h3>
-            <p className="pipelineNotice">In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data
+            {/* <p className="pipelineNotice">In collaboration with Karel Svoboda's Lab and Lawrence Berkeley Lab, DataJoint Neuro is preparing a set of "Canonical Data
                 Pipelines for Neurophysiology" to be presented at the <a className="inlineLink" href="https://www.sfn.org/Meetings/Neuroscience-2019">Society for
-                Neuroscience Conference in November 2019</a>.
+                Neuroscience Conference</a> in October of 2019.
+            </p> */}
+            <p className="pipelineNotice">In collaboration with Karel Svoboda's Lab, DataJoint Neuro is preparing a set of "Canonical Data
+                Pipelines for Neurophysiology" to be presented at the <a className="inlineLink" href="https://www.sfn.org/Meetings/Neuroscience-2019">Society for
+                Neuroscience Conference</a> in 2019 - poster DD27 on October 21st (Mon), 1-5PM.
+            </p>
+            <p className="pipelineNotice">Example pipelines utilizing the canonical pipelines can be found <a className="inlineLink" target="_blank" href="https://github.com/vathes/DataJoint-NWB-showcase">here</a>.
+            <br /> Other datajoint pipeline examples can be found in this <a className="inlineLink" target="_blank" href="https://catalog.datajoint.io/">catalog</a>.
             </p>
         </div>
         <style jsx>{`
