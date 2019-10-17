@@ -104,7 +104,7 @@ class BlogIndex extends React.Component {
                     <br />
                     <h1>News</h1>
                     {this.props.posts.map(({ document: { data, content }, slug }) => (
-                        <div className="postCard">
+                        <div className="postCard" key={slug}>
                             <div className="postHeader">
                                 <span className="postDate">{data.dateOnly}</span>
                                 <span className="postTitle">{data.title}</span>
