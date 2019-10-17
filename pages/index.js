@@ -13,24 +13,34 @@ const homeTop = {
 }
 
 const sliderSetup = {
-    className: "center",
+    className: "slider variable-width",
     // centerMode: true,
+    variableWidth: true,
     dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerPadding: "0px",
-    // responsive: [
-    //     {
-    //         breakpoint: 768,
-    //         settings: {
-    //             arrows: false,
-    //             centerMode: true,
-    //             centerPadding: '40px',
-    //             slidesToShow: 3
-    //         }
-    //     },
-    // ],
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                centerPadding: '0px',
+                slidesToShow: 1,
+                swipeToSlide: true,
+            }
+        },
+        {
+            breakpoint: 545,
+            settings: {
+                arrows: false,
+                centerPadding: '0px',
+                slidesToShow: 1,
+                swipeToSlide: true,
+            }
+        },
+    ],
     speed: 500
 }
 
@@ -165,7 +175,8 @@ export default function Index() {
                     margin: 25px;
                 }
                 .partnerSection img {
-                    height: 80px;
+                    height: 60px;
+                    transform: translateX(-3%);
                 }
                 .customerSection {
                     padding: 4% 0 12% 0;
@@ -185,8 +196,10 @@ export default function Index() {
 
                 .sliderBooth {
                     border-right: 1px solid lightgrey;
+                    // border-left: 1px solid red;
                     // border-top: 1px solid red;
                     // border-bottom: 1px solid red;
+                    margin: 0 20px;
                 }
 
                 .sliderBooth img {
@@ -230,7 +243,15 @@ export default function Index() {
                         position: 'relative'
                     }
                     .partnerSection {
-                        padding: 7% 0 20% 0;
+                        padding: 7% 0;
+                    }
+                    .partnerSection img {
+                        height: 50px;
+                        transform: translateX(-5%);
+                    }
+                    .customerSection {
+                        padding: 7% 0 120px 0;
+                    }
                 }
                 @media (max-width: 480px) {
                     h1.homeTopTagline {
@@ -243,7 +264,17 @@ export default function Index() {
                         position: 'relative'
                     }
                     .partnerSection {
-                        padding: 7% 0 20% 0;
+                        padding: 7% 0;
+                    }
+                    .partnerSection img {
+                        height: 40px;
+                        transform: translateX(-10%);
+                    }
+                    .sliderContainer {
+                        width: 90%;
+                        margin-left: 4%;
+                        margin-top: 4%;
+                    }
                 }
             }
             `}</style>
