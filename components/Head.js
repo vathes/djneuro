@@ -4,7 +4,7 @@ export default() => (
     <div>
         <Head>
             <meta name="robots" content="noindex" />
-            {/* <meta name="keywords" content="DataJoint, datajoint neuro, data pipeline, data, neuroscience, AI, machine learning" />
+            {/* <meta name="keywords" content="DataJoint, datajoint neuro, DataJoint neuro, datajoint, data pipeline, data, neuroscience, AI, machine learning" />
             <meta name="description" content="DataJoint NEURO enables research teams to design scientific 
                         databases and computational pipelines by providing support, resources, and services." /> */}
             <meta name="viewport" content="width=device-width, initial-scale=1" />
