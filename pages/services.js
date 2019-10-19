@@ -183,13 +183,13 @@ class Services extends React.Component {
 
     scroll() {
         this.formOpenedRef.current.scrollIntoView({ behavior: "smooth" });
-        console.log('scroll ran! formLoaded Status - ', this.state.formLoaded);
+        // console.log('scroll ran! formLoaded Status - ', this.state.formLoaded);
 
     }
 
     componentDidUpdate() {
         if (this.state.formLoaded) {
-            console.log('inside comp did update - form is loaded');
+            // console.log('inside comp did update - form is loaded');
             this.scroll();
         }
     }

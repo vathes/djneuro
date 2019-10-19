@@ -111,17 +111,14 @@ class Navigation extends React.Component {
         }
     }
     collapseClass(e) {
-        console.log('inside collapseClass()');
-        console.log(e);
+        // console.log('inside collapseClass()');
+        // console.log(e);
         // consolelog('window.innerWidth?: ', window.innerWidth)
         // return (window && window.innerWidth > 1200 ? '' : 'collapse');
     }
 
     toggleMenu() {
-        console.log('toggling menue!');
-        console.log('menuOpen? before: ', this.state.menuOpen)
         this.state.menuOpen = !this.state.menuOpen;
-        console.log('menuOpen? after: ', this.state.menuOpen)
     }
     // constructor(props) {
     //     super(props);
