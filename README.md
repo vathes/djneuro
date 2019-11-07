@@ -5,11 +5,13 @@ Don't forget to run `node prebuild.js` to build the appropriate news posts in to
 
 Put the markdown news post files inside the `markdowns` folder. The filename before `.md` will also be the path to the post on the website.
 If you have an image reference in the post, put the image inside the `static/posts` folder.
-(Due to migration from another blog framework), so far, each post images are placed inside the folder with the same name as the markdown filename (minus the .md) - we will keep this convention going to keep consistent organization.
+(Due to migration from another blog framework), so far, each post images are placed inside the folder with the same name as the markdown filename (minus the .md) - we will keep this convention to maintain consistent organization.
 
 ## How to build in general
-`npm run build` `npm run export` then `http-server -p 8080` to test the static export
+1. `npm run build`
+2. `npm run export`
+3. Move to `out` folder then `http-server -p 8080` to test the static export
 
-### Note on deploy 
+### Note on production deploy 
 Remember to turn off the no-follow robot meta tag in the `components/Head.js` file for production build.
 

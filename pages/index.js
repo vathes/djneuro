@@ -66,7 +66,7 @@ class Index extends React.Component {
     render() {
         return (
             <Layout>
-                <div style={this.state.noticeOpen ? { display: 'block' }: { display: 'none'}} className='noticeContainer'>
+                {/* <div style={this.state.noticeOpen ? { display: 'block' }: { display: 'none'}} className='noticeContainer'>
                     <h2 className="noticeTitle">Looking for us at SfN?</h2>
 
                     <p className="noticeSubtitle">
@@ -84,7 +84,7 @@ class Index extends React.Component {
                     </p>
                     <button className="closeNoticeButton" onClick={(e) => this.closeNotice(e)}>X</button>
                 </div>
-                <button style={this.state.noticeOpen ? { visibility: 'hidden' } : { visibility: 'visible' }} className="openNoticeButton" onClick={(e) => this.openNotice(e)}>SfN 2019 Notice</button>
+                <button style={this.state.noticeOpen ? { visibility: 'hidden' } : { visibility: 'visible' }} className="openNoticeButton" onClick={(e) => this.openNotice(e)}>SfN 2019 Notice</button> */}
 
                 <div style={homeTop}>
                     <h1 className="homeTopTagline">Data pipelines built by you.</h1>
