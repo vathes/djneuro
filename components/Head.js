@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+
 export default() => (
     <div>
         <Head>
@@ -9,6 +10,15 @@ export default() => (
                         databases and computational pipelines by providing support, resources, and services." /> */}
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta charSet="utf-8" />
+
+            {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162022587-2"></script>
+            <script dangerouslySetInnerHTML={{__html: `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-162022587-2');`}}>
+            </script>
+
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
             <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />

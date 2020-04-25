@@ -302,7 +302,7 @@ class Services extends React.Component {
                     
                     {/* <div style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'none', opacity: '0' }} className={this.state.formLoaded ? 'formContainer animated fadeInUp': 'formContainer'} {...this.state.formLoaded ? this.scroll() : ''}> */}
                     <div className={this.state.formLoaded ? 'animated fadeIn formContainer' : 'formContainer'} style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'none', opacity: '0' }}>
-                        <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
+                        {/* <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
                             <div className="formgroup">
                                 <label>Name *</label>
                                 <input className={`inputField ${this.errorClass(this.state.formErrors.name)}`} type="text" name="name" placeholder="Contact Person" 
@@ -354,6 +354,12 @@ class Services extends React.Component {
                             <button className="formButton" type="submit" value="Send" disabled={!this.state.allFormFieldsValid}>Send</button>
 
                             <p className="formHelpText">* required field</p>
+                        </form> */}
+                        <form>
+                            <div>
+                                <p>Apologies - the form is temporarily unavailable. Please reach out to us directly to <a href="mailto:info@vathes.com">info@vathes.com</a></p>
+                            </div>
+                            <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
                         </form>
                         </div>
                     </div>
