@@ -12,7 +12,7 @@ const snsLink = {
 const Footer = () => (
     <div>
         <footer>
-            <p style={footerText}>DataJoint NEURO 2019 All Rights Reserved</p>
+            <p style={footerText}>DataJoint NEURO 2019-2020 All Rights Reserved</p>
             <div style={snsLink}>
                 <a target="_blank" href="https://www.linkedin.com/company/vathes-llc">
                     <img src="/static/images/icons/linkedin_white.png"/>
