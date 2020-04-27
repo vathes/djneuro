@@ -1,5 +1,6 @@
 import Layout from '../components/Layout.js';
 import React from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const background = {
     // backgroundImage: 'url("/static/images/artwork/blue-cherry-flicker.gif")',
@@ -13,7 +14,6 @@ const background = {
     // color: '#DDD'
     color: '#000022'
 };
-
 
 
 
@@ -88,6 +88,7 @@ class Services extends React.Component {
             fieldStatus: {
                 emailValid: false, nameValid: false, piValid: false, departmentValid: false, institutionValid: false, projectValid: false
             },
+            reCaptchaChecked: false,
             allFormFieldsValid: false
         };
         this.check = this.check.bind(this);
@@ -150,7 +151,8 @@ class Services extends React.Component {
                                         this.state.fieldStatus.piValid &&
                                         this.state.fieldStatus.departmentValid &&
                                         this.state.fieldStatus.institutionValid &&
-                                        this.state.fieldStatus.projectValid
+                                        this.state.fieldStatus.projectValid &&
+                                        this.state.reCaptchaChecked
                       });
         // console.log('field status is...', this.state.fieldStatus);
         // console.log('form validation status is...', this.state.allFormFieldsValid);
@@ -194,10 +196,24 @@ class Services extends React.Component {
         }
     }
 
+    onReCaptchaCheck(value) {
+        console.log('recaptcha checked');
+        console.log("Captcha value:", value);
+        if (!this.state.reCaptchaChecked) {
+            this.setState({
+                reCaptchaChecked: true,
+                reCaptchValue: value
+            }, this.validateForm);
+            console.log('state: ', this.state)
+        }
+        
+    }
+
     render() {
         
         return (
             <Layout>
+                {/* <script src="https://www.google.com/recaptcha/api.js" async defer></script> */}
                 <div style={background}>
 {/* 
                     <div className="resourceSection">
@@ -300,9 +316,9 @@ class Services extends React.Component {
                         </div>
                     </div>
                     
-                    {/* <div style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'none', opacity: '0' }} className={this.state.formLoaded ? 'formContainer animated fadeInUp': 'formContainer'} {...this.state.formLoaded ? this.scroll() : ''}> */}
                     <div className={this.state.formLoaded ? 'animated fadeIn formContainer' : 'formContainer'} style={this.state.formLoaded ? { display: 'block', opacity: '1' } : { display: 'none', opacity: '0' }}>
-                        {/* <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
+                        <form action="https://datajoint.io/djneuro-service-inquiry" method="POST">
+                        {/* <form action="http://localhost:3456/djneuro-service-inquiry" method="POST"> */}
                             <div className="formgroup">
                                 <label>Name *</label>
                                 <input className={`inputField ${this.errorClass(this.state.formErrors.name)}`} type="text" name="name" placeholder="Contact Person" 
@@ -349,21 +365,29 @@ class Services extends React.Component {
                                     <input className="radioField" type="radio" checked={this.state.radioChecked[2]} onChange={() => this.check(3)} name="subscription_type" value="custom service" /> 
                                     <label>Custom Services and Development</label>
                                 </div>
-                            </div>
-                            <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
-                            <button className="formButton" type="submit" value="Send" disabled={!this.state.allFormFieldsValid}>Send</button>
 
+                            </div>
+                            
+                            
+                            <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
+                            
+                            {/* <ReCAPTCHA style={{ marginLeft: "18%" }} sitekey="6LcsDe8UAAAAAHm_EupFZJLqKItXdLmsukxFbED5" onChange={(e) => this.onReCaptchaCheck(e)}/>  for - testing */}
+                            <ReCAPTCHA style={{ marginLeft: "18%" }} sitekey="6LehZO4UAAAAAAAyUzEujxHSIEz7Fn_noCeEjdvI" onChange={(e) => this.onReCaptchaCheck(e)}/>
+                            <button className="formButton" type="submit" value="Send" disabled={!this.state.allFormFieldsValid}>Send</button>
+                            
                             <p className="formHelpText">* required field</p>
-                        </form> */}
-                        <form>
+                            
+                            
+                        </form>
+             
+                        {/* <form>
                             <div>
                                 <p>Apologies - the form is temporarily unavailable. Please reach out to us directly to <a href="mailto:info@vathes.com">info@vathes.com</a></p>
                             </div>
                             <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div>
-                        </form>
+                        </form> */}
                         </div>
                     </div>
-                    {/* <div style={{ float: "left", clear: "both" }} ref={this.formOpenedRef}></div> */}
 
                 <style jsx>{`
                     .construction {
