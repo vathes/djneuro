@@ -28,7 +28,7 @@ class ApplyButton extends React.Component {
     render(id=this.props.id) {
         return (
             <div>
-                <button onClick={(e) => this.onClickApply(id, e)}>Apply</button>
+                <button onClick={(e) => this.onClickApply(id, e)}>Inquire</button>
                 <style jsx>{`
                     button {
                         // border: 2px solid black;

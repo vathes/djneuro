@@ -4,10 +4,10 @@ import Head from 'next/head'
 export default() => (
     <div>
         <Head>
-            <meta name="robots" content="noindex" />
-            {/* <meta name="keywords" content="DataJoint, datajoint neuro, DataJoint neuro, datajoint, data pipeline, data, neuroscience, AI, machine learning" />
+            {/* <meta name="robots" content="noindex" /> */}
+            <meta name="keywords" content="DataJoint, datajoint neuro, DataJoint neuro, datajoint, data pipeline, data, neuroscience, AI, machine learning" />
             <meta name="description" content="DataJoint NEURO enables research teams to design scientific 
-                        databases and computational pipelines by providing support, resources, and services." /> */}
+                        databases and computational pipelines by providing support, resources, and services." />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta charSet="utf-8" />
 
@@ -18,8 +18,6 @@ export default() => (
                 gtag('js', new Date());
                 gtag('config', 'UA-162022587-2');`}}>
             </script>
-
-            {/* <script src="https://www.google.com/recaptcha/api.js" async defer></script> */}
 
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"></link>
             <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
