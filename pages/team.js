@@ -45,17 +45,17 @@ const Team = () => (
                 <div className="row">
                     <div className="tabcard to-left animated fadeInLeft" >
                         <div className="memberText">
-                            <p className="memberName">Dimitri Yatsenko, PhD</p>
-                            <p className="memberRole">President</p>
+                            <p className="memberName">Edgar Y. Walker, PhD</p>
+                            <p className="memberRole">CEO</p>
                         </div>
-                        <img style={{ float: 'right' }} src="/static/images/team/dimitriyatsenko.jpg" />
+                        <img style={{ float: 'right' }} src="/static/images/team/edgarwalker.jpg" />
                     </div>
                     <div className="tabcard to-right animated fadeInRight">
                         <div className="memberText2">
-                            <p className="memberName">Edgar Y. Walker, PhD</p>
-                            <p className="memberRole">Vice President, Engineering</p>
+                            <p className="memberName">Dimitri Yatsenko, PhD</p>
+                            <p className="memberRole">VP, Research and Development</p>
                         </div>
-                        <img style={{float: 'left'}} src="/static/images/team/edgarwalker.jpg" />
+                        <img style={{float: 'left'}} src="/static/images/team/dimitriyatsenko.jpg" />
                     </div>
                 </div>
                 <div className="row">
@@ -211,6 +211,15 @@ const Team = () => (
                 font-size: 75%;
                 font-weight: 200;
                 padding-top: 2px;
+            }
+
+
+            @media (min-width: 769px) {
+                .memberBackground {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; 
+                }
             }
             
             @media (max-width: 1024px) {
