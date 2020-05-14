@@ -14,4 +14,5 @@ If you have an image reference in the post, put the image inside the `static/pos
 
 ### Note on production deploy 
 Remember to turn off the no-follow robot meta tag in the `components/Head.js` file for production build.
+From the root folder, run `aws s3 sync --delete ./out s3://djneuro.io/`
 

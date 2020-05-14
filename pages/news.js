@@ -65,6 +65,7 @@ class BlogIndex extends React.Component {
     }
 // export default class extends React.Component {
     static async getInitialProps() {
+    // static async getStaticProps() {
         // Get contents from posts folder
         const posts = (items => {
             // console.log(items);

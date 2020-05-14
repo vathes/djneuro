@@ -27,14 +27,9 @@ class PostImage extends React.Component {
 }
 
 export default class extends React.Component {
-    // static async getInitialProps({ query }) { // old stuff - if server was running...
-    //     const post = await import(`../static/posts/${query.id}.md`);
-    //     const document = matter(post.default);
-    //     return {
-    //         ...document
-    //     };
-    // }
+
     static async getInitialProps(props) {
+    // static async getStaticProps(props) {
         const fileName = props.asPath.split('/')[2]
         // console.log('filename is: ', fileName)
         const post = await import(`../../markdowns/${fileName}.md`);
