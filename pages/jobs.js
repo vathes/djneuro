@@ -45,7 +45,7 @@ const About = () => (
                     software, and external database and computing resources. Within this project, primary responsibilities will entail 
                     system design, coding, and testing for the system, with a focus on interfaces between the UI, Middle Tier, and Backend 
                     services.The position will also entail development of open-source library <a target="_blank" href="https://datajoint.io">DataJoint</a>
-                    to power computational pipelines in science labs, working in a team of neuro- and data scientists to develop frameworks 
+                    &nbsp;to power computational pipelines in science labs, working in a team of neuro- and data scientists to develop frameworks 
                     and pipelines for analysis and visualization of scientific data.
                 </p>
             </div>
