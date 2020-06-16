@@ -168,6 +168,9 @@ const About = () => (
                     line-height: 1.9rem;
                     padding: 5px 7% 1.5%;
                 }
+                p.job-description.list-bottom {
+                    padding: 5px 7%;
+                }
             }
             @media (max-width: 480px) {
                 h3 {
@@ -178,6 +181,9 @@ const About = () => (
                     font-size: 0.95rem;
                     line-height: 1.5rem;
                     padding: 5px 3% 1%;
+                }
+                p.job-description.list-bottom {
+                    padding: 5px 3%;
                 }
             }
 
