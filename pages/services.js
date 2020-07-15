@@ -270,15 +270,14 @@ class Services extends React.Component {
                         <div className="servicePanel">
                             <h4 className="servicePanelTitle">Managed Database Hosting (Beta)</h4>
                             <div className="servicePanelText">
-                                <p><b>DataJoint Neuro</b> offers managed DataJoint-optimized cloud hosting for an additional $4,800/year 
-                                    introductory pricing. This service is an option offered to qualified groups with a Basic Support subscription.</p>
+                                <p><b>DataJoint Neuro</b> offers managed DataJoint-optimized cloud hosting. 
+                                This service is an option offered to qualified groups with a Basic Support subscription.</p>
                                 <p>Features</p>
                                 <ul>
                                     <li>DataJoint-optimized relational Database Server + object storage</li>
                                     <li>up to 1 TiB relational storage + 10 TiB object storage</li>
                                     <li>unlimited transfers in and up to 2 TiB / month transfers out</li>
                                     <li>unlimited transfers to AWS compute</li>
-                                    <li>Database access URL  &lt;yourlab&gt;.djhub.io</li>
                                     <li>Secure connection</li>
                                     <li>High performance and uptime </li>
                                     <li>Unlimited data pipelines and schemas</li>
