@@ -10,7 +10,7 @@ If you have an image reference in the post, put the image inside the `static/pos
 ## How to build in general
 1. `npm run build`
 2. `npm run export`
-3. Move to `out` folder then `http-server -p 8080` to test the static export
+3. Move to `out` folder then `http-server -p 8080` / `python3 -m http.server` to test the static export
 
 ### Note on production deploy 
 Remember to turn off the no-follow robot meta tag in the `components/Head.js` file for production build.
