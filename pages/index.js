@@ -1,6 +1,6 @@
 import Layout from '../components/Layout.js';
 import Slider from 'react-slick';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 const homeTop = {
@@ -52,7 +52,9 @@ class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            noticeOpen: true
+            noticeOpen: true,
+            tagline1: true,
+            tagline: 'neurophysiology'
         }
     }
     closeNotice(event) {
@@ -61,6 +63,19 @@ class Index extends React.Component {
 
     openNotice(event) {
         this.setState({ noticeOpen: true})
+    }
+
+    setTagline() {
+        // still in works
+        const [tagEndings] = useState(0);
+        tagEndings = ['neurophysiology', 'machine learning', 'data analysis']
+
+        useEffect(() => {
+            const interval = setInterval(() => {
+            this.setState.tagline = tagEndings[Math.floor(Math.random() * 3)];
+            }, 2000);
+            return () => clearInterval(interval);
+        }, []);
     }
 
     render() {
@@ -87,7 +102,8 @@ class Index extends React.Component {
                 <button style={this.state.noticeOpen ? { visibility: 'hidden' } : { visibility: 'visible' }} className="openNoticeButton" onClick={(e) => this.openNotice(e)}>SfN 2019 Notice</button> */}
 
                 <div style={homeTop}>
-                    <h1 className="homeTopTagline">Data pipelines built by you.</h1>
+                    {/* <h1 className="homeTopTagline">Data pipelines built by you.</h1> */}
+            <h1 className="homeTopTagline">Data pipelines built for {this.state.tagline}</h1>
                     <p className="homeTopSubtitle">
                         <br />
                         <b>DataJoint Neuro®</b> enables research teams to design scientific databases
