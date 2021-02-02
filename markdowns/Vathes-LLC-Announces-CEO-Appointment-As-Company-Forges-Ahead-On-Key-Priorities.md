@@ -19,7 +19,7 @@ Among the company’s key priorities is the development of a line of scientific 
 Dr. Edgar Y. Walker, a co-founder of Vathes LLC, who served as CEO since May 2020 and VP of Engineering prior to that, will continue serving on the Member Board. He will continue pursuing advanced research at the intersection of neuroscience and machine learning at the University of Tübingen, Germany. 
 
 **__About Vathes LLC__**  
-Based in Houston’s Texas Medical Center (the largest medical center in the world), the Vathes LLC team is the principal developer of [DataJoint®]((https://datajoint.io)) Neuro, an open-source framework for shared scientific databases and computational data pipelines. The company’s mission is to enable scientific research teams to solve complex challenges by bringing scientific rigor and clarity to big data and computations. We help draw insights from complex data in neuroscience, machine learning research, and other fields.
+Based in Houston’s Texas Medical Center (the largest medical center in the world), the Vathes LLC team is the principal developer of [DataJoint®](https://datajoint.io) Neuro, an open-source framework for shared scientific databases and computational data pipelines. The company’s mission is to enable scientific research teams to solve complex challenges by bringing scientific rigor and clarity to big data and computations. We help draw insights from complex data in neuroscience, machine learning research, and other fields.
 
 The &quot;DataJoint Pipelines for Neurophysiology&quot; Project is supported by the National Institute of Neurological Disorders and Stroke of the National Institutes of Health under Award Grant Number U24NS116470.
 
