@@ -49,7 +49,7 @@ const background3 = {
 
 const background4 = {
     // backgroundImage: 'linear-gradient(white, white, white,  #E6FF42)',
-    // backgroundColor: '#E1EBF7',
+    backgroundColor: '#E1EBF7',
     padding: '60px 40px',
     color: 'black',
     position: 'relative'

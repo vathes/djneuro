@@ -81,6 +81,7 @@ class Index extends React.Component {
     render() {
         return (
             <Layout>
+              <div className="content-container">
                 {/* <div style={this.state.noticeOpen ? { display: 'block' }: { display: 'none'}} className='noticeContainer'>
                     <h2 className="noticeTitle">Looking for us at SfN?</h2>
 
@@ -100,10 +101,10 @@ class Index extends React.Component {
                     <button className="closeNoticeButton" onClick={(e) => this.closeNotice(e)}>X</button>
                 </div>
                 <button style={this.state.noticeOpen ? { visibility: 'hidden' } : { visibility: 'visible' }} className="openNoticeButton" onClick={(e) => this.openNotice(e)}>SfN 2019 Notice</button> */}
-
+                
                 <div style={homeTop}>
                     {/* <h1 className="homeTopTagline">Data pipelines built by you.</h1> */}
-            <h1 className="homeTopTagline">Data pipelines built for {this.state.tagline}</h1>
+                    <h1 className="homeTopTagline">Data pipelines built for {this.state.tagline}</h1>
                     <p className="homeTopSubtitle">
                         <br />
                         <b>DataJoint Neuro®</b> enables research teams to design scientific databases
@@ -173,7 +174,11 @@ class Index extends React.Component {
                         </Slider>
                     </div>
                 </div>
-                <style jsx>{`
+              </div>
+              <style jsx>{`
+                .contentContainer {
+                  position: relative;
+                }
                 p {
                     margin: 0;
                 }
@@ -220,6 +225,7 @@ class Index extends React.Component {
                 }
                 .customerSection {
                     padding: 4% 0 12% 0;
+                    background-color: #E0E0E0;
                 }
                 .sliderContainer {
                     width: 70%;
@@ -376,9 +382,9 @@ class Index extends React.Component {
                     .noticeSubtitle {
                         font-size: 0.9rem;
                     }
+                  }
                 }
-            }
-            `}</style>
+              `}</style>
             </Layout>
         );
 

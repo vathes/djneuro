@@ -136,7 +136,7 @@ class BlogIndex extends React.Component {
                 <style jsx>{`
                     div.newsIndexContainer {
                         padding-bottom: 8%;
-                        background-color: rgba(10, 10, 110, 0.1);
+                        background-color: #E0E0E0; // little lighter than #DDD
                     }
                     .postCard {
                         border: 2px solid black;

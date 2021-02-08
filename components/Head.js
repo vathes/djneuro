@@ -40,7 +40,7 @@ export default() => (
             body {
                 margin: 0px;
                 padding: 0;
-                background-color: #DDD;
+                background-color: #001226;
             }
             // canvas {
             //     width: 100%;

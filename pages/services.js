@@ -12,7 +12,8 @@ const background = {
     backgroundRepeat: 'repeat',
     backgroundPosition: 'top right',
     // color: '#DDD'
-    color: '#000022'
+    color: '#000022',
+    height: '100%'
 };
 
 
@@ -409,7 +410,7 @@ class Services extends React.Component {
                     .servicesSection {
                         display: flex;
                         flex-direction: row;
-                        margin-left: 2%;
+                        justify-content: center;
                         margin-top: 3%;
                         padding-bottom: 8%;
                     }
