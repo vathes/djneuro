@@ -234,7 +234,7 @@ class Navigation extends React.Component {
                     }
 
                     .linkWrap:hover { 
-                        border-bottom: solid 4px black;
+                        border-bottom: solid 4px #d6a9ff; // pastel blueviolet
                     }
 
                     @media(max-width: 768px) {
