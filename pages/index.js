@@ -171,6 +171,12 @@ class Index extends React.Component {
                                     <p>Frank lab @ University of California San Francisco</p>
                                 </div>
                             </div>
+                            <div className="sliderBooth">
+                                <img src="./static/images/logo/color/columbia_logo.png" alt="Columbia University Logo" height="70px" />
+                                <div className="customerDetail">
+                                    <p>Columbia University</p>
+                                </div>
+                            </div>
                         </Slider>
                     </div>
                 </div>
