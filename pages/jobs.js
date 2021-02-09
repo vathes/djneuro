@@ -43,8 +43,8 @@ class Jobs extends React.Component {
                 <h2>Career Opportunities</h2>
                     <div className="positionHeader">
                     <h3>Open Positions: <br />
-                    <button className="togglePosition" onClick={() => this.togglePosition(1)}>Software Engineer</button>&nbsp;&nbsp;
-                    <button className="togglePosition" onClick={()=>this.togglePosition(2)}>Data Scientist</button>
+                    {/* <button className="togglePosition" onClick={() => this.togglePosition(1)}>Software Engineer</button>&nbsp;&nbsp; */}
+                    {/* <button className="togglePosition" onClick={()=>this.togglePosition(2)}>Data Scientist</button> */}
                     </h3>
                 </div>
                 <div className="job-section">
@@ -60,7 +60,7 @@ class Jobs extends React.Component {
                 </div>
 
 
-                <div className="position1" style={this.state.position1selected ? {display: 'block'} : {display: 'none'}}>
+                {/* <div className="position1" style={this.state.position1selected ? {display: 'block'} : {display: 'none'}}>
                     
                     <div className="job-section">
                         <h3>Software Engineer</h3>
@@ -199,7 +199,7 @@ class Jobs extends React.Component {
                             </a>
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div >
     
             <style jsx>{`

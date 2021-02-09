@@ -83,20 +83,56 @@ const Team = () => (
                         </div>
                         <img style={{ float: 'right' }} src="/static/images/team/raphaelguzman.jpg" />
                     </div>
+                    <div className="tabcard to-right animated fadeInRight">
+                        <div className="memberText2">
+                            <p className="memberName">Camila Lopez</p>
+                            <p className="memberRole">Project Manager</p>
+                        </div>
+                        <img style={{ float: 'left' }} src="/static/images/team/camilalopez.jpg" />
+                    </div>
+                </div>
+                
+                <hr className="divider" />
+                {/* <h4 className="team-title">Team</h4> */}
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInLeft">
+                        <div className="memberText">
+                            <p className="memberName">Maho Sasaki</p>
+                            <p className="memberRole">Front-end Web Developer</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/mahosasaki.jpg" />
+                    </div>
+                    <div className="tabcard to-right animated fadeInRight">
+                        <div className="memberText2">
+                            <p className="memberName">Kabilar Gunalan, MD/PhD</p>
+                            <p className="memberRole">Data Scientist</p>
+                        </div>
+                        <img style={{ float: 'left' }} src="/static/images/team/kabilargunalan.jpg" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInLeft">
+                        <div className="memberText">
+                            <p className="memberName">Daniel Sitonic</p>
+                            <p className="memberRole">Software Engineer</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/danielsitonic.jpg" />
+                    </div>
                     {/* <div className="tabcard to-right animated fadeInRight">
                         <div className="memberText2">
-                            <p className="memberName">Some Name</p>
-                            <p className="memberRole">Business Manager</p>
+                            <p className="memberName">New Hire</p>
+                            <p className="memberRole">New Role</p>
                         </div>
-                        <img style={{ float: 'left' }} src="/static/images/team/somename.jpg" />
+                        <img style={{ float: 'left' }} src="/static/images/team/newperson.jpg" />
                     </div> */}
                 </div>
                 <hr className="divider" />
+                <h4 className="team-title">Scientific Advisors</h4>
                 <div className="row">
                     <div className="tabcard to-left animated fadeInRight">
                         <div className="memberText">
                             <p className="memberName">Edgar Y. Walker, PhD</p>
-                            <p className="memberRole">Scientific Advisor, Co-Founder</p>
+                            <p className="memberRole">Co-Founder</p>
                         </div>
                         <img style={{float: 'right'}} src="/static/images/team/edgarwalker.jpg" />
                         
@@ -104,7 +140,7 @@ const Team = () => (
                     <div className="tabcard to-right animated fadeInLeft">
                         <div className="memberText2">
                             <p className="memberName">Jake Reimer, PhD</p>
-                            <p className="memberRole">Scientific Advisor, Co-Founder</p>
+                            <p className="memberRole">Co-Founder</p>
                         </div>
                         <img style={{ float: 'left' }} src="/static/images/team/jakereimer.jpg" />
                         
@@ -114,51 +150,18 @@ const Team = () => (
                     <div className="tabcard to-left animated fadeInLeft">
                         <div className="memberText">
                             <p className="memberName">Andreas Tolias, PhD</p>
-                            <p className="memberRole">Scientific Advisor, Co-Founder</p>
+                            <p className="memberRole">Co-Founder</p>
                         </div>
                         <img style={{ float: 'right' }} src="/static/images/team/andreastolias.jpg" />
                         
                     </div>
                     {/* <div className="tabcard to-right animated fadeInRight">
                         <div className="memberText2">
-                            <p className="memberName">Maho Sasaki</p>
-                            <p className="memberRole">Front-end Web Developer</p>
+                            <p className="memberName">Blank</p>
+                            <p className="memberRole"></p>
                         </div>
-                        <img style={{ float: 'left' }} src="/static/images/team/mahosasaki.jpg" />
+                        <img style={{ float: 'left' }} src="/static/images/team/blank.jpg" />
                     </div> */}
-                </div>
-                <hr className="divider" />
-                <div className="row">
-                    <div className="tabcard to-left animated fadeInLeft">
-                        <div className="memberText">
-                            <p className="memberName">Camila Lopez</p>
-                            <p className="memberRole">Project Manager</p>
-                        </div>
-                        <img style={{ float: 'right' }} src="/static/images/team/camilalopez.jpg" />
-                    </div>
-                    <div className="tabcard to-right animated fadeInRight">
-                        <div className="memberText2">
-                            <p className="memberName">Maho Sasaki</p>
-                            <p className="memberRole">Front-end Web Developer</p>
-                        </div>
-                        <img style={{ float: 'left' }} src="/static/images/team/mahosasaki.jpg" />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="tabcard to-left animated fadeInLeft">
-                        <div className="memberText">
-                            <p className="memberName">Kabilar Gunalan</p>
-                            <p className="memberRole">Data Scientist</p>
-                        </div>
-                        <img style={{ float: 'right' }} src="/static/images/team/kabilargunalan.jpg" />
-                    </div>
-                    <div className="tabcard to-right animated fadeInRight">
-                        <div className="memberText2">
-                            <p className="memberName">Daniel Sitonic</p>
-                            <p className="memberRole">Software Engineer</p>
-                        </div>
-                        <img style={{ float: 'left' }} src="/static/images/team/danielsitonic.jpg" />
-                    </div>
                 </div>
             </div>
         </div>
