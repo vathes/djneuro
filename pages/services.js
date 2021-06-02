@@ -244,18 +244,18 @@ class Services extends React.Component {
                             <h4 className="servicePanelTitle">Basic Support</h4>
                             <div className="servicePanelText">
                                 <p>Basic Support is a subscription service offered to qualified research groups who use DataJoint 
-                                    and require occasional or semi-regular support and assistance.</p> 
-                                <p><b>Price: </b>$1200/year</p>
+                                    and require occasional or semi-regular support and assistance.</p>
+                                
                                 <ul>
                                     <li>Includes a free online <b>"Interactive Course for DataJoint  Practitioners"</b> (10 seats).</li>
                                     <li>Access to on-demand, targeted training workshops for novice, intermediate, or advanced practitioners:</li>
                                     <ul>
-                                        <li>on-site workshops: $1500/day/instructor + travel expenses. Each day includes six hours of instruction 
-                                            and interactive hands-on tutorials with the rest of the time for questions and discussion. 
+                                        <li>On-site workshops: Each day includes six hours of instruction and interactive hands-on tutorials with the rest of the time 
+                                            for questions and discussion. 
                                             Limit 15 students/instructor.</li>
-                                        <li>remote interactive workshops: $500 per 3-hour block (10 students)</li>
+                                        <li>Remote interactive workshops: 3-hour block (10 students)</li>
                                     </ul>
-                                    <li>Access to ticket-based priority support ($95/hour/engineer):</li>
+                                    <li>Access to ticket-based priority support:</li>
                                     <ul>
                                         <li>Assistance with pipeline design and execution</li>
                                         <li>Assistance with local IT and database administration</li>
