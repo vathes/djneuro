@@ -64,6 +64,13 @@ const background5 = {
 
 };
 
+const background6 = {
+  backgroundColor: '#001226',
+  padding: '60px 40px',
+  color: 'white',
+  position: 'relative'
+};
+
 const djNeuroLogoColor = {
     transform: 'rotate(10deg)',
     width: '220px',
@@ -113,6 +120,14 @@ const About = () => (
             <p>DataJoint Neuro is run by Vathes LLC based in Houston, Texas. Vathes LLC spun off from the Lab of Andreas Tolias at Baylor
                 College of Medicine in 2017 after receiving initial SBIR funding from DARPA.</p> 
                 {/* and  is a BCM family company */}
+        </div >
+        <div style={background6}>
+            <h4>Policy</h4>
+            <p>Please click on the policy to download. 
+            <ul>
+              <li><a href="/static/documents/FCOI POLICY - DataJoint Financial Conflict of Interest Policy - June 2021.pdf" download>DataJoint Financial Conflict of Interest Policy</a></li> 
+            </ul>
+            </p>
         </div >
         <style jsx>{`
             a {
