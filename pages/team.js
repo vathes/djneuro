@@ -86,9 +86,18 @@ const Team = () => (
                     <div className="tabcard to-right animated fadeInRight">
                         <div className="memberText2">
                             <p className="memberName">Camila Lopez</p>
-                            <p className="memberRole">Project Manager</p>
+                            <p className="memberRole">Secretary, Company Manager</p>
                         </div>
                         <img style={{ float: 'left' }} src="/static/images/team/camilalopez.jpg" />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="tabcard to-left animated fadeInLeft">
+                        <div className="memberText">
+                            <p className="memberName">Jason Kirkpatrick</p>
+                            <p className="memberRole">COO</p>
+                        </div>
+                        <img style={{ float: 'right' }} src="/static/images/team/placeholder.png" />
                     </div>
                 </div>
                 
@@ -118,13 +127,13 @@ const Team = () => (
                         </div>
                         <img style={{ float: 'right' }} src="/static/images/team/danielsitonic.jpg" />
                     </div>
-                    {/* <div className="tabcard to-right animated fadeInRight">
+                    <div className="tabcard to-right animated fadeInRight">
                         <div className="memberText2">
-                            <p className="memberName">New Hire</p>
-                            <p className="memberRole">New Role</p>
+                            <p className="memberName">David Godinez</p>
+                            <p className="memberRole">Data Engineer</p>
                         </div>
-                        <img style={{ float: 'left' }} src="/static/images/team/newperson.jpg" />
-                    </div> */}
+                        <img style={{ float: 'left' }} src="/static/images/team/placeholder.png" />
+                    </div>
                 </div>
                 <hr className="divider" />
                 <h4 className="team-title">Scientific Advisors</h4>
